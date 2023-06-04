@@ -44,6 +44,11 @@
 }
 
 @media screen and (max-width: 600px) {
+    .home-top-background {
+        background-image: url(../../public/img/hyundai-mobile.png);
+        background-attachment: scroll;
+    }
+
     .home-top-content {
         font-size: 14px;
         line-height: 50px;
