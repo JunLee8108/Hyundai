@@ -47,7 +47,7 @@
 }
 
 .home-middle-left {
-    width: 50%;
+    width: 40%;
     height: 600px;
     float: left;
     text-align: center;
@@ -61,7 +61,7 @@
 }
 
 .home-middle-right {
-    width: 50%;
+    width: 60%;
     height: 600px;
     float: left;
     position: relative;
@@ -83,12 +83,15 @@ table {
 }
 
 th, td {
-    padding: 20px;
+    padding: 5px;
 }
 
 @media screen and (max-width: 600px) {
     .home-top-background {
         background-image: url(../../public/img/hyundai-mobile.png);
+    }
+
+    .background-img {
         background-attachment: scroll;
     }
 
@@ -106,7 +109,6 @@ th, td {
     }
 
     .home-middle-background {
-        width: 100%;
         height: 400px;
     }
 
@@ -116,20 +118,15 @@ th, td {
     }
 
     .home-middle-left img{
-        width: 100%;
-        max-width: 500px;
         margin-top: 30px;
     }
 
     .home-middle-right {
         width: 100%;
         height: 100px;
-        float: left;
-        background-color: white;
     }
 
     table {
-        margin-top: -60px;
         width: 90%;
         box-sizing: border-box;
     }
@@ -141,5 +138,6 @@ th, td {
 
     td {
         font-size: 8px;
+        color: grey;
     }
 }
