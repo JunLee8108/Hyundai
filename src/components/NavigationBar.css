@@ -1,0 +1,58 @@
+
+li {
+    box-sizing: border-box;
+}
+
+nav {
+    height: 50px;
+    padding: 20px;
+    background-color: black;
+}
+
+nav li {
+    display: inline;
+    padding: 20px;
+    font-size: 15px;
+}
+
+.nav-container {
+    position: sticky;
+    z-index: 999;
+    top: 0;
+}
+
+.hyundai-logo {
+    float: left;
+    width: 70px;
+}
+
+.company-name {
+    float: left;
+    margin-top: -17px; 
+    font-size: 30px;
+    font-weight: bold; 
+    color: white;
+}
+
+.nav-item-company:hover {
+    color: red;
+}
+
+.nav-menu {
+    float: right;
+    margin-top: 15px;
+}
+
+nav li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.clear-both {
+    clear: both;
+}
+
+
+
+
