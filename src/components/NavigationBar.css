@@ -34,6 +34,12 @@ nav li {
     color: white;
 }
 
+.nav-item-company {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
 .nav-item-company:hover {
     color: red;
 }
@@ -43,14 +49,24 @@ nav li {
     margin-top: 15px;
 }
 
-nav li a {
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-}
-
 .clear-both {
     clear: both;
+}
+
+@media screen and (max-width: 600px) {
+    nav {
+        height: 25px;
+    }
+
+    .hyundai-logo {
+        margin-top: 2px;
+        width: 30px;
+    }
+
+    .company-name {
+        margin-top: -22px; 
+        font-size: 20px;
+    }
 }
 
 
