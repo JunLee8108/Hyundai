@@ -26,6 +26,11 @@
     transform:translate(-50%, -50%);
 }
 
+.logo-style {
+    font-size: 52.5px;
+    letter-spacing: 8px;
+}
+
 .button-learn-more {
     width: 130px;
     font-weight: bold;
@@ -92,6 +97,12 @@ th, td {
     filter: brightness(90%) contrast(120%) saturate(200%);
 }
 
+.home-bottom-background2 {
+    height: 800px;
+    background-image: url(../../public/img/hyundai-kona.jpg);
+    filter: brightness(100%) contrast(100%) saturate(140%);
+}
+
 .home-bottom-content {
     letter-spacing: 5px;
     top: 50%;
@@ -108,9 +119,14 @@ th, td {
 
     .home-top-content {
         font-size: 14px;
-        line-height: 50px;
-        letter-spacing: 8px;
+        line-height: 60px;
+        letter-spacing: 6px;
         top: 38%;
+    }
+
+    .logo-style {
+        font-size: 35px;
+        letter-spacing: 5px;
     }
     
     .button-learn-more {
@@ -153,6 +169,17 @@ th, td {
     }
 
     .home-bottom-background {
-        height: 600px;
+        height: 650px;
     }
+
+    .home-bottom-background2 {
+        height: 650px;
+    }
+    
+    .home-bottom-content {
+        font-size: 11px;
+        letter-spacing: 5px;
+        top: 50%;
+    }
+
 }

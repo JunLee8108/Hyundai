@@ -5,14 +5,21 @@ function HomeSection() {
     <div>
       <div className="home-top-background background-img">
         <div className="home-top-content">
-          <h1>Your Car with, Hyundai</h1>
+          <h1>Your Car with, <span className="logo-style">Hyundai</span></h1>
           <button className="button-learn-more">LEARN MORE</button>
         </div>
       </div>
 
-      <div className="home-middle-background home-bottom-background background-img">
-      <div className="home-top-content home-bottom-content">
+      <div className="home-bottom-background background-img">
+        <div className="home-bottom-content home-top-content ">
           <h1>2023 TUCSON HYBRID WITH 38 MPG</h1>
+          <button className="button-learn-more">LEARN MORE</button>
+        </div>
+      </div>
+
+      <div className="home-bottom-background2 background-img">
+        <div className="home-bottom-content home-top-content ">
+          <h1>2023 KONA HYBRID WITH 40 MPG</h1>
           <button className="button-learn-more">LEARN MORE</button>
         </div>
       </div>
