@@ -24,9 +24,15 @@ function HomeSection() {
         </div>
       </div>
 
+      <div className="home-bottom-background3 background-img">
+        <div className="home-bottom-content home-top-content ">
+          <h1>The first-ever, all electric 2023 IONIQ 6.</h1>
+        </div>
+      </div>
+
       <div className="home-middle-background">
         <div className="home-middle-left">
-          <img src="img/hyundai-elantra.jpg"></img>
+          <img src="img/hyundai-ioniq-model2.jpg"></img>
         </div>
 
         <div className="home-middle-right">
@@ -34,20 +40,20 @@ function HomeSection() {
             <table>
               <thead>
                 <tr>
-                  <th>2023 Elantra</th>
+                  <th>2023 IONIQ 6</th>
                   <th>Starting at</th>
                   <th>Up to</th>
-                  <th>Standard</th>
+                  <th>Up to</th>
                   <th>Available</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td>Compact Sedan</td>
-                  <td>$20,950</td>
-                  <td>42 MPG Hwy</td>
-                  <td>201 hp</td>
-                  <td>18 inch wheels</td>
+                  <td>Electric Sedan</td>
+                  <td>$41,600</td>
+                  <td>361 miles</td>
+                  <td>320 hp</td>
+                  <td>20 inch wheels</td>
                 </tr>
               </tbody>
             </table>

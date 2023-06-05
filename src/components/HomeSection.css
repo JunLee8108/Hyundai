@@ -52,7 +52,7 @@
 }
 
 .home-middle-left {
-    width: 40%;
+    width: 30%;
     height: 600px;
     float: left;
     text-align: center;
@@ -60,13 +60,14 @@
 }
 
 .home-middle-left img{
-    width: 100%;
+    width: 90%;
     max-width: 500px;
-    margin-top: 150px;
+    margin-left: 70px;
+    margin-top: 200px;
 }
 
 .home-middle-right {
-    width: 60%;
+    width: 70%;
     height: 600px;
     float: left;
     position: relative;
@@ -88,7 +89,8 @@ table {
 }
 
 th, td {
-    padding: 5px;
+    padding: 7px;
+    font-size: 18px;
 }
 
 .home-bottom-background {
@@ -100,6 +102,12 @@ th, td {
 .home-bottom-background2 {
     height: 100vh;
     background-image: url(../../public/img/hyundai-kona.jpg);
+    filter: brightness(100%) contrast(100%) saturate(140%);
+}
+
+.home-bottom-background3 {
+    height: 100vh;
+    background-image: url(../../public/img/hyundai-ioniq.jpg);
     filter: brightness(100%) contrast(100%) saturate(140%);
 }
 
