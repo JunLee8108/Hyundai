@@ -1,4 +1,6 @@
 import "./HomeSection.css";
+import { Link } from "react-router-dom";
+import ioniq from "../assets/hyundai-ioniq-model.webp"
 
 function HomeSection() {
   return (
@@ -30,13 +32,15 @@ function HomeSection() {
         <div className="home-bottom-content home-top-content ">
         <h3>The first-ever, all electric 2023 IONIQ 6.</h3>
         <h1>2023 IONIQ 6</h1>
+        <Link to="/Ioniq">
         <button className="button-learn-more">LEARN MORE</button>
+        </Link>
         </div>
       </div>
 
       <div className="home-middle-background">
         <div className="home-middle-left">
-          <img src="img/hyundai-ioniq-model.webp"></img>
+          <img src={ioniq}></img>
         </div>
 
         <div className="home-middle-right">
