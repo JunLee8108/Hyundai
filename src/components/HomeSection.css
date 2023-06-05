@@ -92,13 +92,13 @@ th, td {
 }
 
 .home-bottom-background {
-    height: 800px;
+    height: 100vh;
     background-image: url(../../public/img/hyundai-grey.jpg);
     filter: brightness(90%) contrast(120%) saturate(200%);
 }
 
 .home-bottom-background2 {
-    height: 800px;
+    height: 100vh;
     background-image: url(../../public/img/hyundai-kona.jpg);
     filter: brightness(100%) contrast(100%) saturate(140%);
 }
