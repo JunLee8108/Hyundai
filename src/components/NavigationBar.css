@@ -1,6 +1,11 @@
 
-li {
+li, ul {
     box-sizing: border-box;
+}
+
+ul {
+    box-sizing: border-box;
+    margin: 0;
 }
 
 nav {

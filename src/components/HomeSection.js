@@ -13,26 +13,30 @@ function HomeSection() {
       <div className="home-bottom-background background-img">
         <div className="home-bottom-content home-top-content ">
           <h1>2023 TUCSON HYBRID WITH 38 MPG</h1>
+          <h3>All-purpose hybrid SUV</h3>
           <button className="button-learn-more">LEARN MORE</button>
         </div>
       </div>
 
       <div className="home-bottom-background2 background-img">
         <div className="home-bottom-content home-top-content ">
-          <h1>2023 KONA HYBRID WITH 40 MPG</h1>
+          <h1>2023 KONA ELECTRIC</h1>
+          <h3>Our all-electric small SUV</h3>
           <button className="button-learn-more">LEARN MORE</button>
         </div>
       </div>
 
       <div className="home-bottom-background3 background-img">
         <div className="home-bottom-content home-top-content ">
-          <h1>The first-ever, all electric 2023 IONIQ 6.</h1>
+        <h3>The first-ever, all electric 2023 IONIQ 6.</h3>
+        <h1>2023 IONIQ 6</h1>
+        <button className="button-learn-more">LEARN MORE</button>
         </div>
       </div>
 
       <div className="home-middle-background">
         <div className="home-middle-left">
-          <img src="img/hyundai-ioniq-model2.jpg"></img>
+          <img src="img/hyundai-ioniq-model.webp"></img>
         </div>
 
         <div className="home-middle-right">
