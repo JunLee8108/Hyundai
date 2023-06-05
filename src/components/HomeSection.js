@@ -10,6 +10,13 @@ function HomeSection() {
         </div>
       </div>
 
+      <div className="home-middle-background home-bottom-background background-img">
+      <div className="home-top-content home-bottom-content">
+          <h1>2023 TUCSON HYBRID WITH 38 MPG</h1>
+          <button className="button-learn-more">LEARN MORE</button>
+        </div>
+      </div>
+
       <div className="home-middle-background">
         <div className="home-middle-left">
           <img src="img/hyundai-elantra.jpg"></img>
