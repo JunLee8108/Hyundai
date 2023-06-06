@@ -4,7 +4,6 @@ div {
 
 .footer-container {
     display: flex;
-    
     background-color: black;
     justify-content: center;
     padding: 20px;
@@ -45,5 +44,23 @@ div {
     
     .footer-item {
         width: 100%;
+        text-align: left;
+    }
+
+    .footer-item h1 {
+        font-size: 16px;
+        color: white;
+        display: inline-block;
+    }
+
+    .arrow-symbol {
+        margin-top: 13px;
+        float: right;
+        font-size: 13px;
+        color: white;
+    }
+    .clean-both {
+        float: none;
+        clear: both;
     }
 }
