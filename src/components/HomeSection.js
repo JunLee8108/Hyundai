@@ -46,28 +46,26 @@ function HomeSection() {
         </div>
 
         <div className="home-middle-right">
-          <div className="home-table">
-            <table>
-              <thead>
-                <tr>
-                  <th>2023 IONIQ 6</th>
-                  <th>Starting at</th>
-                  <th>Up to</th>
-                  <th>Up to</th>
-                  <th>Available</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Electric Sedan</td>
-                  <td>$41,600</td>
-                  <td>361 miles</td>
-                  <td>320 hp</td>
-                  <td>20 inch wheels</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
+          <table>
+            <thead>
+              <tr>
+                <th className="car-name">2023 IONIQ 6</th>
+                <th>Starting at</th>
+                <th>Up to</th>
+                <th>Up to</th>
+                <th>Available</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Electric Sedan</td>
+                <td className="car-number">$41,600</td>
+                <td><span className="car-number">361</span> miles</td>
+                <td><span className="car-number">320</span> hp</td>
+                <td><span className="car-number">20</span> inch wheels</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
     </div>

@@ -7,6 +7,7 @@ import ShoppingTools from "./components/pages/ShoppingTools";
 import Vehicles from "./components/pages/Vehicles";
 import NavigationBar from "./components/NavigationBar";
 import Ioniq from "./components/pages/Ioniq";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path="/ShoppingTools" element={<ShoppingTools/>}/>
           <Route path="Ioniq" element={<Ioniq/>}/>
         </Routes>
+        <Footer/>
       </BrowserRouter>
     </div>
   );
