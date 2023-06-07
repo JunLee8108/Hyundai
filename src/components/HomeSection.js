@@ -1,6 +1,6 @@
 import "./HomeSection.css";
 import { Link } from "react-router-dom";
-import ioniq from "../assets/hyundia-ioniq-model2.jpg";
+import ioniq from "../assets/hyundai-ioniq-model.webp";
 
 function HomeSection() {
   return (
