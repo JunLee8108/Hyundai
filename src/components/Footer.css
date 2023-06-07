@@ -24,6 +24,16 @@ div {
     color: #D3D3D3;
 }
 
+.footer-item p:hover {
+    color: red;
+    transform: scale(1.1);
+    transition: all 0.2s linear;
+}
+
+.footer-link {
+    text-decoration: none;
+}
+
 
 
 @media screen and (max-width: 1200px) {

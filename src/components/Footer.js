@@ -1,5 +1,6 @@
 import "./Footer.css";
 import useMediaQuery from "@mui/material/useMediaQuery";
+import { Link } from "react-router-dom";
 
 function Footer() {
   const isMobile = useMediaQuery("(max-width: 600px)");
@@ -9,10 +10,14 @@ function Footer() {
         <div>
           <div className="footer-container">
             <div className="footer-item">
+            <Link 
+            to="/Vehicles"
+            className="footer-link">
               <h1>Vehicles</h1>
               <div className="arrow-symbol">
               ▼
               </div>
+              </Link>
               <div className="clean-both"></div>
             </div>
             <div className="footer-item">
@@ -46,6 +51,12 @@ function Footer() {
           <div className="footer-container">
             <div className="footer-item">
               <h1>Vehicles</h1>
+              <Link
+              to="/Vehicles"
+              className="footer-link"
+              >
+              <p>All Vehicles</p>
+              </Link>
               <p>SUVs</p>
               <p>Sedans</p>
               <p>Electrified</p>

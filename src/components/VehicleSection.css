@@ -7,7 +7,7 @@ div {
 }
 
 .vehicle-top h1 {
-    font-size: 40px;
+    font-size: 33px;
     font-weight: lighter;
     margin-left: 0px;
     color: black;
@@ -31,16 +31,16 @@ div {
     border-radius: 5px;
 }
 
-.vehicle-top-box:hover {
-    transition: all 0.2s linear;
-    transform: scale(1.05);
-}
-
 .vehicle-top-box img {
     margin-top: 160px;
     width: 100%;
     height: 200px;
     filter: brightness(90%) contrast(100%) saturate(150%);
+}
+
+.vehicle-top-box img:hover {
+    transition: all 0.2s linear;
+    transform: scale(1.05);
 }
 
 .vehicle-text-box {
@@ -59,7 +59,22 @@ div {
 
 .color-navy {
     color: navy;
+    font-size: 37px;
     font-weight: bold;
+}
+
+.vehicle-button {
+    width: 100px;
+    height: 50px;
+    margin: 10px;
+    border: none;
+}
+
+.vehicle-button:hover {
+    background-color: black;
+    color: white;
+    transition: all 0.2s linear;
+    transform: scale(1.1);
 }
 
 
@@ -69,19 +84,31 @@ div {
     }
 
     .vehicle-top h1 {
-        font-size: 30px;
+        font-size: 24px;
         margin-left: 0px;
     }
 
     .vehicle-top-box {
         height: 350px;
-        margin: 10px;
+        margin: 20px;
+        margin-bottom: 0px;
     }
 
     .vehicle-top-box img {
         margin-top: 120px;
         width: 100%;
-        height: 200px;
+        height: 150px;
         filter: brightness(90%) contrast(100%) saturate(150%);
+    }
+
+    .vehicle-text-box h1 {
+        padding: 5px;
+        border-left: 3px solid navy;
+    }
+
+    .color-navy {
+        color: navy;
+        font-size: 32px;
+        font-weight: bold;
     }
 }

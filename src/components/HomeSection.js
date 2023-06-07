@@ -24,7 +24,7 @@ function HomeSection() {
 
       <div className="home-bottom-background2 background-img">
         <div className="home-bottom-content home-top-content ">
-          <h3>Our all-electric small SUV</h3>
+          <h3>all-electric small SUV</h3>
           <h1>2023 KONA ELECTRIC</h1>
           <button className="button-learn-more">LEARN MORE</button>
         </div>
@@ -32,7 +32,7 @@ function HomeSection() {
 
       <div className="home-bottom-background3 background-img">
         <div className="home-bottom-content home-top-content ">
-          <h3>The first-ever, all electric 2023 IONIQ 6.</h3>
+          <h3>The first-ever, all electric.</h3>
           <h1>2023 IONIQ 6</h1>
           <Link to="/Ioniq">
             <button className="button-learn-more">LEARN MORE</button>

@@ -200,7 +200,7 @@ th {
 
     table {
         width: 100%;
-        padding: 30px;
+        padding: 10px;
     }
 
     th, td {
@@ -213,22 +213,17 @@ th {
     }
 
     .car-name {
-        color: navy;
         font-size: 12px;
-    }
-
-    .home-bottom-background {
-        height: 650px;
-    }
-
-    .home-bottom-background2 {
-        height: 650px;
     }
     
     .home-bottom-content {
-        font-size: 11px;
+        font-size: 14px;
         letter-spacing: 5px;
         top: 50%;
+    }
+
+    .car-number {
+        font-size: 12px;
     }
 }
 

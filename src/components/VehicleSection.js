@@ -7,41 +7,76 @@ function VehicleSection() {
   return (
     <div>
       <div className="vehicle-top">
-        <h1>ALL VEHICLES</h1>
         <div className="vehicle-top-container">
           <div className="vehicle-top-box">
             <img src={ioniq}></img>
             <div className="vehicle-text-box">
+              <p>⚡ ELECTRIFIED</p>
               <h1>
                 2023 <span className="color-navy">IONIQ 6</span>
               </h1>
+            </div>
+            <div style={{ textAlign: "center" }}>
+              <button className="vehicle-button">
+                <p>Explore</p>
+              </button>
+              <button className="vehicle-button">
+                <p>Budild</p>
+              </button>
+            </div>
+          </div>
+
+          <div className="vehicle-top-box">
+            <img src={kona}></img>
+            <div className="vehicle-text-box">
+              <p>⚡ ELECTRIFIED</p>
+              <h1>
+                2023 <span className="color-navy">KONA</span> Electric
+              </h1>
+            </div>
+            <div style={{ textAlign: "center" }}>
+              <button className="vehicle-button">
+                <p>Explore</p>
+              </button>
+              <button className="vehicle-button">
+                <p>Budild</p>
+              </button>
             </div>
           </div>
 
           <div className="vehicle-top-box">
             <img src={tucsan}></img>
             <div className="vehicle-text-box">
+              <p>HYBRID</p>
               <h1>
                 2023 <span className="color-navy">TUCSAN</span> Hybrid
               </h1>
             </div>
-          </div>
-
-          <div className="vehicle-top-box">
-            <img src={kona}></img>
-            <div className="vehicle-text-box">
-              <h1>
-                2023 <span className="color-navy">KONA</span> Electric
-              </h1>
+            <div style={{ textAlign: "center" }}>
+              <button className="vehicle-button">
+                <p>Explore</p>
+              </button>
+              <button className="vehicle-button">
+                <p>Budild</p>
+              </button>
             </div>
           </div>
 
           <div className="vehicle-top-box">
             <img src={kona}></img>
             <div className="vehicle-text-box">
+              <p>HYBRID</p>
               <h1>
                 2023 <span className="color-navy">KONA</span> Electric
               </h1>
+            </div>
+            <div style={{ textAlign: "center" }}>
+              <button className="vehicle-button">
+                <p>Explore</p>
+              </button>
+              <button className="vehicle-button">
+                <p>Budild</p>
+              </button>
             </div>
           </div>
         </div>
