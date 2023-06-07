@@ -58,7 +58,7 @@ function HomeSection() {
             </thead>
             <tbody>
               <tr>
-                <td>Electric Sedan</td>
+                <th>Electric Sedan</th>
                 <td className="car-number">$41,600</td>
                 <td><span className="car-number">361</span> miles</td>
                 <td><span className="car-number">320</span> hp</td>

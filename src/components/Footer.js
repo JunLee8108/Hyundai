@@ -1,6 +1,5 @@
 import "./Footer.css";
 import useMediaQuery from "@mui/material/useMediaQuery";
-import ioniq from "../assets/hyundia-ioniq-model2.jpg";
 
 function Footer() {
   const isMobile = useMediaQuery("(max-width: 600px)");

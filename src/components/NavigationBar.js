@@ -1,6 +1,7 @@
 import "./NavigationBar.css";
 import { Link } from "react-router-dom";
 import useMediaQuery from "@mui/material/useMediaQuery";
+import hyundaiLogo from "../assets/hyundai-logo.webp"
 
 function NavigationBar() {
   const isMobile = useMediaQuery("(max-width: 600px)");
@@ -10,10 +11,10 @@ function NavigationBar() {
     return (
       <div className="nav-container">
         <nav>
-          <img className="hyundai-logo" src="img/hyundai.png" alt="logo"></img>
+          <img className="hyundai-logo" src={hyundaiLogo} alt="logo"></img>
           <li className="company-name">
             <Link className="nav-item-company" to="/">
-              Hyundai
+              HYUNDAI
             </Link>
           </li>
         </nav>
@@ -29,12 +30,12 @@ function NavigationBar() {
           <ul>
             <img
               className="hyundai-logo"
-              src="img/hyundai.png"
+              src={hyundaiLogo}
               alt="logo"
             ></img>
             <li className="company-name">
               <Link className="nav-item-company" to="/">
-                Hyundai
+                HYUNDAI
               </Link>
             </li>
 

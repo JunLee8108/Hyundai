@@ -8,32 +8,44 @@ div {
 
 .vehicle-top h1 {
     font-size: 40px;
-    margin-left: 4px;
+    font-weight: lighter;
+    margin-left: 0px;
+    color: black;
+    text-align: center;
 }
 
 .vehicle-top-container {
     width: 100%;
     display: flex;
     margin-bottom: 50px;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .vehicle-top-box {
-    width: 100%;
-    height: 600px;
-    background-color: red;
-    margin: 5px;
+    width: 90%;
+    max-width: 600px;
+    height: 450px;
+    margin: 50px;
     position: relative;
+    border-radius: 5px;
+}
+
+.vehicle-top-box:hover {
+    transition: all 0.2s linear;
+    transform: scale(1.05);
 }
 
 .vehicle-top-box img {
+    margin-top: 160px;
     width: 100%;
-    height: 600px;
-    border-radius: 5px;
+    height: 200px;
+    filter: brightness(90%) contrast(100%) saturate(150%);
 }
 
 .vehicle-text-box {
     position: absolute;
-    color: white;
+    color: black;
     left: 5%;
     top: 0%;
 }
@@ -42,5 +54,34 @@ div {
     padding-top: 5px;
     padding-bottom: 5px;
     padding: 10px;
-    border-left: 3px solid white;
+    border-left: 4px solid navy;
+}
+
+.color-navy {
+    color: navy;
+    font-weight: bold;
+}
+
+
+@media screen and (max-width: 767px) {
+    .vehicle-top {
+        padding: 20px;
+    }
+
+    .vehicle-top h1 {
+        font-size: 30px;
+        margin-left: 0px;
+    }
+
+    .vehicle-top-box {
+        height: 350px;
+        margin: 10px;
+    }
+
+    .vehicle-top-box img {
+        margin-top: 120px;
+        width: 100%;
+        height: 200px;
+        filter: brightness(90%) contrast(100%) saturate(150%);
+    }
 }
