@@ -1,6 +1,7 @@
 import "./Footer.css";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { Link } from "react-router-dom";
+import Accordion from 'react-bootstrap/Accordion';
 
 function Footer() {
   const isMobile = useMediaQuery("(max-width: 600px)");
