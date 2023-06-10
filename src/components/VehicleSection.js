@@ -2,6 +2,7 @@ import "./VehicleSection.css";
 import ioniq from "../assets/hyundai-ioniq-model.webp";
 import kona from "../assets/kona-ev.webp";
 import tucsan from "../assets/tucson-hb.webp";
+import sonata from "../assets/sonata.webp"
 
 function VehicleSection() {
   return (
@@ -31,7 +32,7 @@ function VehicleSection() {
             <div className="vehicle-text-box">
               <p>⚡ ELECTRIFIED</p>
               <h1>
-                2023 <span className="color-navy">KONA</span> Electric
+                2023 <span className="color-navy">KONA</span> ELECTRIC
               </h1>
             </div>
             <div style={{ textAlign: "center" }}>
@@ -56,18 +57,18 @@ function VehicleSection() {
               <button className="vehicle-button">
                 <p>Explore</p>
               </button>
-              <button className="vehicle-button">
+              <button className="vehicle-button"> 
                 <p>Budild</p>
               </button>
             </div>
           </div>
 
           <div className="vehicle-top-box">
-            <img src={kona}></img>
+            <img src={sonata}></img>
             <div className="vehicle-text-box">
               <p>HYBRID</p>
               <h1>
-                2023 <span className="color-navy">KONA</span> Electric
+                2023 <span className="color-navy">SONATA</span> Hybrid
               </h1>
             </div>
             <div style={{ textAlign: "center" }}>

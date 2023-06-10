@@ -41,11 +41,12 @@ function HomeSection() {
       </div>
 
       <div className="home-middle-background">
-        <div className="home-middle-left">
+        <div className="home-middle-left align-center">
+          <p>«</p>
           <img src={ioniq}></img>
+          <p>»</p>
         </div>
-
-        <div className="home-middle-right">
+        <div className="home-middle-right align-center">
           <table>
             <thead>
               <tr>
@@ -60,9 +61,15 @@ function HomeSection() {
               <tr>
                 <th>Electric Sedan</th>
                 <td className="car-number">$41,600</td>
-                <td><span className="car-number">361</span> miles</td>
-                <td><span className="car-number">320</span> hp</td>
-                <td><span className="car-number">20</span> inch wheels</td>
+                <td>
+                  <span className="car-number">361</span> miles
+                </td>
+                <td>
+                  <span className="car-number">320</span> hp
+                </td>
+                <td>
+                  <span className="car-number">20</span> inch wheels
+                </td>
               </tr>
             </tbody>
           </table>

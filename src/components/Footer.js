@@ -58,9 +58,6 @@ function Footer() {
               >
               <p>All Vehicles</p>
               </Link>
-              <p>SUVs</p>
-              <p>Sedans</p>
-              <p>Electrified</p>
             </div>
             <div className="footer-item">
               <h1>Shopping Tools</h1>

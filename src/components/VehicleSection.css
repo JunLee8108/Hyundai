@@ -68,6 +68,7 @@ div {
     height: 50px;
     margin: 10px;
     border: none;
+    color: black;
 }
 
 .vehicle-button:hover {
