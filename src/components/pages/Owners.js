@@ -1,5 +1,11 @@
+import OwnerSection from "../OwnerSection";
+
 function Owners(props) {
-  return <div>Cart</div>;
+  return (
+    <div>
+      <OwnerSection />
+    </div>
+  );
 }
 
 export default Owners;
