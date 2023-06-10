@@ -1,12 +1,12 @@
 .home-top-background {
     width: 100%;
-    height: 100vh;
     filter: brightness(90%) contrast(150%) saturate(150%);
-    position: relative;
     background-image: url(../../public/img/pexels-hyundai-motor-group-11159145.webp);
 }
 
 .background-img {
+    height: 100vh;
+    position: relative;
     background-repeat: repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -116,24 +116,18 @@ th {
 }
 
 .home-bottom-background {
-    height: 100vh;
     background-image: url(../../public/img/hyundai-grey.webp);
     filter: brightness(90%) contrast(120%) saturate(200%);
-    position: relative;
 }
 
 .home-bottom-background2 {
-    height: 100vh;
     background-image: url(../../public/img/hyundai-kona.webp);
     filter: brightness(100%) contrast(110%) saturate(140%);
-    position: relative;
 }
 
 .home-bottom-background3 {
-    height: 100vh;
     background-image: url(../../public/img/ioniq.webp);
     filter: brightness(100%) contrast(110%) saturate(160%);
-    position: relative;
 }
 
 .home-bottom-content {
@@ -151,13 +145,23 @@ th {
         background-image: url(../../public/img/hyundai-mobile.webp);
     }
 
+    .home-bottom-background {
+        background-image: url(../../public/img/hyundai-grey-mobile.webp);
+        filter: brightness(90%) contrast(120%) saturate(150%);
+    }
+
+    .home-bottom-background3 {
+        background-image: url(../../public/img/ioniq-mobile.webp);
+        filter: brightness(100%) contrast(110%) saturate(160%);
+    }
+
     .background-img {
         background-attachment: scroll;
     }
 
     .home-top-content {
         font-size: 14px;
-        line-height: 60px;
+        line-height: 50px;
         letter-spacing: 6px;
         top: 38%;
     }
@@ -213,6 +217,7 @@ th {
     .home-bottom-content {
         font-size: 14px;
         letter-spacing: 5px;
+        line-height: 30px;
         top: 50%;
     }
 
