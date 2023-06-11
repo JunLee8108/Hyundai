@@ -1,3 +1,11 @@
+/* Safari 7.1+ */
+_::-webkit-full-page-media,
+_:future,
+:root .background-img {
+    background-attachment: scroll;
+}
+
+
 .home-top-background {
     width: 100%;
     filter: brightness(90%) contrast(150%) saturate(150%);
@@ -23,7 +31,7 @@
     position: absolute;
     top: 40%;
     left: 50%;
-    transform:translate(-50%, -50%);
+    transform: translate(-50%, -50%);
 }
 
 .logo-style {
@@ -35,9 +43,9 @@
     width: 130px;
     font-weight: bold;
     border: none;
-    border-radius: 5px;
     height: 50px;
     cursor: pointer;
+    background-color: ghostwhite;
 }
 
 .button-learn-more:hover {
@@ -71,7 +79,7 @@
     transition: all 0.2s linear;
 }
 
-.home-middle-left img{
+.home-middle-left img {
     width: 80%;
     max-width: 800px;
     padding: 10px;
@@ -80,7 +88,7 @@
 .home-middle-right {
     width: 100%;
     height: 200px;
-    background-color:ghostwhite;
+    background-color: ghostwhite;
     display: flex;
 }
 
@@ -92,7 +100,8 @@ table {
     box-sizing: border-box;
 }
 
-th, td {
+th,
+td {
     padding: 0px;
     font-size: 18px;
 }
@@ -169,7 +178,7 @@ th {
         font-size: 35px;
         letter-spacing: 5px;
     }
-    
+
     .button-learn-more {
         width: 110px;
         font-size: 12px;
@@ -200,7 +209,8 @@ th {
         padding: 10px;
     }
 
-    th, td {
+    th,
+    td {
         padding: 5px;
         font-size: 9px;
     }
@@ -212,7 +222,7 @@ th {
     .car-name {
         font-size: 12px;
     }
-    
+
     .home-bottom-content {
         font-size: 14px;
         letter-spacing: 5px;
@@ -224,4 +234,3 @@ th {
         font-size: 12px;
     }
 }
-
