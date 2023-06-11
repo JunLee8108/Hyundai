@@ -18,7 +18,7 @@ function HomeSection() {
         <div className="home-bottom-content home-top-content ">
           <h3>All-purpose hybrid SUV</h3>
           <h1>2023 TUCSON HYBRID</h1>
-          <button className="button-learn-more">LEARN MORE</button>
+          <button className="button-learn-more">EXPLORE</button>
         </div>
       </div>
 
@@ -35,7 +35,7 @@ function HomeSection() {
           <h3>The first-ever, all electric</h3>
           <h1>2023 IONIQ 6</h1>
           <Link to="/Ioniq">
-            <button className="button-learn-more">LEARN MORE</button>
+            <button className="button-learn-more">EXPLORE</button>
           </Link>
         </div>
       </div>

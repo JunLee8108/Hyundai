@@ -5,11 +5,10 @@ function ShoppingTools(props) {
     <div>
       <motion.div 
   initial={{ x: "100%" }}
-  animate={{ x: "calc(100vw - 50%)" }}
-      whileHover="hover"
+  animate={{ x: "45%" }}
       transition={{delay:0.3}}
       >
-        <h1>asdasd</h1>
+        <h1 style={{margin: "0px"}}>asdasd</h1>
       </motion.div>
     </div>
   );

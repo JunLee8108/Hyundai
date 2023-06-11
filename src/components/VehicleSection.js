@@ -6,7 +6,7 @@ import sonata from "../assets/sonata.webp"
 
 function VehicleSection() {
   return (
-    <div>
+    <div style={{backgroundColor: "ghostwhite"}}>
       <div className="vehicle-top">
         <div className="vehicle-top-container">
           <div className="vehicle-top-box">

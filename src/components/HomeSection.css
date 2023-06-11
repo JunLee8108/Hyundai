@@ -69,7 +69,6 @@
 .home-middle-left p:hover {
     transform: scale(1.2);
     transition: all 0.2s linear;
-    color: navy;
 }
 
 .home-middle-left img{
@@ -217,7 +216,7 @@ th {
     .home-bottom-content {
         font-size: 14px;
         letter-spacing: 5px;
-        line-height: 30px;
+        line-height: 40px;
         top: 50%;
     }
 
