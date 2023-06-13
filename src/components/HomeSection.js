@@ -1,8 +1,73 @@
 import "./HomeSection.css";
 import { Link } from "react-router-dom";
 import ioniq from "../assets/hyundai-ioniq-model.webp";
+import kona from "../assets/kona-ev.webp";
+import sonata from "../assets/sonata.webp";
+import tucson from "../assets/tucson-hb.webp";
+import { useState } from "react";
 
 function HomeSection() {
+  let [count, setCount] = useState(0);
+  let [numForMiles, setNumForMile] = useState(0);
+  let [numForAvailable, setNumAvailable] = useState(0);
+  const milesOrMPG = ["miles", "MPG Hwy"];
+  const available = [" inch wheels", ""];
+  const carName = [
+    "2023 IONIQ 6",
+    "2023 KONA ELECTRIC",
+    "2023 SONATA HYBTID",
+    "2023 TUCSON HYBRID",
+  ];
+  const carType = [
+    "Electric Sedan",
+    "Electric SUV",
+    "Hybrid Sedan",
+    "Modern Compact SUV",
+  ];
+  const carPrice = [
+    "41,600",
+    "33,550",
+    "28,250",
+    "31,350",
+  ];
+  const carPower = ["320", "201", "192", "226"];
+  const carWheel = ["20", "17", "17", "HTRAC AWD"];
+  const carMiles = ["361", "258", "54", "38"];
+  const carImage = [ioniq, kona, sonata, tucson];
+
+  const carInfoForward = () => {
+    if (count < carImage.length - 1) {
+      count += 1;
+      setCount(count);
+    }
+    if (count == 0 || count == 1) {
+      setNumForMile(0);
+    } else {
+      setNumForMile(1);
+    }
+    if (count == 3) {
+      setNumAvailable(1);
+    } else {
+      setNumAvailable(0);
+    }
+  };
+
+  const carInfoBackward = () => {
+    if (count > 0 && count <= carImage.length - 1) {
+      setCount((count -= 1));
+    }
+    if (count == 0 || count == 1) {
+      setNumForMile(0);
+    } else {
+      setNumForMile(1);
+    }
+    if (count == 3) {
+      setNumAvailable(1);
+    } else {
+      setNumAvailable(0);
+    }
+  };
+
   return (
     <div>
       <div className="home-top-background background-img">
@@ -42,15 +107,15 @@ function HomeSection() {
 
       <div className="home-middle-background">
         <div className="home-middle-left align-center">
-          <p>«</p>
-          <img src={ioniq}></img>
-          <p>»</p>
+          <p onClick={carInfoBackward}>«</p>
+          <img src={carImage[count]}></img>
+          <p onClick={carInfoForward}>»</p>
         </div>
         <div className="home-middle-right align-center">
           <table>
             <thead>
               <tr>
-                <th className="car-name">2023 IONIQ 6</th>
+                <th className="car-name">{carName[count]}</th>
                 <th>Starting at</th>
                 <th>Up to</th>
                 <th>Up to</th>
@@ -59,16 +124,18 @@ function HomeSection() {
             </thead>
             <tbody>
               <tr>
-                <th>Electric Sedan</th>
-                <td className="car-number">$41,600</td>
+                <th>{carType[count]}</th>
+                <td className="car-number">${carPrice[count]}</td>
                 <td>
-                  <span className="car-number">361</span> miles
+                  <span className="car-number">{carMiles[count]}</span>{" "}
+                  {milesOrMPG[numForMiles]}
                 </td>
                 <td>
-                  <span className="car-number">320</span> hp
+                  <span className="car-number">{carPower[count]}</span> hp
                 </td>
                 <td>
-                  <span className="car-number">20</span> inch wheels
+                  <span className="car-number">{carWheel[count]}</span>
+                  {available[numForAvailable]}
                 </td>
               </tr>
             </tbody>
