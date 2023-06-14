@@ -35,11 +35,17 @@ function HomeSection() {
       count += 1;
       setCount(count);
     }
+    else if (count == carImage.length -1) {
+      count = 0;
+      setCount(count);
+    }
+
     if (count == 0 || count == 1) {
       setNumForMile(0);
     } else {
       setNumForMile(1);
     }
+
     if (count == 3) {
       setNumAvailable(1);
     } else {
@@ -51,11 +57,17 @@ function HomeSection() {
     if (count > 0 && count <= carImage.length - 1) {
       setCount((count -= 1));
     }
+    else if (count == 0) {
+      count = 3;
+      setCount(count);
+    }
+
     if (count == 0 || count == 1) {
       setNumForMile(0);
     } else {
       setNumForMile(1);
     }
+
     if (count == 3) {
       setNumAvailable(1);
     } else {
@@ -75,10 +87,8 @@ function HomeSection() {
           <h1>
             Your Car with, <span className="logo-style">Hyundai</span>
           </h1>
-          <Link
-          to="/Vehicles"
-          >
-          <button className="button-learn-more">LEARN MORE</button>
+          <Link to="/Vehicles">
+            <button className="button-learn-more">LEARN MORE</button>
           </Link>
         </div>
       </div>

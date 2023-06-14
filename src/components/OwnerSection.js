@@ -2,7 +2,7 @@ import "./OwnerSection.css";
 
 function OwnerSection() {
   return (
-    <div>
+    <div style={{background: "radial-gradient(circle at 40.1% 80.8%, rgb(50, 50, 50) 0%, rgb(0, 0, 0) 99.4%)"}}>
       <div className="Owner-container">
         <div className="login">
           <form>

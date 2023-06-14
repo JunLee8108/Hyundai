@@ -44,6 +44,7 @@ _:future,
     border: none;
     height: 50px;
     cursor: pointer;
+    border-radius: 5px;
     background-color: ghostwhite;
 }
 

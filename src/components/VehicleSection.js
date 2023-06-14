@@ -3,6 +3,7 @@ import ioniq from "../assets/hyundai-ioniq-model.webp";
 import kona from "../assets/kona-ev.webp";
 import tucsan from "../assets/tucson-hb.webp";
 import sonata from "../assets/sonata.webp"
+import { Link } from "react-router-dom";
 
 function VehicleSection() {
   return (
@@ -18,9 +19,13 @@ function VehicleSection() {
               </h1>
             </div>
             <div style={{ textAlign: "center" }}>
+              <Link
+              to="/Ioniq"
+              >
               <button className="vehicle-button">
                 <p>Explore</p>
               </button>
+              </Link>
               <button className="vehicle-button">
                 <p>Budild</p>
               </button>

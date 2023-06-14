@@ -58,7 +58,7 @@ div {
 }
 
 .color-navy {
-    color:snow;
+    color: snow;
     font-size: 37px;
     font-weight: bold;
 }
@@ -104,7 +104,7 @@ div {
 
     .vehicle-text-box h1 {
         padding: 5px;
-        border-left: 4px solid;
+        border-left: 3px solid;
     }
 
     .color-navy {
