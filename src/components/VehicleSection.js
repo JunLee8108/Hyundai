@@ -6,11 +6,11 @@ import sonata from "../assets/sonata.webp"
 
 function VehicleSection() {
   return (
-    <div style={{backgroundColor: "ghostwhite"}}>
+    <div style={{background: "radial-gradient(circle at 40.1% 80.8%, rgb(50, 50, 50) 0%, rgb(0, 0, 0) 99.4%)"}}>
       <div className="vehicle-top">
         <div className="vehicle-top-container">
           <div className="vehicle-top-box">
-            <img src={ioniq}></img>
+            <img src={ioniq} alt="car-IONIQ"></img>
             <div className="vehicle-text-box">
               <p>⚡ ELECTRIFIED</p>
               <h1>
@@ -28,7 +28,7 @@ function VehicleSection() {
           </div>
 
           <div className="vehicle-top-box">
-            <img src={kona}></img>
+            <img src={kona} alt="car-KONA"></img>
             <div className="vehicle-text-box">
               <p>⚡ ELECTRIFIED</p>
               <h1>
@@ -46,7 +46,7 @@ function VehicleSection() {
           </div>
 
           <div className="vehicle-top-box">
-            <img src={tucsan}></img>
+            <img src={tucsan} alt="car-TUCSAN"></img>
             <div className="vehicle-text-box">
               <p>HYBRID</p>
               <h1>
@@ -64,7 +64,7 @@ function VehicleSection() {
           </div>
 
           <div className="vehicle-top-box">
-            <img src={sonata}></img>
+            <img src={sonata} alt="car-SONATA"></img>
             <div className="vehicle-text-box">
               <p>HYBRID</p>
               <h1>

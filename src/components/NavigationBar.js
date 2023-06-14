@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import hyundaiLogo from "../assets/hyundai-logo.webp";
 import account from "../assets/user.webp";
+import { useState } from "react";
 
 function NavigationBar() {
   const isMobile = useMediaQuery("(max-width: 600px)");
@@ -31,23 +32,23 @@ function NavigationBar() {
           <ul>
             <div>
               <img className="hyundai-logo" src={hyundaiLogo} alt="logo"></img>
-              <li className="company-name">
+              <li className="company-name" id="button1">
                 <Link className="nav-item-company" to="/">
                   HYUNDAI
                 </Link>
               </li>
-              <li style={{ float: "left" }}>
+              <li style={{ float: "left" }} id="button2">
                 <Link className="nav-item-company" to="/Vehicles">
                   VEHICLES
                 </Link>
               </li>
-              <li style={{ float: "left" }}>
+              <li style={{ float: "left" }} id="button3">
                 <Link className="nav-item-company" to="/ShoppingTools">
                   BUILD YOUR OWN
                 </Link>
               </li>
-              <li style={{ float: "left" }}>
-                <Link className="nav-item-company" to="/ShoppingTools">
+              <li style={{ float: "left" }} id="button4">
+                <Link className="nav-item-company" to="/About">
                   ABOUT
                 </Link>
               </li>
@@ -58,6 +59,7 @@ function NavigationBar() {
                 src={account}
                 width="20px"
                 style={{ marginRight: "-10px" }}
+                alt="account-logo"
               ></img>
               <li>
                 <Link className="nav-item-company" to="/Owners">

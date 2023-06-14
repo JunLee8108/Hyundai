@@ -76,6 +76,7 @@ _:future,
 .home-middle-left p:hover {
     transform: scale(1.2);
     transition: all 0.2s linear;
+    color: red;
 }
 
 .home-middle-left img {

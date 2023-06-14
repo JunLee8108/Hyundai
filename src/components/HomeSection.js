@@ -4,7 +4,7 @@ import ioniq from "../assets/hyundai-ioniq-model.webp";
 import kona from "../assets/kona-ev.webp";
 import sonata from "../assets/sonata.webp";
 import tucson from "../assets/tucson-hb.webp";
-import { useState } from "react";
+import { useState, useRef } from "react";
 
 function HomeSection() {
   let [count, setCount] = useState(0);
@@ -15,7 +15,7 @@ function HomeSection() {
   const carName = [
     "2023 IONIQ 6",
     "2023 KONA ELECTRIC",
-    "2023 SONATA HYBTID",
+    "2023 SONATA HYBRID",
     "2023 TUCSON HYBRID",
   ];
   const carType = [
@@ -24,12 +24,7 @@ function HomeSection() {
     "Hybrid Sedan",
     "Modern Compact SUV",
   ];
-  const carPrice = [
-    "41,600",
-    "33,550",
-    "28,250",
-    "31,350",
-  ];
+  const carPrice = ["41,600", "33,550", "28,250", "31,350"];
   const carPower = ["320", "201", "192", "226"];
   const carWheel = ["20", "17", "17", "HTRAC AWD"];
   const carMiles = ["361", "258", "54", "38"];
@@ -68,6 +63,11 @@ function HomeSection() {
     }
   };
 
+  const carInfoRef = useRef(null);
+  const clickToInfo = () => {
+    carInfoRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <div>
       <div className="home-top-background background-img">
@@ -75,7 +75,11 @@ function HomeSection() {
           <h1>
             Your Car with, <span className="logo-style">Hyundai</span>
           </h1>
+          <Link
+          to="/Vehicles"
+          >
           <button className="button-learn-more">LEARN MORE</button>
+          </Link>
         </div>
       </div>
 
@@ -83,7 +87,9 @@ function HomeSection() {
         <div className="home-bottom-content home-top-content ">
           <h3>All-purpose hybrid SUV</h3>
           <h1>2023 TUCSON HYBRID</h1>
-          <button className="button-learn-more">EXPLORE</button>
+          <button className="button-learn-more" onClick={clickToInfo}>
+            EXPLORE
+          </button>
         </div>
       </div>
 
@@ -99,16 +105,16 @@ function HomeSection() {
         <div className="home-bottom-content home-top-content ">
           <h3>The first-ever, all electric</h3>
           <h1>2023 IONIQ 6</h1>
-          <Link to="/Ioniq">
-            <button className="button-learn-more">EXPLORE</button>
-          </Link>
+          <button className="button-learn-more" onClick={clickToInfo}>
+            EXPLORE
+          </button>
         </div>
       </div>
 
-      <div className="home-middle-background">
+      <div className="home-middle-background" ref={carInfoRef}>
         <div className="home-middle-left align-center">
           <p onClick={carInfoBackward}>«</p>
-          <img src={carImage[count]}></img>
+          <img src={carImage[count]} alt="car-information"></img>
           <p onClick={carInfoForward}>»</p>
         </div>
         <div className="home-middle-right align-center">

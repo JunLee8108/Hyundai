@@ -6,11 +6,11 @@ function OwnerSection() {
       <div className="Owner-container">
         <div className="login">
           <form>
-            <h2>MY HYUNDAI,</h2>
-            <p>Hyundai ID</p>
-            <input type="text"></input>
-            <p>Password</p>
-            <input type="password"></input>
+            <h2>MY HYUNDAI</h2>
+            <label htmlFor="loginID"><p>Hyundai ID</p></label>
+            <input type="text" id="loginID"></input>
+            <label htmlFor="loginPW"><p>Password</p></label>
+            <input type="password" id="loginPW"></input>
             <p className="underline">Forgot your password?</p>
             <center>
               <button type="submit">Login</button>

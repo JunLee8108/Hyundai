@@ -10,7 +10,7 @@ div {
     font-size: 33px;
     font-weight: lighter;
     margin-left: 0px;
-    color: black;
+    color: white;
     text-align: center;
 }
 
@@ -45,7 +45,7 @@ div {
 
 .vehicle-text-box {
     position: absolute;
-    color: black;
+    color: white;
     left: 5%;
     top: 0%;
 }
@@ -54,11 +54,11 @@ div {
     padding-top: 5px;
     padding-bottom: 5px;
     padding: 10px;
-    border-left: 4px solid navy;
+    border-left: 4px solid snow;
 }
 
 .color-navy {
-    color: navy;
+    color:snow;
     font-size: 37px;
     font-weight: bold;
 }
@@ -104,11 +104,10 @@ div {
 
     .vehicle-text-box h1 {
         padding: 5px;
-        border-left: 3px solid navy;
+        border-left: 4px solid;
     }
 
     .color-navy {
-        color: navy;
         font-size: 32px;
         font-weight: bold;
     }

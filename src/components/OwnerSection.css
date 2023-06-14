@@ -71,6 +71,7 @@ input[type="password"], input[type="text"] {
     .Owner-container {
         height: 90vh;
         background-attachment: scroll;
+        background: linear-gradient(to right, #434343 0%, black 100%);
     }
 
     .login {
