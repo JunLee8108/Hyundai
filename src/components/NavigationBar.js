@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import hyundaiLogo from "../assets/hyundai-logo.webp";
 import account from "../assets/user.webp";
+import menu from "../assets/main-menu.png";
 import { useState } from "react";
 
 function NavigationBar() {
@@ -19,8 +20,12 @@ function NavigationBar() {
               HYUNDAI
             </Link>
           </li>
+          <li className="mobile-menu">
+            <img src={menu}></img>
+          </li>
         </nav>
         <div className="clear-both"></div>
+        <Modal/>
       </div>
     );
   }
@@ -73,6 +78,13 @@ function NavigationBar() {
       </div>
     );
   }
+}
+
+function Modal() {
+  return (
+  <div className="nav-modal">
+    zxczxc
+  </div>);
 }
 
 export default NavigationBar;

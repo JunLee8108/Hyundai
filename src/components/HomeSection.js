@@ -11,7 +11,7 @@ function HomeSection() {
   let [numForMiles, setNumForMile] = useState(0);
   let [numForAvailable, setNumAvailable] = useState(0);
   const milesOrMPG = ["miles", "MPG Hwy"];
-  const available = [" inch wheels", ""];
+  const available = [" inch wheels", "."];
   const carName = [
     "2023 IONIQ 6",
     "2023 KONA ELECTRIC",

@@ -40,6 +40,22 @@ nav li {
     color: white;
 }
 
+.mobile-menu {
+    float: right;
+    margin-top: -20px; 
+}
+
+.mobile-menu img {
+    width: 20px;
+    height: 20px;
+}
+
+.nav-modal {
+    background-color: snow;
+    height: 300px;
+    padding: 20px;
+}
+
 .nav-item-company {
     text-decoration: none;
     color: white;
