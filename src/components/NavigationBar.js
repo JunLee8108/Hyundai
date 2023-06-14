@@ -4,10 +4,26 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 import hyundaiLogo from "../assets/hyundai-logo.webp";
 import account from "../assets/user.webp";
 import menu from "../assets/main-menu.png";
+import deleteButton from "../assets/delete-button.png";
 import { useState } from "react";
 
 function NavigationBar() {
   const isMobile = useMediaQuery("(max-width: 600px)");
+
+  let [modal, setModal] = useState(false);
+
+  const modalImage = [menu, deleteButton];
+  let [imageNum, setImageNum] = useState(0);
+
+  const modalControl = () => {
+    if (modal) {
+      setModal(false);
+      setImageNum(0);
+    } else {
+      setModal(true);
+      setImageNum(1);
+    }
+  };
 
   // If it's mobile
   if (isMobile) {
@@ -15,17 +31,32 @@ function NavigationBar() {
       <div className="nav-container">
         <nav>
           <img className="hyundai-logo" src={hyundaiLogo} alt="logo"></img>
-          <li className="company-name">
+          <li className="company-name" onClick={modalControl}>
             <Link className="nav-item-company" to="/">
               HYUNDAI
             </Link>
           </li>
           <li className="mobile-menu">
-            <img src={menu}></img>
+            <img src={modalImage[imageNum]} onClick={modalControl}></img>
           </li>
         </nav>
         <div className="clear-both"></div>
-        <Modal/>
+        {modal == true ? (
+          <div className="nav-modal">
+            <ul>
+              <Link to="/Vehicles" className="modal-style">
+                <li onClick={modalControl}>VEHICLES</li>
+              </Link>
+              <li>BUILD YOUR OWN</li>
+              <Link to="/About" className="modal-style">
+                <li onClick={modalControl}>ABOUT</li>
+              </Link>
+              <Link to="/Owners" className="modal-style">
+                <li onClick={modalControl}>MY HYUNDAI</li>
+              </Link>
+            </ul>
+          </div>
+        ) : null}
       </div>
     );
   }
@@ -78,13 +109,6 @@ function NavigationBar() {
       </div>
     );
   }
-}
-
-function Modal() {
-  return (
-  <div className="nav-modal">
-    zxczxc
-  </div>);
 }
 
 export default NavigationBar;
