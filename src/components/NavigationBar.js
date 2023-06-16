@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import hyundaiLogo from "../assets/hyundai-logo.webp";
 import account from "../assets/user.webp";
-import menu from "../assets/main-menu.png";
-import deleteButton from "../assets/delete-button.png";
+import menu from "../assets/main-menu.webp";
+import deleteButton from "../assets/delete-button.webp";
 import { useState } from "react";
 
 function NavigationBar() {
@@ -45,14 +45,14 @@ function NavigationBar() {
           <div className="nav-modal">
             <ul>
               <Link to="/Vehicles" className="modal-style">
-                <li onClick={modalControl}>VEHICLES</li>
+                <li onClick={modalControl}>‣ VEHICLES</li>
               </Link>
-              <li>BUILD YOUR OWN</li>
+              <li>‣ BUILD YOUR OWN</li>
               <Link to="/About" className="modal-style">
-                <li onClick={modalControl}>ABOUT</li>
+                <li onClick={modalControl}>‣ ABOUT</li>
               </Link>
               <Link to="/Owners" className="modal-style">
-                <li onClick={modalControl}>MY HYUNDAI</li>
+                <li onClick={modalControl}>‣ MY HYUNDAI</li>
               </Link>
             </ul>
           </div>
