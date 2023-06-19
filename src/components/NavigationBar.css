@@ -52,7 +52,7 @@ nav li {
 }
 
 .nav-modal {
-    background-color: silver;
+    background: radial-gradient(circle at 10% 20%, rgb(0, 0, 0) 0%, rgb(64, 64, 64) 90.2%);
     width: 100%;
     height: 300px;
     padding-top: 30px;
@@ -60,9 +60,11 @@ nav li {
 
 .nav-modal li {
     list-style-type: none;
-    margin-top: 5px;
+    margin-top: 1px;
     margin-bottom: 50px;
+    font-size: 18px;
     font-weight: bold;
+    color: white;
 }
 
 .nav-modal li:visited {
@@ -74,7 +76,6 @@ nav li {
 }
 
 .modal-style {
-    color: black;
     text-decoration: none;
 }
 

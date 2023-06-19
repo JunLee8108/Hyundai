@@ -19,15 +19,18 @@ function NavigationBar() {
     if (modal) {
       setModal(false);
       setImageNum(0);
+      document.body.style.overflow = "unset";
     } else {
       setModal(true);
       setImageNum(1);
+      document.body.style.overflow = "hidden";
     }
   };
 
   const modalControlFalse = () => {
     setImageNum(0);
     setModal(false);
+    document.body.style.overflow = "unset";
   }
 
   // If it's mobile
@@ -50,14 +53,14 @@ function NavigationBar() {
           <div className="nav-modal">
             <ul>
               <Link to="/Vehicles" className="modal-style">
-                <li onClick={modalControl}>‣ VEHICLES</li>
+                <li onClick={modalControl}>‣ Vehicles</li>
               </Link>
-              <li>‣ BUILD YOUR OWN</li>
+              <li>‣ Build Your Own</li>
               <Link to="/About" className="modal-style">
-                <li onClick={modalControl}>‣ ABOUT</li>
+                <li onClick={modalControl}>‣ About Hyundai</li>
               </Link>
               <Link to="/Owners" className="modal-style">
-                <li onClick={modalControl}>‣ MY HYUNDAI</li>
+                <li onClick={modalControl}>‣ Login to My Hyundai</li>
               </Link>
             </ul>
           </div>
