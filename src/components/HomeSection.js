@@ -32,12 +32,9 @@ function HomeSection() {
 
   const carInfoForward = () => {
     if (count < carImage.length - 1) {
-      count += 1;
-      setCount(count);
-    }
-    else if (count == carImage.length -1) {
-      count = 0;
-      setCount(count);
+      setCount((count += 1));
+    } else if (count == carImage.length - 1) {
+      setCount(count = 0);
     }
 
     if (count == 0 || count == 1) {
@@ -56,10 +53,8 @@ function HomeSection() {
   const carInfoBackward = () => {
     if (count > 0 && count <= carImage.length - 1) {
       setCount((count -= 1));
-    }
-    else if (count == 0) {
-      count = 3;
-      setCount(count);
+    } else if (count == 0) {
+      setCount(count=3);
     }
 
     if (count == 0 || count == 1) {
@@ -123,10 +118,17 @@ function HomeSection() {
 
       <div className="home-middle-background" ref={carInfoRef}>
         <div className="home-middle-left align-center">
-          <p onClick={carInfoBackward}>«</p>
-          <img src={carImage[count]} alt="car-information"></img>
-          <p onClick={carInfoForward}>»</p>
+          <div className="home-middle-left-flexbox1" onClick={carInfoBackward}>
+            <p>«</p>
+          </div>
+          <div className="home-middle-left-flexbox2">
+            <img src={carImage[count]} alt="car-information"></img>
+          </div>
+          <div className="home-middle-left-flexbox3" onClick={carInfoForward}>
+            <p>»</p>
+          </div>
         </div>
+
         <div className="home-middle-right align-center">
           <table>
             <thead>

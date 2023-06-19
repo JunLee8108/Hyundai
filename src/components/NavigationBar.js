@@ -25,13 +25,18 @@ function NavigationBar() {
     }
   };
 
+  const modalControlFalse = () => {
+    setImageNum(0);
+    setModal(false);
+  }
+
   // If it's mobile
   if (isMobile) {
     return (
       <div className="nav-container">
         <nav>
           <img className="hyundai-logo" src={hyundaiLogo} alt="logo"></img>
-          <li className="company-name" onClick={modalControl}>
+          <li className="company-name" onClick={modalControlFalse}>
             <Link className="nav-item-company" to="/">
               HYUNDAI
             </Link>
