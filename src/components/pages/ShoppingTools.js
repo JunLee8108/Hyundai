@@ -34,7 +34,7 @@ function ShoppingTools(props) {
           <div className="flexbox" onClick={()=>navigate("/CarBuild/2")}>
             <img src={tucson} alt="car-tucson"></img>
             <h3>2023</h3>
-            <h1>TUCSAN HYBRID</h1>
+            <h1>TUCSON HYBRID</h1>
           </div>
         </div>
       </div>

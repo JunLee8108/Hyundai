@@ -58,7 +58,7 @@ function VehicleSection() {
                 className="vehicle-button"
                 onClick={() => navigate("/CarBuild/1")}
               >
-                <p>Budild</p>
+                <p>Build</p>
               </button>
             </div>
           </div>
@@ -82,7 +82,7 @@ function VehicleSection() {
                 className="vehicle-button"
                 onClick={() => navigate("/CarBuild/2")}
               >
-                <p>Budild</p>
+                <p>Build</p>
               </button>
             </div>
           </div>
@@ -103,7 +103,7 @@ function VehicleSection() {
               </Link>
               <Link to="/CarBuild/3">
                 <button className="vehicle-button">
-                  <p>Budild</p>
+                  <p>Build</p>
                 </button>
               </Link>
             </div>
