@@ -17,11 +17,12 @@ div {
 }
 
 .footer-item h1 {
-    font-size: 22px;
+    font-size: 20px;
     color: white;
 }
 
 .footer-item p {
+    font-size: 16px;
     color: #D3D3D3;
 }
 

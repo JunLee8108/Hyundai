@@ -31,7 +31,7 @@ function NavigationBar() {
     setImageNum(0);
     setModal(false);
     document.body.style.overflow = "unset";
-  }
+  };
 
   // If it's mobile
   if (isMobile) {
@@ -55,7 +55,9 @@ function NavigationBar() {
               <Link to="/Vehicles" className="modal-style">
                 <li onClick={modalControl}>‣ Vehicles</li>
               </Link>
-              <li>‣ Build Your Own</li>
+              <Link to="/ShoppingTools" className="modal-style">
+                <li onClick={modalControl}>‣ Build Your Own</li>
+              </Link>
               <Link to="/About" className="modal-style">
                 <li onClick={modalControl}>‣ About Hyundai</li>
               </Link>

@@ -17,8 +17,10 @@ function Footer() {
             <div className="clean-both"></div>
           </div>
           <div className="footer-item">
-            <h1>Shopping Tools</h1>
-            <div className="arrow-symbol">▼</div>
+            <Link to="ShoppingTools" className="footer-link">
+              <h1>Shopping Tools</h1>
+              <div className="arrow-symbol">▼</div>
+            </Link>
             <div className="clean-both"></div>
           </div>
           <div className="footer-item">
@@ -47,8 +49,10 @@ function Footer() {
             </Link>
           </div>
           <div className="footer-item">
-            <h1>Shopping Tools</h1>
-            <p>Shop Hyundai</p>
+            <Link to="/ShoppingTools" className="footer-link">
+              <h1>Shopping Tools</h1>
+              <p>Shop Hyundai</p>
+            </Link>
           </div>
           <div className="footer-item">
             <h1>Owners</h1>
@@ -59,7 +63,7 @@ function Footer() {
           <div className="footer-item">
             <h1>About</h1>
             <Link to="/About" className="footer-link">
-            <p>Our Company</p>
+              <p>Our Company</p>
             </Link>
           </div>
         </div>

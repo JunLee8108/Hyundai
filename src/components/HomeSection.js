@@ -1,40 +1,18 @@
 import "./HomeSection.css";
 import { Link } from "react-router-dom";
-import ioniq from "../assets/hyundai-ioniq-model.webp";
-import kona from "../assets/kona-ev.webp";
-import sonata from "../assets/sonata.webp";
-import tucson from "../assets/tucson-hb.webp";
 import { useState, useRef } from "react";
+import {carImage, carName, carType, carPrice, carMiles, carPower, carWheel, milesOrMPG, available} from "./helpers/CarData"
 
 function HomeSection() {
   let [count, setCount] = useState(0);
   let [numForMiles, setNumForMile] = useState(0);
   let [numForAvailable, setNumAvailable] = useState(0);
-  const milesOrMPG = ["miles", "MPG Hwy"];
-  const available = [" inch wheels", "."];
-  const carName = [
-    "2023 IONIQ 6",
-    "2023 KONA ELECTRIC",
-    "2023 SONATA HYBRID",
-    "2023 TUCSON HYBRID",
-  ];
-  const carType = [
-    "Electric Sedan",
-    "Electric SUV",
-    "Hybrid Sedan",
-    "Modern Compact SUV",
-  ];
-  const carPrice = ["41,600", "33,550", "28,250", "31,350"];
-  const carPower = ["320", "201", "192", "226"];
-  const carWheel = ["20", "17", "17", "HTRAC AWD"];
-  const carMiles = ["361", "258", "54", "38"];
-  const carImage = [ioniq, kona, sonata, tucson];
-
+  
   const carInfoForward = () => {
     if (count < carImage.length - 1) {
       setCount((count += 1));
     } else if (count == carImage.length - 1) {
-      setCount(count = 0);
+      setCount((count = 0));
     }
 
     if (count == 0 || count == 1) {
@@ -54,7 +32,7 @@ function HomeSection() {
     if (count > 0 && count <= carImage.length - 1) {
       setCount((count -= 1));
     } else if (count == 0) {
-      setCount(count=3);
+      setCount((count = 3));
     }
 
     if (count == 0 || count == 1) {

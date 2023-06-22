@@ -2,12 +2,19 @@ import "./VehicleSection.css";
 import ioniq from "../assets/hyundai-ioniq-model.webp";
 import kona from "../assets/kona-ev.webp";
 import tucsan from "../assets/tucson-hb.webp";
-import sonata from "../assets/sonata.webp"
+import sonata from "../assets/sonata.webp";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 function VehicleSection() {
+  let navigate = useNavigate();
+
   return (
-    <div style={{background: "radial-gradient(circle at 40.1% 80.8%, rgb(50, 50, 50) 0%, rgb(0, 0, 0) 99.4%)"}}>
+    <div
+      style={{
+        background: "white",
+      }}
+    >
       <div className="vehicle-top">
         <div className="vehicle-top-container">
           <div className="vehicle-top-box">
@@ -19,16 +26,16 @@ function VehicleSection() {
               </h1>
             </div>
             <div style={{ textAlign: "center" }}>
-              <Link
-              to="/Ioniq"
-              >
-              <button className="vehicle-button">
-                <p>Explore</p>
-              </button>
+              <Link to="/CarDetail/0">
+                <button className="vehicle-button">
+                  <p>Explore</p>
+                </button>
               </Link>
-              <button className="vehicle-button">
-                <p>Budild</p>
-              </button>
+              <Link to="/CarBuild/0">
+                <button className="vehicle-button">
+                  <p>Budild</p>
+                </button>
+              </Link>
             </div>
           </div>
 
@@ -41,10 +48,16 @@ function VehicleSection() {
               </h1>
             </div>
             <div style={{ textAlign: "center" }}>
-              <button className="vehicle-button">
+              <button
+                className="vehicle-button"
+                onClick={() => navigate("/CarDetail/1")}
+              >
                 <p>Explore</p>
               </button>
-              <button className="vehicle-button">
+              <button
+                className="vehicle-button"
+                onClick={() => navigate("/CarBuild/1")}
+              >
                 <p>Budild</p>
               </button>
             </div>
@@ -55,14 +68,20 @@ function VehicleSection() {
             <div className="vehicle-text-box">
               <p>HYBRID</p>
               <h1>
-                2023 <span className="color-navy">TUCSAN</span> Hybrid
+                2023 <span className="color-navy">TUCSAN</span> HYBRID
               </h1>
             </div>
             <div style={{ textAlign: "center" }}>
-              <button className="vehicle-button">
+              <button
+                className="vehicle-button"
+                onClick={() => navigate("/CarDetail/2")}
+              >
                 <p>Explore</p>
               </button>
-              <button className="vehicle-button"> 
+              <button
+                className="vehicle-button"
+                onClick={() => navigate("/CarBuild/2")}
+              >
                 <p>Budild</p>
               </button>
             </div>
@@ -73,16 +92,20 @@ function VehicleSection() {
             <div className="vehicle-text-box">
               <p>HYBRID</p>
               <h1>
-                2023 <span className="color-navy">SONATA</span> Hybrid
+                2023 <span className="color-navy">SONATA</span> HYBRID
               </h1>
             </div>
             <div style={{ textAlign: "center" }}>
-              <button className="vehicle-button">
-                <p>Explore</p>
-              </button>
-              <button className="vehicle-button">
-                <p>Budild</p>
-              </button>
+              <Link to="/CarDetail/3">
+                <button className="vehicle-button">
+                  <p>Explore</p>
+                </button>
+              </Link>
+              <Link to="/CarBuild/3">
+                <button className="vehicle-button">
+                  <p>Budild</p>
+                </button>
+              </Link>
             </div>
           </div>
         </div>
