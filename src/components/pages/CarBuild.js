@@ -41,7 +41,7 @@ let Flexbox2 = styled.div`
   align-items: center;
   @media screen and (max-width: 787px) {
     width: 100%;
-    height: 790px;
+    height: 820px;
   }
 `;
 
@@ -62,19 +62,7 @@ function CarBuild() {
       >
         <CarDataContainer>
           <Flexbox1>
-            <h1
-              style={{
-                textAlign: "center",
-                borderLeft: "solid 4px black",
-                paddingLeft: "10px",
-                borderRight: "solid 4px black",
-                paddingRight: "10px",
-                borderRadius: "5px",
-                marginBottom: "40px",
-              }}
-            >
-              {carAllData[id].name}
-            </h1>
+            <h1 className="h1-title">{carAllData[id].name}</h1>
             <div className="trim">
               <button
                 onClick={() => {

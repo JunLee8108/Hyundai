@@ -33,7 +33,7 @@ function VehicleSection() {
               </Link>
               <Link to="/CarBuild/0">
                 <button className="vehicle-button">
-                  <p>Budild</p>
+                  <p>Build</p>
                 </button>
               </Link>
             </div>
@@ -68,7 +68,7 @@ function VehicleSection() {
             <div className="vehicle-text-box">
               <p>HYBRID</p>
               <h1>
-                2023 <span className="color-navy">TUCSAN</span> HYBRID
+                2023 <span className="color-navy">TUCSON</span> HYBRID
               </h1>
             </div>
             <div style={{ textAlign: "center" }}>
