@@ -69,6 +69,7 @@ div {
     border: 1px solid white;
     background-color: black;
     color: white;
+    font-weight: bold;
     cursor: pointer;
 }
 
