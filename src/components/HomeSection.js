@@ -62,7 +62,7 @@ function HomeSection() {
             Your Car with, <span className="logo-style">Hyundai</span>
           </h1>
           <Link to="/Vehicles">
-            <button className="button-learn-more">LEARN MORE</button>
+            <button className="button-learn-more">EXPLORE</button>
           </Link>
         </div>
       </div>

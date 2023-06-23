@@ -39,17 +39,19 @@ _:future,
 }
 
 .button-learn-more {
-    width: 130px;
+    width: 110px;
     font-weight: bold;
     border: none;
     height: 50px;
     cursor: pointer;
+    color: white;
+    border: 1px solid white;
+    background-color: black;
     border-radius: 5px;
-    background-color: ghostwhite;
 }
 
 .button-learn-more:hover {
-    background-color: black;
+    background-color: white;
     color: red;
     transition: all 0.2s linear;
     transform: scale(1.05);
@@ -212,7 +214,7 @@ th {
         width: 110px;
         font-size: 12px;
         height: 45px;
-        color: black;
+        color: white;
     }
 
     .home-middle-background {
