@@ -259,15 +259,16 @@
         margin-top: -20px;
         position: relative;
         bottom: 435px;
-        right: 60px;
+        right: 75px;
     }
 
     .detail-nextButton button {
-        width: 90px;
+        width: 100px;
         height: 30px;
         color: red;
         border: white 2px solid;
         background-color: black;
         border-radius: 5px;
+        font-size: 10px;
     }
 }
