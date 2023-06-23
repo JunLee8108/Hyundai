@@ -18,38 +18,44 @@ function VehicleSection() {
       <div className="vehicle-top">
         <div className="vehicle-top-container">
           <div className="vehicle-top-box">
-            <img src={ioniq} alt="car-IONIQ"></img>
             <div className="vehicle-text-box">
               <p>⚡ ELECTRIFIED</p>
               <h1>
                 2023 <span className="color-navy">IONIQ 6</span>
               </h1>
             </div>
-            <div style={{ textAlign: "center" }}>
-              <p style={{ color: "white" }}>Starting at $41,600</p>
-              <Link to="/CarDetail/0">
-                <button className="vehicle-button">
-                  <p>Explore</p>
-                </button>
-              </Link>
-              <Link to="/CarBuild/0">
-                <button className="vehicle-button">
-                  <p>Build</p>
-                </button>
-              </Link>
-            </div>
+            <center>
+              <img src={ioniq} alt="car-IONIQ"></img>
+            </center>
+            <center>
+              <div style={{ textAlign: "center" }}>
+                <p style={{ color: "white" }}>Starting at $41,600</p>
+                <Link to="/CarDetail/0">
+                  <button className="vehicle-button">
+                    <p>Explore</p>
+                  </button>
+                </Link>
+                <Link to="/CarBuild/0">
+                  <button className="vehicle-button">
+                    <p>Build</p>
+                  </button>
+                </Link>
+              </div>
+            </center>
           </div>
 
           <div className="vehicle-top-box">
-            <img src={kona} alt="car-KONA"></img>
             <div className="vehicle-text-box">
               <p>⚡ ELECTRIFIED</p>
               <h1>
                 2023 <span className="color-navy">KONA</span> ELECTRIC
               </h1>
             </div>
+            <center>
+            <img src={kona} alt="car-KONA"></img>
+            </center>
             <div style={{ textAlign: "center" }}>
-            <p style={{ color: "white" }}>Starting at $33,550</p>
+              <p style={{ color: "white" }}>Starting at $33,550</p>
               <button
                 className="vehicle-button"
                 onClick={() => navigate("/CarDetail/1")}
@@ -66,15 +72,17 @@ function VehicleSection() {
           </div>
 
           <div className="vehicle-top-box">
-            <img src={tucsan} alt="car-TUCSAN"></img>
             <div className="vehicle-text-box">
               <p>HYBRID</p>
               <h1>
                 2023 <span className="color-navy">TUCSON</span> HYBRID
               </h1>
             </div>
+            <center>
+            <img src={tucsan} alt="car-TUCSAN"></img>
+            </center>
             <div style={{ textAlign: "center" }}>
-            <p style={{ color: "white" }}>Starting at $31,350</p>
+              <p style={{ color: "white" }}>Starting at $31,350</p>
               <button
                 className="vehicle-button"
                 onClick={() => navigate("/CarDetail/2")}
@@ -91,15 +99,17 @@ function VehicleSection() {
           </div>
 
           <div className="vehicle-top-box">
-            <img src={sonata} alt="car-SONATA"></img>
             <div className="vehicle-text-box">
               <p>HYBRID</p>
               <h1>
                 2023 <span className="color-navy">SONATA</span> HYBRID
               </h1>
             </div>
+            <center>
+            <img src={sonata} alt="car-SONATA"></img>
+            </center>
             <div style={{ textAlign: "center" }}>
-            <p style={{ color: "white" }}>Starting at $28,250</p>
+              <p style={{ color: "white" }}>Starting at $28,250</p>
               <Link to="/CarDetail/3">
                 <button className="vehicle-button">
                   <p>Explore</p>

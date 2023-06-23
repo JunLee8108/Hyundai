@@ -25,17 +25,16 @@ div {
 .vehicle-top-box {
     width: 100%;
     max-width: 650px;
-    height: 450px;
+    height: 500px;
     margin: 50px;
     position: relative;
     border-radius: 5px;
 }
 
 .vehicle-top-box img {
+    text-align: center;
     margin-top: 160px;
-    width: 100%;
-    height: 200px;
-    filter: brightness(90%) contrast(100%) saturate(150%);
+    width: 95%;
 }
 
 .vehicle-top-box img:hover {
