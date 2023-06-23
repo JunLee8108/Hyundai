@@ -6,23 +6,23 @@ import tucson from "../../assets/tucson-hb.webp";
 import buildKona from "../../assets/build-kona.webp";
 import buildKonaWhite from "../../assets/build-kona-white.webp";
 import buildKonaRed from "../../assets/build-kona-red.webp";
-import buildKonaBlue from "../../assets/build-kona-blue.png";
+import buildKonaBlue from "../../assets/build-kona-blue.webp";
 
 import buildIoniq from "../../assets/build-ioniq6.webp";
 import buildIoniqRed from "../../assets/build-ioniq-red.webp";
 import buildIoniqWhite from "../../assets/build-ioniq-white.webp";
-import buildIoniqSilver from "../../assets/build-ioniq-silver.png";
+import buildIoniqSilver from "../../assets/build-ioniq-silver.webp";
 import detailIoniq from "../../assets/detail-ioniq-bg.webp";
 
 import buildSonata from "../../assets/build-sonata.webp";
 import buildSonataRed from "../../assets/build-sonata-red.webp";
 import buildSonataWhite from "../../assets/build-sonata-white.webp";
-import buildSonataSilver from "../../assets/build-sonata-silver.png";
+import buildSonataSilver from "../../assets/build-sonata-silver.webp";
 
 import buildTucson from "../../assets/build-tucson.webp";
 import buildTucsonWhite from "../../assets/build-tucson-white.webp";
 import buildTucsonBlue from "../../assets/build-tucson-blue.webp";
-import buildTucsonSivler from "../../assets/build-tucson-silver.png";
+import buildTucsonSivler from "../../assets/build-tucson-silver.webp";
 
 const carImage = [ioniq, kona, sonata, tucson];
 const carName = [
