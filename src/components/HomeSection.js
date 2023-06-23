@@ -1,5 +1,5 @@
 import "./HomeSection.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useState, useRef } from "react";
 import {carImage, carName, carType, carPrice, carMiles, carPower, carWheel, milesOrMPG, available} from "./helpers/CarData"
 
@@ -7,6 +7,7 @@ function HomeSection() {
   let [count, setCount] = useState(0);
   let [numForMiles, setNumForMile] = useState(0);
   let [numForAvailable, setNumAvailable] = useState(0);
+  let navigate = useNavigate();
   
   const carInfoForward = () => {
     if (count < carImage.length - 1) {
@@ -70,7 +71,7 @@ function HomeSection() {
         <div className="home-bottom-content home-top-content ">
           <h3>All-purpose hybrid SUV</h3>
           <h1>2023 TUCSON HYBRID</h1>
-          <button className="button-learn-more" onClick={clickToInfo}>
+          <button className="button-learn-more" onClick={()=>navigate("/CarDetail/2")}>
             EXPLORE
           </button>
         </div>
@@ -88,7 +89,7 @@ function HomeSection() {
         <div className="home-bottom-content home-top-content ">
           <h3>The first-ever, all electric</h3>
           <h1>2023 IONIQ 6</h1>
-          <button className="button-learn-more" onClick={clickToInfo}>
+          <button className="button-learn-more" onClick={()=>navigate("/CarDetail/0")}>
             EXPLORE
           </button>
         </div>

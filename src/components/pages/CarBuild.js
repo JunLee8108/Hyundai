@@ -18,7 +18,7 @@ let CarDataContainer = styled.div`
 
 let Flexbox1 = styled.div`
   width: 40%;
-  height: 80%;
+  height: 83%;
   margin: 1px;
   display: flex;
   justify-content: center;
@@ -34,11 +34,11 @@ let Flexbox1 = styled.div`
 
 let Flexbox2 = styled.div`
   width: 60%;
-  height: 60%;
-  margin: 1px;
+  height: 80%;
+  padding: 15px;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   @media screen and (max-width: 787px) {
     width: 100%;
@@ -95,6 +95,8 @@ function CarBuild() {
                 {carAllData[id].trim[2]}
               </button>
             </div>
+            <h4 style={{marginBottom: "-15px"}}>Starting MSRP</h4>
+            <h2 style={{marginBottom: "-15px"}}>${carAllData[id].price[keyNum]}</h2>
 
             {/* Laptop View */}
             <div className="highlight">
@@ -153,7 +155,7 @@ function KeyHighlights(props) {
   // SE Model
   if (props.keyNum === 0) {
     return (
-      <div style={{ width: "55%", height: "100%" }}>
+      <div style={{ width: "55%", height: "100%", maxWidth: "400px"}}>
         <div className="title-margin">
           <h2>Key Features</h2>
         </div>
@@ -168,7 +170,7 @@ function KeyHighlights(props) {
   // SEL Model
   else if (props.keyNum === 1) {
     return (
-      <div style={{ width: "55%", height: "100%" }}>
+      <div style={{ width: "55%", height: "100%", maxWidth: "400px"}}>
         <div className="title-margin">
           <h2>Key Features</h2>
         </div>
@@ -183,7 +185,7 @@ function KeyHighlights(props) {
   // Limited Model
   else {
     return (
-      <div style={{ width: "55%", height: "100%" }}>
+      <div style={{ width: "55%", height: "100%", maxWidth: "400px"}}>
         <div className="title-margin">
           <h2>Key Features</h2>
         </div>
