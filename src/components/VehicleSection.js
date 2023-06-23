@@ -12,7 +12,7 @@ function VehicleSection() {
   return (
     <div
       style={{
-        background: "white",
+        background: "linear-gradient(to right, #434343 0%, black 100%)",
       }}
     >
       <div className="vehicle-top">
@@ -26,6 +26,7 @@ function VehicleSection() {
               </h1>
             </div>
             <div style={{ textAlign: "center" }}>
+              <p style={{ color: "white" }}>Starting at $41,600</p>
               <Link to="/CarDetail/0">
                 <button className="vehicle-button">
                   <p>Explore</p>
@@ -48,6 +49,7 @@ function VehicleSection() {
               </h1>
             </div>
             <div style={{ textAlign: "center" }}>
+            <p style={{ color: "white" }}>Starting at $33,550</p>
               <button
                 className="vehicle-button"
                 onClick={() => navigate("/CarDetail/1")}
@@ -72,6 +74,7 @@ function VehicleSection() {
               </h1>
             </div>
             <div style={{ textAlign: "center" }}>
+            <p style={{ color: "white" }}>Starting at $31,350</p>
               <button
                 className="vehicle-button"
                 onClick={() => navigate("/CarDetail/2")}
@@ -96,6 +99,7 @@ function VehicleSection() {
               </h1>
             </div>
             <div style={{ textAlign: "center" }}>
+            <p style={{ color: "white" }}>Starting at $28,250</p>
               <Link to="/CarDetail/3">
                 <button className="vehicle-button">
                   <p>Explore</p>

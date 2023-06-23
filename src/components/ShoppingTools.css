@@ -1,18 +1,27 @@
+.shopping-container {
+    background: linear-gradient(to right, #434343 0%, black 100%);
+    height: 90vh;
+}
+
 .title {
-    color: black;
-    text-align: center;
+    color: white;
+    text-align: left;
+    height: 150px;
     display: flex;
-    justify-content: center;
     align-items: center;
+    width: 98%;
+}
+
+.title h1 {
+    padding-left: 10px;
 }
 
 .container {
-    height: 90vh;
-    
     padding: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
 }
 
 .flex-container {
@@ -30,13 +39,12 @@
     text-align: center;
     background-color: black;
     color: white;
-    border-radius: 5px;
     cursor: pointer;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 .flexbox img {
     width: 100%;
-    border-radius: 5px;
 }
 
 .flexbox:hover {
@@ -46,7 +54,7 @@
 }
 
 @media screen and (max-width: 767px) {
-    .container {
+    .shopping-container {
         height: 100%;
     }
 
@@ -58,7 +66,17 @@
         width: 80%;
     }
 
-    h3 {
+    .title {
+        justify-content: center;
+        align-items: center;
+        font-size: 13px;
+    }
+
+    .flexbox h1 {
+        font-size: 28px;
+    }
+
+    .flexbox h3 {
         font-size: 16px;
     }
 }

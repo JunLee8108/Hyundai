@@ -3,14 +3,14 @@ div {
 }
 
 .vehicle-top {
-    padding: 45px;
+    padding: 20px;
 }
 
 .vehicle-top h1 {
     font-size: 33px;
-    font-weight: 300;
+    font-weight: lighter;
     margin-left: 0px;
-    color: black;
+    color: white;
     text-align: center;
 }
 
@@ -24,7 +24,7 @@ div {
 
 .vehicle-top-box {
     width: 100%;
-    max-width: 600px;
+    max-width: 650px;
     height: 450px;
     margin: 50px;
     position: relative;
@@ -45,7 +45,7 @@ div {
 
 .vehicle-text-box {
     position: absolute;
-    color: navy;
+    color: white;
     left: 5%;
     top: 0%;
 }
@@ -54,11 +54,11 @@ div {
     padding-top: 5px;
     padding-bottom: 5px;
     padding: 10px;
-    border-left: 4px solid navy;
+    border-left: 4px solid white;
 }
 
 .color-navy {
-    color: navy;
+    color: white;
     font-size: 37px;
     font-weight: bold;
 }
@@ -69,6 +69,7 @@ div {
     margin: 10px;
     border: none;
     color: black;
+    cursor: pointer;
 }
 
 .vehicle-button:hover {
@@ -92,7 +93,7 @@ div {
     .vehicle-top-box {
         height: 350px;
         margin: 20px;
-        margin-bottom: 0px;
+        margin-bottom: 50px;
     }
 
     .vehicle-top-box img {
@@ -110,5 +111,11 @@ div {
     .color-navy {
         font-size: 32px;
         font-weight: bold;
+    }
+
+    .vehicle-button {
+        width: 85px;
+        height: 40px;
+        font-size: 12px;
     }
 }

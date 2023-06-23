@@ -3,18 +3,26 @@ import kona from "../../assets/kona-ev.webp";
 import sonata from "../../assets/sonata.webp";
 import tucson from "../../assets/tucson-hb.webp";
 
-import buildKona from "../../assets/build-kona.png";
+import buildKona from "../../assets/build-kona.webp";
 import buildKonaWhite from "../../assets/build-kona-white.webp";
-import buildKonaRed from "../../assets/build-kona-red.png";
+import buildKonaRed from "../../assets/build-kona-red.webp";
+import buildKonaBlue from "../../assets/build-kona-blue.png";
+
 import buildIoniq from "../../assets/build-ioniq6.webp";
-import buildIoniqRed from "../../assets/build-ioniq-red.png";
-import buildIoniqWhite from "../../assets/build-ioniq-white.png";
+import buildIoniqRed from "../../assets/build-ioniq-red.webp";
+import buildIoniqWhite from "../../assets/build-ioniq-white.webp";
+import buildIoniqSilver from "../../assets/build-ioniq-silver.png";
+import detailIoniq from "../../assets/detail-ioniq-bg.webp";
+
 import buildSonata from "../../assets/build-sonata.webp";
 import buildSonataRed from "../../assets/build-sonata-red.webp";
 import buildSonataWhite from "../../assets/build-sonata-white.webp";
+import buildSonataSilver from "../../assets/build-sonata-silver.png";
+
 import buildTucson from "../../assets/build-tucson.webp";
 import buildTucsonWhite from "../../assets/build-tucson-white.webp";
 import buildTucsonBlue from "../../assets/build-tucson-blue.webp";
+import buildTucsonSivler from "../../assets/build-tucson-silver.png";
 
 const carImage = [ioniq, kona, sonata, tucson];
 const carName = [
@@ -34,16 +42,20 @@ const carMiles = ["361", "258", "54", "38"];
 const carPower = ["320", "201", "192", "226"];
 const carWheel = ["20", "17", "17", "HTRAC AWD"];
 const milesOrMPG = ["miles", "MPG Hwy"];
-const available = [" inch wheels", null];
+const available = [" inch wheels", "."];
+const trimDescription = ["The base trim with lots of great standard features.", "The balanced trim with plenty of must-have features.", "The premium trim that treats you with high-end features."];
 
 const carAllData = [
   {
     id: 0,
     img: ioniq,
-    buildImg: [buildIoniq, buildIoniqRed, buildIoniqWhite],
-    name: "2023 IONIQ 6",
+    buildImg: [buildIoniq, buildIoniqWhite, buildIoniqSilver, buildIoniqRed],
+    color: ["black", "white", "silver", "#790001"],
+    background: detailIoniq,
+    year: "2023",
+    name: "IONIQ6",
     type: "Electric Sedan",
-    price: "41,600",
+    price: ["45,500", "47,700", "52,600"],
     miles: "361",
     power: "320",
     wheel: "20",
@@ -77,14 +89,16 @@ const carAllData = [
   {
     id: 1,
     img: kona,
-    buildImg: [buildKona, buildKonaRed, buildKonaWhite],
-    name: "2023 KONA ELECTRIC",
+    buildImg: [buildKona,buildKonaWhite, buildKonaBlue, buildKonaRed],
+    color: ["black", "white", "#006DB5", "#790001"],
+    name: "KONA ELECTRIC",
+    year: "2023",
     type: "Electric SUV",
-    price: "33,550",
+    price: ["33,550", "37,300", "41,550"],
     miles: "258",
     power: "201",
     wheel: "17",
-    trim: ["SE", "SL", "Limited"],
+    trim: ["SE", "SEL", "Limited"],
     SEKey: [
       "258-mile EPA-est. range",
       "8-inch color touchscreen display audio",
@@ -114,10 +128,12 @@ const carAllData = [
   {
     id: 3,
     img: tucson,
-    buildImg: [buildTucson, buildTucsonBlue, buildTucsonWhite],
-    name: "2023 TUCSON HYBRID",
+    buildImg: [buildTucson, buildTucsonWhite, buildTucsonSivler ,buildTucsonBlue],
+    color: ["black", "white", "silver", "#00154D"],
+    year: "2023",
+    name: "TUCSON HYBRID",
     type: "Modern Compact SUV",
-    price: "31,350",
+    price: ["31,350", "34,310", "39,110"],
     miles: "38",
     power: "226",
     wheel: "HTRAC AWD",
@@ -151,10 +167,12 @@ const carAllData = [
   {
     id: 2,
     img: sonata,
-    buildImg: [buildSonata, buildSonataRed, buildSonataWhite],
-    name: "2023 SONATA HYBRID",
+    buildImg: [buildSonata, buildSonataWhite, buildSonataSilver, buildSonataRed],
+    color: ["black", "white", "silver", "#790001"],
+    year: "2023",
+    name: "SONATA HYBRID",
     type: "Hybrid Sedan",
-    price: "28,250",
+    price: ["28,250", "31,600", "36,400"],
     miles: "54",
     power: "192",
     wheel: "17",
@@ -197,4 +215,5 @@ export {
   milesOrMPG,
   available,
   carAllData,
+  trimDescription,
 };

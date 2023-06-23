@@ -5,6 +5,7 @@ import styled from "styled-components";
 import "../CarBuild.css";
 import { useState } from "react";
 
+///////////////////////////// Styled div
 let CarDataContainer = styled.div`
   height: 90vh;
   display: flex;
@@ -44,12 +45,14 @@ let Flexbox2 = styled.div`
     height: 820px;
   }
 `;
+///////////////////////////// Styled div
 
 function CarBuild() {
   let { id } = useParams();
   let [keyNum, setKey] = useState(0);
   let [imgNum, setImg] = useState(0);
 
+  // 404 Page
   if (id === "" || id > 3) {
     return <Page404 />;
   } else {
@@ -61,8 +64,11 @@ function CarBuild() {
         }}
       >
         <CarDataContainer>
+          {/* Flexbox1 */}
           <Flexbox1>
-            <h1 className="h1-title">{carAllData[id].name}</h1>
+            <h1 className="h1-title">{carAllData[id].year}</h1>
+            <h1 className="h1-subtitle">{carAllData[id].name}</h1>
+            {/* Different Trim */}
             <div className="trim">
               <button
                 onClick={() => {
@@ -89,6 +95,8 @@ function CarBuild() {
                 {carAllData[id].trim[2]}
               </button>
             </div>
+
+            {/* Laptop View */}
             <div className="highlight">
               <KeyHighlights
                 keyNum={keyNum}
@@ -97,6 +105,8 @@ function CarBuild() {
               ></KeyHighlights>
             </div>
           </Flexbox1>
+
+          {/* Flexbox2 */}
           <Flexbox2>
             <img
               src={carAllData[id].buildImg[imgNum]}
@@ -104,37 +114,27 @@ function CarBuild() {
               alt="car"
             />
 
-            {id == 2 ? (
-              <div className="color">
-                <button
-                  style={{ backgroundColor: "#00154D" }}
-                  onClick={() => setImg(1)}
-                ></button>
-                <button
-                  style={{ backgroundColor: "white" }}
-                  onClick={() => setImg(2)}
-                ></button>
-                <button
-                  style={{ backgroundColor: "black" }}
-                  onClick={() => setImg(0)}
-                ></button>
-              </div>
-            ) : (
-              <div className="color">
-                <button
-                  style={{ backgroundColor: "#790001" }}
-                  onClick={() => setImg(1)}
-                ></button>
-                <button
-                  style={{ backgroundColor: "white" }}
-                  onClick={() => setImg(2)}
-                ></button>
-                <button
-                  style={{ backgroundColor: "black" }}
-                  onClick={() => setImg(0)}
-                ></button>
-              </div>
-            )}
+            {/* Color */}
+            <div className="color">
+              <button
+                style={{ backgroundColor: carAllData[id].color[0] }}
+                onClick={() => setImg(0)}
+              ></button>
+              <button
+                style={{ backgroundColor: carAllData[id].color[1] }}
+                onClick={() => setImg(1)}
+              ></button>
+              <button
+                style={{ backgroundColor: carAllData[id].color[2] }}
+                onClick={() => setImg(2)}
+              ></button>
+              <button
+                style={{ backgroundColor: carAllData[id].color[3] }}
+                onClick={() => setImg(3)}
+              ></button>
+            </div>
+
+            {/* Mobile View */}
             <div className="highlight-mobile">
               <KeyHighlights
                 keyNum={keyNum}
@@ -150,9 +150,10 @@ function CarBuild() {
 }
 
 function KeyHighlights(props) {
+  // SE Model
   if (props.keyNum === 0) {
     return (
-      <div style={{ width: "50%", height: "100%" }}>
+      <div style={{ width: "55%", height: "100%" }}>
         <div className="title-margin">
           <h2>Key Features</h2>
         </div>
@@ -163,9 +164,11 @@ function KeyHighlights(props) {
         </div>
       </div>
     );
-  } else if (props.keyNum === 1) {
+  }
+  // SEL Model
+  else if (props.keyNum === 1) {
     return (
-      <div style={{ width: "50%", height: "100%" }}>
+      <div style={{ width: "55%", height: "100%" }}>
         <div className="title-margin">
           <h2>Key Features</h2>
         </div>
@@ -176,9 +179,11 @@ function KeyHighlights(props) {
         </div>
       </div>
     );
-  } else {
+  }
+  // Limited Model
+  else {
     return (
-      <div style={{ width: "50%", height: "100%" }}>
+      <div style={{ width: "55%", height: "100%" }}>
         <div className="title-margin">
           <h2>Key Features</h2>
         </div>

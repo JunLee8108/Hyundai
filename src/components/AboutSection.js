@@ -9,7 +9,7 @@ function AboutSection() {
           <p>Where anything is possible.</p>
         </div>
       </div>
-      <div className="mid-container"></div>
+      {/* <div className="mid-container"></div> */}
     </div>
   );
 }
