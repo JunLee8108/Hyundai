@@ -5,6 +5,7 @@ div {
 .vehicle-section-container {
     background: linear-gradient(to right, #434343 0%, black 100%);
     opacity: 0;
+    min-height: calc(100vh - 15rem);
 }
 
 .vehicle-top {
@@ -78,16 +79,18 @@ div {
     cursor: pointer;
 }
 
-.vehicle-button:hover {
-    background-color: white;
-    color: red;
-    transition: all 0.2s linear;
-    transform: scale(1.1);
-}
-
 .vehicle-section-visible {
     opacity: 1;
     transition: 1.5s;
+}
+
+@media (hover: hover) {
+    .vehicle-button:hover {
+        background-color: white;
+        color: red;
+        transition: all 0.2s linear;
+        transform: scale(1.1);
+    }
 }
 
 

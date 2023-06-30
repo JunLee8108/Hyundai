@@ -18,30 +18,24 @@ let NavLi = styled.li`
   cursor: pointer;
   float: ${(props) => props.float};
   color: ${(props) => props.color};
+  margin-top: 3px;
 
   &:hover {
     color: red;
   }
 `;
 
-let NavLiCompanyName = styled.li`
-  box-sizing: border-box;
-  display: inline;
-  padding: 20px;
-  float: left;
-  margin-top: -10px;
+let NavLiCompanyName = styled(NavLi)`
+  margin-top: -8px;
   font-size: 30px;
-  font-weight: bold;
-  color: white;
-  cursor: pointer;
 
   &:hover {
     color: red;
   }
 
-  @media screen and (max-width: 600px) {
-    margin-top: -22px;
-    font-size: 20px;
+  @media only screen and (max-width: 767px) {
+    margin-top: -18px;
+    font-size: 18px;
   }
 `;
 /////////////////// STYLED COMPONENTS
@@ -114,11 +108,15 @@ function NavigationBar() {
       <div className="nav-container-mobile">
         <nav>
           <img className="hyundai-logo" src={hyundaiLogo} alt="logo"></img>
-          <li className="company-name" onClick={modalControlFalse}>
-            <Link className="nav-item-company" to="/">
-              HYUNDAI
-            </Link>
-          </li>
+          <NavLiCompanyName
+            float="left"
+            color="white"
+            onClick={() => {
+              navigate("/");
+            }}
+          >
+            HYUNDAI
+          </NavLiCompanyName>
           <li className="mobile-menu">
             <img src={modalImage[imageNum]} onClick={modalControl}></img>
           </li>
@@ -155,6 +153,7 @@ function NavigationBar() {
               <img className="hyundai-logo" src={hyundaiLogo} alt="logo"></img>
               <NavLiCompanyName
                 float="left"
+                color="white"
                 onClick={() => {
                   navigate("/");
                   buttonControl(3);
@@ -198,7 +197,7 @@ function NavigationBar() {
               <img
                 src={account}
                 width="20px"
-                style={{ marginRight: "-10px" }}
+                style={{ marginRight: "-10px", marginTop: "2px" }}
                 alt="account-logo"
               ></img>
               <NavLi

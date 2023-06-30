@@ -94,6 +94,12 @@ _:future,
     display: flex;
     justify-content: center;
     align-items: center;
+    transform: translateY(-5%);
+}
+
+.carFade {
+    transform: translateY(0%);
+    transition: 1s;
 }
 
 .home-middle-left-flexbox3 {
@@ -121,6 +127,12 @@ _:future,
     height: 200px;
     background-color: ghostwhite;
     display: flex;
+    opacity: 0;
+}
+
+.infoFade {
+    opacity: 1;
+    transition: 2s;
 }
 
 table {

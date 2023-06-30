@@ -9,6 +9,7 @@ import { useState, useEffect } from "react";
 function ShoppingTools(props) {
   let navigate = useNavigate();
   let [fade, setFade] = useState("");
+
   useEffect(() => {
     setFade("shopping-container-fade");
 
@@ -20,7 +21,7 @@ function ShoppingTools(props) {
     <div className={"shopping-container " + fade}>
       <div className="container">
         <div className="title">
-          <h1>Build Your Own Vehicle</h1>
+          <h1>Build Your Own Car</h1>
         </div>
         <div className="flex-container">
           <div className="flexbox" onClick={() => navigate("/CarBuild/0")}>

@@ -28,8 +28,9 @@ nav {
 
 .hyundai-logo {
     float: left;
-    margin-top: 10px;
-    width: 70px;
+    margin-top: 13px;
+    margin-right: -10px;
+    width: 60px;
 }
 
 .mobile-menu {
@@ -40,6 +41,7 @@ nav {
 .mobile-menu img {
     width: 20px;
     height: 20px;
+    margin-top: 21px;
     cursor: pointer;
 }
 
@@ -53,7 +55,7 @@ nav {
 
 .nav-modal-fade {
     opacity: 1;
-    transition: 1.5s;
+    transition: 0.5s;
 }
 
 .nav-modal li {
@@ -103,13 +105,14 @@ nav {
     clear: both;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 767px) {
     nav {
         height: 25px;
     }
 
     .hyundai-logo {
-        margin-top: 2px;
+        margin-top: 5px;
+        margin-right: -12px;
         width: 30px;
     }
 }

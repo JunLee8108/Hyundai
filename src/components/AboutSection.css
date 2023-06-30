@@ -1,5 +1,12 @@
 .about-container {
     background: linear-gradient(to right, #434343 0%, black 100%);
+    opacity: 0;
+    min-height: calc(100vh - 15rem);
+}
+
+.about-container-fade {
+    opacity: 1;
+    transition: 1.5s;
 }
 
 .top-container {

@@ -1,6 +1,6 @@
 import "./HomeSection.css";
 import { Link, useNavigate } from "react-router-dom";
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import {carImage, carName, carType, carPrice, carMiles, carPower, carWheel, milesOrMPG, available} from "./helpers/CarData"
 
 function HomeSection() {
@@ -54,6 +54,21 @@ function HomeSection() {
     carInfoRef.current?.scrollIntoView({ behavior: "smooth" });
   };
 
+  let [carFade, setCarFade] = useState("");
+  let [infoFade, setInfoFade] = useState("");
+  
+  useEffect(()=> {
+    let timer = setTimeout(()=>{setCarFade("carFade")}, 100);
+    let timer2 = setTimeout(()=>{setInfoFade("infoFade")}, 100);
+
+    return(()=> {
+      clearTimeout(timer);
+      clearTimeout(timer2);
+      setCarFade("");
+      setInfoFade("");
+    })
+  },[count])
+
   return (
     <div>
       <div className="home-top-background background-img">
@@ -100,7 +115,7 @@ function HomeSection() {
           <div className="home-middle-left-flexbox1" onClick={carInfoBackward}>
             <p>«</p>
           </div>
-          <div className="home-middle-left-flexbox2">
+          <div className={"home-middle-left-flexbox2 " + carFade}>
             <img src={carImage[count]} alt="car-information"></img>
           </div>
           <div className="home-middle-left-flexbox3" onClick={carInfoForward}>
@@ -108,7 +123,7 @@ function HomeSection() {
           </div>
         </div>
 
-        <div className="home-middle-right align-center">
+        <div className={"home-middle-right align-center " + infoFade}>
           <table>
             <thead>
               <tr>
