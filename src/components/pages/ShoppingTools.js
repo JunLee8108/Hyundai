@@ -8,21 +8,21 @@ import { useState, useEffect } from "react";
 
 function ShoppingTools(props) {
   let navigate = useNavigate();
-  let [fade, setFade] = useState("");
+  let [translateX, setTranslateX] = useState("");
 
   useEffect(() => {
-    setFade("shopping-container-fade");
+    setTranslateX("title-translateX");
 
-    return(()=>{
-      setFade("");
+    return(() => {
+      setTranslateX("");
     })
   }, []);
 
 
   return (
     <div className="shopping-container">
-      <div className={"container " + fade}>
-        <div className="title">
+      <div className="container">
+        <div className={"title " + translateX}>
           <h1>Build Your Own Car</h1>
         </div>
         <div className="flex-container">

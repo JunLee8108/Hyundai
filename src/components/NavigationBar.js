@@ -113,6 +113,7 @@ function NavigationBar() {
             color="white"
             onClick={() => {
               navigate("/");
+              modalControlFalse();
             }}
           >
             HYUNDAI
