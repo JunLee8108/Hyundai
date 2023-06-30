@@ -94,11 +94,11 @@ _:future,
     display: flex;
     justify-content: center;
     align-items: center;
-    transform: translateY(-5%);
+    opacity: 0;
 }
 
 .carFade {
-    transform: translateY(0%);
+    opacity: 1;
     transition: 1s;
 }
 
@@ -132,7 +132,7 @@ _:future,
 
 .infoFade {
     opacity: 1;
-    transition: 2s;
+    transition: 1s;
 }
 
 table {
