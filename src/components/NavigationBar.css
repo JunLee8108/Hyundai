@@ -1,5 +1,5 @@
 
-li, ul {
+ul {
     box-sizing: border-box;
 }
 
@@ -14,12 +14,6 @@ nav {
     background-color: black;
 }
 
-nav li {
-    display: inline;
-    padding: 20px;
-    font-size: 15px;
-}
-
 .nav-container {
     position: sticky;
     z-index: 999;
@@ -30,14 +24,6 @@ nav li {
     float: left;
     margin-top: 10px;
     width: 70px;
-}
-
-.company-name {
-    float: left;
-    margin-top: -10px; 
-    font-size: 30px;
-    font-weight: bold; 
-    color: white;
 }
 
 .mobile-menu {
@@ -113,11 +99,6 @@ nav li {
     .hyundai-logo {
         margin-top: 2px;
         width: 30px;
-    }
-
-    .company-name {
-        margin-top: -22px; 
-        font-size: 20px;
     }
 }
 

@@ -1,19 +1,63 @@
 import "./NavigationBar.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import hyundaiLogo from "../assets/hyundai-logo.webp";
 import account from "../assets/user.webp";
 import menu from "../assets/main-menu.webp";
 import deleteButton from "../assets/delete-button.webp";
 import { useState } from "react";
+import styled from "styled-components";
+
+/////////////////// STYLED COMPONENTS
+let NavLi = styled.li`
+  box-sizing: border-box;
+  display: inline;
+  padding: 20px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  float: ${(props) => props.float};
+  color: ${(props) => props.color};
+
+  &:hover {
+    color: red;
+  }
+`;
+
+let NavLiCompanyName = styled.li`
+  box-sizing: border-box;
+  display: inline;
+  padding: 20px;
+  float: left;
+  margin-top: -10px;
+  font-size: 30px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+
+  &:hover {
+    color: red;
+  }
+
+  @media screen and (max-width: 600px) {
+    margin-top: -22px;
+    font-size: 20px;
+  }
+`;
+/////////////////// STYLED COMPONENTS
 
 function NavigationBar() {
+  const navigate = useNavigate();
   const isMobile = useMediaQuery("(max-width: 600px)");
 
   let [modal, setModal] = useState(false);
 
   const modalImage = [menu, deleteButton];
   let [imageNum, setImageNum] = useState(0);
+
+  let [btnColor1, setBtnColor1] = useState("white");
+  let [btnColor2, setBtnColor2] = useState("white");
+  let [btnColor3, setBtnColor3] = useState("white");
 
   const modalControl = () => {
     if (modal) {
@@ -31,6 +75,26 @@ function NavigationBar() {
     setImageNum(0);
     setModal(false);
     document.body.style.overflow = "unset";
+  };
+
+  const buttonControl = (e) => {
+    if (e == 0) {
+      setBtnColor1("red");
+      setBtnColor2("white");
+      setBtnColor3("white");
+    } else if (e == 1) {
+      setBtnColor1("white");
+      setBtnColor2("red");
+      setBtnColor3("white");
+    } else if (e == 2) {
+      setBtnColor1("white");
+      setBtnColor2("white");
+      setBtnColor3("red");
+    } else {
+      setBtnColor1("white");
+      setBtnColor2("white");
+      setBtnColor3("white");
+    }
   };
 
   // If it's mobile
@@ -78,26 +142,45 @@ function NavigationBar() {
           <ul>
             <div>
               <img className="hyundai-logo" src={hyundaiLogo} alt="logo"></img>
-              <li className="company-name" id="button1">
-                <Link className="nav-item-company" to="/">
-                  HYUNDAI
-                </Link>
-              </li>
-              <li style={{ float: "left" }} id="button2">
-                <Link className="nav-item-company" to="/Vehicles">
-                  VEHICLES
-                </Link>
-              </li>
-              <li style={{ float: "left" }} id="button3">
-                <Link className="nav-item-company" to="/ShoppingTools">
-                  BUILD YOUR OWN
-                </Link>
-              </li>
-              <li style={{ float: "left" }} id="button4">
-                <Link className="nav-item-company" to="/About">
-                  ABOUT
-                </Link>
-              </li>
+              <NavLiCompanyName
+                float="left"
+                onClick={() => {
+                  navigate("/");
+                  buttonControl(3);
+                }}
+              >
+                HYUNDAI
+              </NavLiCompanyName>
+              <NavLi
+                float="left"
+                color={btnColor1}
+                onClick={() => {
+                  navigate("/Vehicles");
+                  buttonControl(0);
+                }}
+              >
+                VEHICLES
+              </NavLi>
+              <NavLi
+                float="left"
+                color={btnColor2}
+                onClick={() => {
+                  navigate("/ShoppingTools");
+                  buttonControl(1);
+                }}
+              >
+                BUILD YOUR OWN
+              </NavLi>
+              <NavLi
+                float="left"
+                color={btnColor3}
+                onClick={() => {
+                  navigate("/About");
+                  buttonControl(2);
+                }}
+              >
+                ABOUT
+              </NavLi>
             </div>
 
             <div className="nav-menu">
@@ -107,11 +190,15 @@ function NavigationBar() {
                 style={{ marginRight: "-10px" }}
                 alt="account-logo"
               ></img>
-              <li>
-                <Link className="nav-item-company" to="/Owners">
-                  MY HYUNDAI
-                </Link>
-              </li>
+              <NavLi
+                color="white"
+                onClick={() => {
+                  navigate("/Owners");
+                  buttonControl(3);
+                }}
+              >
+                MY HYUNDAI
+              </NavLi>
             </div>
           </ul>
         </nav>

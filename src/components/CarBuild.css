@@ -2,21 +2,6 @@
     display: flex;
 }
 
-.trim button {
-    border: none;
-    width: 110px;
-    height: 50px;
-    padding-right: 10px;
-    background-color: white;
-    color: black;
-    cursor: pointer;
-}
-
-.trim button:hover {
-    background-color: black;
-    color: white;
-}
-
 .color button {
     border: none;
     margin-top: 20px;

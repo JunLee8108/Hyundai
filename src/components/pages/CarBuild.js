@@ -45,12 +45,57 @@ let Flexbox2 = styled.div`
     height: 820px;
   }
 `;
+
+let TrimButton1 = styled.button`
+  border: none;
+  width: 110px;
+  height: 50px;
+  padding-right: 10px;
+  background-color: ${(props) => props.bg};
+  color: ${(props) => props.color};
+  cursor: pointer;
+  &:hover {
+    background-color: black;
+    color: white;
+  }
+`;
 ///////////////////////////// Styled div
 
 function CarBuild() {
   let { id } = useParams();
   let [keyNum, setKey] = useState(0);
   let [imgNum, setImg] = useState(0);
+  let [buttonBgColor1, setButtonBgColor1] = useState("");
+  let [buttonBgColor2, setButtonBgColor2] = useState("");
+  let [buttonBgColor3, setButtonBgColor3] = useState("");
+  let [buttonColor1, setButtonColor1] = useState("");
+  let [buttonColor2, setButtonColor2] = useState("");
+  let [buttonColor3, setButtonColor3] = useState("");
+
+  const handleButton = (e) => {
+    if (e == 0) {
+      setButtonBgColor1("black");
+      setButtonBgColor2("white");
+      setButtonBgColor3("white");
+      setButtonColor1("white");
+      setButtonColor2("black");
+      setButtonColor3("black");
+    } else if (e == 1) {
+      setButtonBgColor1("white");
+      setButtonBgColor2("black");
+      setButtonBgColor3("white");
+      setButtonColor1("black");
+      setButtonColor2("white");
+      setButtonColor3("black");
+    } else {
+      setButtonBgColor1("white");
+      setButtonBgColor2("white");
+      setButtonBgColor3("black");
+      setButtonColor1("black");
+      setButtonColor2("black");
+      setButtonColor3("white");
+    }
+  };
 
   // 404 Page
   if (id === "" || id > 3) {
@@ -68,35 +113,48 @@ function CarBuild() {
           <Flexbox1>
             <h1 className="h1-title">{carAllData[id].year}</h1>
             <h1 className="h1-subtitle">{carAllData[id].name}</h1>
+
             {/* Different Trim */}
             <div className="trim">
-              <button
+              {/* SE */}
+              <TrimButton1
                 onClick={() => {
                   setKey(0);
+                  handleButton(0);
                 }}
-                id="button1"
+                bg={buttonBgColor1}
+                color={buttonColor1}
               >
                 {carAllData[id].trim[0]}
-              </button>
-              <button
+              </TrimButton1>
+              {/* SEL */}
+              <TrimButton1
                 onClick={() => {
                   setKey(1);
+                  handleButton(1);
                 }}
-                id="button2"
+                bg={buttonBgColor2}
+                color={buttonColor2}
               >
                 {carAllData[id].trim[1]}
-              </button>
-              <button
+              </TrimButton1>
+              {/* LIMITED */}
+              <TrimButton1
                 onClick={() => {
                   setKey(2);
+                  handleButton(2);
                 }}
-                id="button3"
+                bg={buttonBgColor3}
+                color={buttonColor3}
               >
                 {carAllData[id].trim[2]}
-              </button>
+              </TrimButton1>
             </div>
-            <h4 style={{marginBottom: "-15px"}}>Starting MSRP</h4>
-            <h2 style={{marginBottom: "-15px"}}>${carAllData[id].price[keyNum]}</h2>
+
+            <h4 style={{ marginBottom: "-15px" }}>Starting MSRP</h4>
+            <h2 style={{ marginBottom: "-15px" }}>
+              ${carAllData[id].price[keyNum]}
+            </h2>
 
             {/* Laptop View */}
             <div className="highlight">
@@ -155,7 +213,7 @@ function KeyHighlights(props) {
   // SE Model
   if (props.keyNum === 0) {
     return (
-      <div style={{ width: "55%", height: "100%", maxWidth: "400px"}}>
+      <div style={{ width: "55%", height: "100%", maxWidth: "400px" }}>
         <div className="title-margin">
           <h2>Key Features</h2>
         </div>
@@ -170,7 +228,7 @@ function KeyHighlights(props) {
   // SEL Model
   else if (props.keyNum === 1) {
     return (
-      <div style={{ width: "55%", height: "100%", maxWidth: "400px"}}>
+      <div style={{ width: "55%", height: "100%", maxWidth: "400px" }}>
         <div className="title-margin">
           <h2>Key Features</h2>
         </div>
@@ -185,7 +243,7 @@ function KeyHighlights(props) {
   // Limited Model
   else {
     return (
-      <div style={{ width: "55%", height: "100%", maxWidth: "400px"}}>
+      <div style={{ width: "55%", height: "100%", maxWidth: "400px" }}>
         <div className="title-margin">
           <h2>Key Features</h2>
         </div>
