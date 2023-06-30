@@ -13,13 +13,15 @@ function ShoppingTools(props) {
   useEffect(() => {
     setFade("shopping-container-fade");
 
-    return(()=>{setFade("");})
+    return(()=>{
+      setFade("");
+    })
   }, []);
 
 
   return (
-    <div className={"shopping-container " + fade}>
-      <div className="container">
+    <div className="shopping-container">
+      <div className={"container " + fade}>
         <div className="title">
           <h1>Build Your Own Car</h1>
         </div>
