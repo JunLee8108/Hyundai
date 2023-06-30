@@ -3,7 +3,7 @@ import { carAllData } from "../helpers/CarData";
 import Page404 from "../helpers/Page404";
 import styled from "styled-components";
 import "../CarBuild.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 ///////////////////////////// Styled div
 let CarDataContainer = styled.div`
@@ -65,10 +65,10 @@ function CarBuild() {
   let { id } = useParams();
   let [keyNum, setKey] = useState(0);
   let [imgNum, setImg] = useState(0);
-  let [buttonBgColor1, setButtonBgColor1] = useState("");
+  let [buttonBgColor1, setButtonBgColor1] = useState("black");
   let [buttonBgColor2, setButtonBgColor2] = useState("");
   let [buttonBgColor3, setButtonBgColor3] = useState("");
-  let [buttonColor1, setButtonColor1] = useState("");
+  let [buttonColor1, setButtonColor1] = useState("white");
   let [buttonColor2, setButtonColor2] = useState("");
   let [buttonColor3, setButtonColor3] = useState("");
 
@@ -96,6 +96,17 @@ function CarBuild() {
       setButtonColor3("white");
     }
   };
+
+  let [fade, setFade] = useState("");
+
+  useEffect(()=> {
+    let timer = setTimeout(()=> {setFade("end")}, 100)
+
+    return (()=> {
+      clearTimeout(timer);
+      setFade("");
+    })
+  },[keyNum])
 
   // 404 Page
   if (id === "" || id > 3) {
@@ -151,10 +162,12 @@ function CarBuild() {
               </TrimButton1>
             </div>
 
+            <div className={"car-build-price " + fade}>
             <h4 style={{ marginBottom: "-15px" }}>Starting MSRP</h4>
             <h2 style={{ marginBottom: "-15px" }}>
               ${carAllData[id].price[keyNum]}
             </h2>
+            </div>
 
             {/* Laptop View */}
             <div className="highlight">
@@ -210,10 +223,22 @@ function CarBuild() {
 }
 
 function KeyHighlights(props) {
+  let [fade, setFade] = useState("");
+
+  useEffect(() => {
+    let timer = setTimeout(() => {
+      setFade("end");
+    }, 100);
+    return () => {
+      setFade("");
+      clearTimeout(timer);
+    };
+  }, [props.keyNum]);
+
   // SE Model
   if (props.keyNum === 0) {
     return (
-      <div style={{ width: "55%", height: "100%", maxWidth: "400px" }}>
+      <div className={"keyFeature-container " + fade}>
         <div className="title-margin">
           <h2>Key Features</h2>
         </div>
@@ -228,7 +253,7 @@ function KeyHighlights(props) {
   // SEL Model
   else if (props.keyNum === 1) {
     return (
-      <div style={{ width: "55%", height: "100%", maxWidth: "400px" }}>
+      <div className={"keyFeature-container " + fade}>
         <div className="title-margin">
           <h2>Key Features</h2>
         </div>
@@ -243,7 +268,7 @@ function KeyHighlights(props) {
   // Limited Model
   else {
     return (
-      <div style={{ width: "55%", height: "100%", maxWidth: "400px" }}>
+      <div className={"keyFeature-container " + fade}>
         <div className="title-margin">
           <h2>Key Features</h2>
         </div>

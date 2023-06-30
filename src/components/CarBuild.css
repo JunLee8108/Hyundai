@@ -50,6 +50,22 @@
     margin-bottom: 40px;
 }
 
+.keyFeature-container {
+    width: 55%;
+    max-width: 400px;
+    height: 100%;
+    opacity: 0;
+}
+
+.car-build-price {
+    opacity: 0;
+}
+
+.end {
+    opacity: 1;
+    transition: 1s;
+}
+
 @media screen and (max-width: 787px) {
     .trim button {
         border: none;

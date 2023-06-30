@@ -4,11 +4,20 @@ import kona from "../../assets/kona-build-your-own.webp";
 import sonata from "../../assets/sonata-build-your-own.webp";
 import tucson from "../../assets/tucson-build-your-own.webp";
 import { useNavigate } from "react-router-dom";
+import { useState, useEffect } from "react";
 
 function ShoppingTools(props) {
   let navigate = useNavigate();
+  let [fade, setFade] = useState("");
+  useEffect(() => {
+    setFade("shopping-container-fade");
+
+    return(()=>{setFade("");})
+  }, []);
+
+
   return (
-    <div className="shopping-container">
+    <div className={"shopping-container " + fade}>
       <div className="container">
         <div className="title">
           <h1>Build Your Own Vehicle</h1>

@@ -5,16 +5,25 @@ import tucsan from "../assets/tucson-hb.webp";
 import sonata from "../assets/sonata.webp";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+import { useEffect, useState } from "react";
 
 function VehicleSection() {
   let navigate = useNavigate();
+  let [fade, setFade] = useState("");
+
+  useEffect(() => {
+    let timer = setTimeout(() => {
+      setFade("vehicle-section-visible");
+    }, 100);
+
+    return () => {
+      clearTimeout(timer);
+      setFade("");
+    };
+  }, []);
 
   return (
-    <div
-      style={{
-        background: "linear-gradient(to right, #434343 0%, black 100%)",
-      }}
-    >
+    <div className={"vehicle-section-container " + fade}>
       <div className="vehicle-top">
         <div className="vehicle-top-container">
           <div className="vehicle-top-box">
@@ -52,7 +61,7 @@ function VehicleSection() {
               </h1>
             </div>
             <center>
-            <img src={kona} alt="car-KONA"></img>
+              <img src={kona} alt="car-KONA"></img>
             </center>
             <div style={{ textAlign: "center" }}>
               <p style={{ color: "white" }}>Starting at $33,550</p>
@@ -79,7 +88,7 @@ function VehicleSection() {
               </h1>
             </div>
             <center>
-            <img src={tucsan} alt="car-TUCSAN"></img>
+              <img src={tucsan} alt="car-TUCSAN"></img>
             </center>
             <div style={{ textAlign: "center" }}>
               <p style={{ color: "white" }}>Starting at $31,350</p>
@@ -106,7 +115,7 @@ function VehicleSection() {
               </h1>
             </div>
             <center>
-            <img src={sonata} alt="car-SONATA"></img>
+              <img src={sonata} alt="car-SONATA"></img>
             </center>
             <div style={{ textAlign: "center" }}>
               <p style={{ color: "white" }}>Starting at $28,250</p>

@@ -5,7 +5,7 @@ import hyundaiLogo from "../assets/hyundai-logo.webp";
 import account from "../assets/user.webp";
 import menu from "../assets/main-menu.webp";
 import deleteButton from "../assets/delete-button.webp";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import styled from "styled-components";
 
 /////////////////// STYLED COMPONENTS
@@ -97,10 +97,21 @@ function NavigationBar() {
     }
   };
 
+  let [fade, setFade] = useState("");
+  useEffect(() => {
+    let timer = setTimeout(() => {
+      setFade("nav-modal-fade");
+    }, 100);
+    return () => {
+      clearTimeout(timer);
+      setFade("");
+    };
+  }, [modal]);
+
   // If it's mobile
   if (isMobile) {
     return (
-      <div className="nav-container">
+      <div className="nav-container-mobile">
         <nav>
           <img className="hyundai-logo" src={hyundaiLogo} alt="logo"></img>
           <li className="company-name" onClick={modalControlFalse}>
@@ -114,7 +125,7 @@ function NavigationBar() {
         </nav>
         <div className="clear-both"></div>
         {modal == true ? (
-          <div className="nav-modal">
+          <div className={"nav-modal " + fade}>
             <ul>
               <Link to="/Vehicles" className="modal-style">
                 <li onClick={modalControl}>‣ Vehicles</li>
