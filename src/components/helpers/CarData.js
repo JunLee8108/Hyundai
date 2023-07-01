@@ -7,22 +7,51 @@ import buildKona from "../../assets/build-kona.webp";
 import buildKonaWhite from "../../assets/build-kona-white.webp";
 import buildKonaRed from "../../assets/build-kona-red.webp";
 import buildKonaBlue from "../../assets/build-kona-blue.webp";
+import detailKona from "../../assets/detail-kona-bg.webp";
+import konaGallery1 from "../../assets/car-detail-gallery/kona-detail-1.webp";
+import konaGallery2 from "../../assets/car-detail-gallery/kona-detail-2.webp";
+import konaGallery3 from "../../assets/car-detail-gallery/kona-detail-3.webp";
+import konaGallery4 from "../../assets/car-detail-gallery/kona-detail-4.webp";
+import konaGallery5 from "../../assets/car-detail-gallery/kona-detail-5.webp";
+import konaGallery6 from "../../assets/car-detail-gallery/kona-detail-6.webp";
 
 import buildIoniq from "../../assets/build-ioniq6.webp";
 import buildIoniqRed from "../../assets/build-ioniq-red.webp";
 import buildIoniqWhite from "../../assets/build-ioniq-white.webp";
 import buildIoniqSilver from "../../assets/build-ioniq-silver.webp";
 import detailIoniq from "../../assets/detail-ioniq-bg.webp";
+import ioniqGallery1 from "../../assets/car-detail-gallery/ioniq-detail-1.webp";
+import ioniqGallery2 from "../../assets/car-detail-gallery/ioniq-detail-2.webp";
+import ioniqGallery3 from "../../assets/car-detail-gallery/ioniq-detail-3.webp";
+import ioniqGallery4 from "../../assets/car-detail-gallery/ioniq-detail-4.webp";
+import ioniqGallery5 from "../../assets/car-detail-gallery/ioniq-detail-5.webp";
+import ioniqGallery6 from "../../assets/car-detail-gallery/ioniq-detail-6.webp";
 
 import buildSonata from "../../assets/build-sonata.webp";
 import buildSonataRed from "../../assets/build-sonata-red.webp";
 import buildSonataWhite from "../../assets/build-sonata-white.webp";
 import buildSonataSilver from "../../assets/build-sonata-silver.webp";
+import detailSonata from "../../assets/detail-sonata-bg.webp";
+import sonataGallery1 from "../../assets/car-detail-gallery/sonata-detail-1.webp";
+import sonataGallery2 from "../../assets/car-detail-gallery/sonata-detail-2.webp";
+import sonataGallery3 from "../../assets/car-detail-gallery/sonata-detail-3.webp";
+import sonataGallery4 from "../../assets/car-detail-gallery/sonata-detail-4.webp";
+import sonataGallery5 from "../../assets/car-detail-gallery/sonata-detail-5.webp";
+import sonataGallery6 from "../../assets/car-detail-gallery/sonata-detail-6.webp";
 
 import buildTucson from "../../assets/build-tucson.webp";
 import buildTucsonWhite from "../../assets/build-tucson-white.webp";
 import buildTucsonBlue from "../../assets/build-tucson-blue.webp";
 import buildTucsonSivler from "../../assets/build-tucson-silver.webp";
+import detailTucson from "../../assets/detail-tucson-bg.webp";
+import tucsonGallery1 from "../../assets/car-detail-gallery/tucson-detail-1.webp";
+import tucsonGallery2 from "../../assets/car-detail-gallery/tucson-detail-2.webp";
+import tucsonGallery3 from "../../assets/car-detail-gallery/tucson-detail-3.webp";
+import tucsonGallery4 from "../../assets/car-detail-gallery/tucson-detail-4.webp";
+import tucsonGallery5 from "../../assets/car-detail-gallery/tucson-detail-5.webp";
+import tucsonGallery6 from "../../assets/car-detail-gallery/tucson-detail-6.webp";
+
+
 
 const carImage = [ioniq, kona, sonata, tucson];
 const carName = [
@@ -54,11 +83,14 @@ const carAllData = [
     background: detailIoniq,
     year: "2023",
     name: "IONIQ6",
+    description: "The first-ever, all electric",
+    detailTable: ["Starting MSRP", "Range Up To", "Up To", "Available"],
     type: "Electric Sedan",
     price: ["45,500", "47,700", "52,600"],
     miles: "361",
     power: "320",
     wheel: "20",
+    option: "20 inch wheels",
     trim: ["SE", "SL", "Limited"],
     SEKey: [
       "RWD: Estimated 361-mile All-Electric",
@@ -84,6 +116,9 @@ const carAllData = [
       "Blind-Spot View Monitor (BVM)",
       "Bose Premium Audio",
     ],
+    imgGallery: [
+      ioniqGallery1, ioniqGallery2, ioniqGallery3, ioniqGallery4, ioniqGallery5, ioniqGallery6
+    ]
   },
 
   {
@@ -91,13 +126,17 @@ const carAllData = [
     img: kona,
     buildImg: [buildKona,buildKonaWhite, buildKonaBlue, buildKonaRed],
     color: ["black", "white", "#006DB5", "#790001"],
+    background: detailKona,
     name: "KONA ELECTRIC",
+    description: "Our all-electric small SUV",
+    detailTable: ["Starting MSRP", "EPA-est.range", "Power", "Standard"],
     year: "2023",
     type: "Electric SUV",
     price: ["33,550", "37,300", "41,550"],
     miles: "258",
     power: "201",
     wheel: "17",
+    option: "17 inch wheels",
     trim: ["SE", "SEL", "Limited"],
     SEKey: [
       "258-mile EPA-est. range",
@@ -123,6 +162,9 @@ const carAllData = [
       "Smart Cruise Control (SCC) with Stop & Go",
       "Leather-trimmed seats",
     ],
+    imgGallery: [
+      konaGallery1, konaGallery2, konaGallery3, konaGallery4, konaGallery5, konaGallery6
+    ]
   },
 
   {
@@ -132,11 +174,15 @@ const carAllData = [
     color: ["black", "white", "silver", "#00154D"],
     year: "2023",
     name: "TUCSON HYBRID",
+    background: detailTucson,
+    description: "All-purpose hybrid SUV",
+    detailTable: ["Starting MSRP", "Up To", "Combined", "Standard"],
     type: "Modern Compact SUV",
     price: ["31,350", "34,310", "39,110"],
     miles: "38",
     power: "226",
     wheel: "HTRAC AWD",
+    option: "HTRAC AWD",
     trim: ["Blue", "SEL", "Limited"],
     SEKey: [
       "38 Combined, 38 City/ 38 Highway",
@@ -162,6 +208,9 @@ const carAllData = [
       "Blind-Spot View Monitor (BVM)",
       "HTRAC All Wheel Drive",
     ],
+    imgGallery: [
+      tucsonGallery1, tucsonGallery2, tucsonGallery3, tucsonGallery4, tucsonGallery5, tucsonGallery6
+    ]
   },
 
   {
@@ -171,11 +220,15 @@ const carAllData = [
     color: ["black", "white", "silver", "#790001"],
     year: "2023",
     name: "SONATA HYBRID",
+    background: detailSonata,
+    description: "The hybrid sedan that reminds you why you love to drive.",
+    detailTable: ["Starting MSRP", "Up To", "Combined", "Available"],
     type: "Hybrid Sedan",
     price: ["28,250", "31,600", "36,400"],
     miles: "54",
     power: "192",
     wheel: "17",
+    option: "17 inch wheels",
     trim: ["Blue", "SEL", "Limited"],
     SEKey: [
       "52 MPG Combined, 50 City/54 Hwy",
@@ -201,6 +254,9 @@ const carAllData = [
       "12.3-inch fully digital gauge cluster",
       "Blind-Spot View Monitor (BVM)",
     ],
+    imgGallery: [
+      sonataGallery1, sonataGallery2, sonataGallery3, sonataGallery4, sonataGallery5, sonataGallery6,
+    ]
   },
 ];
 

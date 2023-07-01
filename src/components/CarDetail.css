@@ -1,276 +1,369 @@
 /* common use */
 .background {
-    width: 100%;
-    height: 650px;
-    max-height: 1000px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
+  width: 100%;
+  height: 650px;
+  max-height: 1000px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 .ioniq-detail-container {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../assets//detail-ioniq-bg.webp");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("../assets//detail-ioniq-bg.webp");
 }
 
 .kona-detail-container {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../assets//detail-kona-bg.webp");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("../assets/detail-kona-bg.webp");
 }
 
 .tucson-detail-container {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../assets//detail-tucson-bg.webp");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url("../assets/detail-tucson-bg.webp");
 }
 
 .sonata-detail-container {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../assets//detail-sonata-bg.webp");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("../assets/detail-sonata-bg.webp");
 }
 
 .detail-flexbox1 {
-    width: 100%;
-    height: 30%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+  width: 100%;
+  height: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .detail-flexbox2 {
-    width: 100%;
-    height: 40%;
+  width: 100%;
+  height: 40%;
 }
 
 .detail-flexbox3 {
-    width: 100%;
-    height: 80%;
-    display: flex;
-    align-items: flex-end;
+  width: 100%;
+  height: 80%;
+  display: flex;
+  align-items: flex-end;
 }
 
 .detail-title {
-    color: white;
-    margin: 0px;
-    font-size: 55px;
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    margin-top: 30px;
+  color: white;
+  margin: 0px;
+  font-size: 55px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-top: 30px;
 }
 
 .detail-subtitle {
-    margin-top: 10px;
-    color: white;
+  margin-top: 10px;
+  color: white;
 }
 
 .detail-info-flex-container {
-    display: flex;
-    height: 100px;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    /* background-color: yellow; */
+  display: flex;
+  height: 100px;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  /* background-color: yellow; */
 }
 
 .detail-info-flexbox {
-    margin: 30px;
-    width: 10%;
-    height: 100px;
-    /* background-color: yellow; */
-    color: white;
-    text-align: center;
+  margin: 30px;
+  width: 10%;
+  height: 100px;
+  /* background-color: yellow; */
+  color: white;
+  text-align: center;
 }
 
 .detail-mid-container-mobile {
-    /* background-color: yellow; */
-    background: radial-gradient(circle at 10% 20%, rgb(90, 92, 106) 0%, rgb(32, 45, 58) 81.3%);
-    width: 100%;
-    height: 100%;
-    display: none;
+  /* background-color: yellow; */
+  background: radial-gradient(
+    circle at 10% 20%,
+    rgb(90, 92, 106) 0%,
+    rgb(32, 45, 58) 81.3%
+  );
+  width: 100%;
+  height: 100%;
+  display: none;
 }
 
 .detail-mid-flex-container {
-    display: flex;
-    width: 100%;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 
 .detail-mid-flexbox {
-    width: 50%;
-    height: 100px;
-    /* background-color: red; */
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+  width: 50%;
+  height: 100px;
+  /* background-color: red; */
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 .detail-mobile-h4 {
-    margin-bottom: 0px;
+  margin-bottom: 0px;
 }
 
 .detail-bottom-container {
-    height: 800px;
-    background: linear-gradient(180.2deg, rgb(30, 33, 48) 6.8%, rgb(74, 98, 110) 131%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  height: 800px;
+  background: linear-gradient(
+    180.2deg,
+    rgb(30, 33, 48) 6.8%,
+    rgb(74, 98, 110) 131%
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .detail-bottom-flex-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
 }
 
 .detail-bottom-flexbox {
-    width: 100%;
-    height: 650px;
-    margin-right: 20px;
-    margin-left: 20px;
-    padding: 50px;
-    background-color: black;
-    border-radius: 5px;
-    color: white;
+  width: 100%;
+  height: 650px;
+  margin-right: 20px;
+  margin-left: 20px;
+  padding: 50px;
+  background-color: black;
+  border-radius: 5px;
+  color: white;
 }
 
 .detail-bottom-flexbox h3 {
+  border-top: 1px dotted white;
+  margin-top: 50px;
+  margin-bottom: 30px;
+  padding-top: 30px;
+}
+
+.detail-bottom-flexbox h4 {
+  margin-top: -10px;
+  margin-bottom: 50px;
+}
+
+.detail-bottom-flexbox h2 {
+  margin-bottom: -5px;
+}
+
+.detail-bottom-container-mobile {
+  display: none;
+}
+
+.detail-nextButton {
+  display: none;
+}
+
+.car-detail-gallery {
+  background: linear-gradient(
+    180.2deg,
+    rgb(30, 33, 48) 6.8%,
+    rgb(74, 98, 110) 131%
+  );
+  height: 100%;
+  padding: 1px;
+  color: white;
+}
+
+.car-detail-gallery h1 {
+  border-left: 4px solid white;
+  margin-top: 60px;
+  margin-left: 80px;
+  padding: 5px;
+  padding-left: 15px;
+  font-size: 40px;
+  width: 80%;
+}
+
+.car-detail-gallery-flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.car-detail-gallery-flexbox {
+  width: 30%;
+  margin: 5px;
+}
+
+.car-detail-gallery-flexbox img {
+  width: 100%;
+  height: 100%;
+}
+
+@media screen and (max-width: 787px) {
+  .background {
+    flex-wrap: wrap;
+    flex-direction: row;
+    height: 350px;
+  }
+
+  .detail-info-flex-container {
+    display: none;
+  }
+
+  .detail-title {
+    font-size: 30px;
+  }
+
+  .detail-subtitle {
+    font-size: 14px;
+    text-align: center;
+  }
+
+  .detail-mid-container-mobile {
+    display: flex;
+  }
+
+  .detail-mobile-h4 {
+    font-size: 15px;
+  }
+
+  .detail-mobile-h5 {
+    font-size: 13px;
+  }
+
+  .detail-bottom-container {
+    display: none;
+    /* height: 100%; */
+  }
+
+  .detail-bottom-container-mobile {
+    height: 650px;
+    width: 100%;
+    background: linear-gradient(
+      180.2deg,
+      rgb(30, 33, 48) 6.8%,
+      rgb(74, 98, 110) 131%
+    );
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: -30px;
+  }
+
+  .detail-bottom-flex-container-mobile {
+    flex-wrap: wrap;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .detail-bottom-flexbox-mobile {
+    height: 650px;
+    width: 100%;
+    padding: 50px;
+    background: linear-gradient(
+      109.6deg,
+      rgb(36, 45, 57) 11.2%,
+      rgb(16, 37, 60) 51.2%,
+      rgb(0, 0, 0) 98.6%
+    );
+    color: white;
+  }
+
+  .detail-bottom-flexbox-mobile h1 {
+    font-size: 20px;
+  }
+
+  .detail-bottom-flexbox-mobile h2 {
+    font-size: 18px;
+    margin-bottom: -5px;
+  }
+
+  .detail-bottom-flexbox-mobile h3 {
+    font-size: 16px;
     border-top: 1px dotted white;
     margin-top: 50px;
     margin-bottom: 30px;
     padding-top: 30px;
-}
+  }
 
-.detail-bottom-flexbox h4 {
+  .detail-bottom-flexbox-mobile h4 {
+    font-size: 14px;
     margin-top: -10px;
     margin-bottom: 50px;
-}
+  }
 
-.detail-bottom-flexbox h2 {
-    margin-bottom: -5px;
-}
+  .detail-bottom-flexbox-mobile p {
+    font-size: 16px;
+  }
 
-.detail-bottom-container-mobile {
-    display: none;
-}
+  .detail-nextButton {
+    display: flex;
+    justify-content: center;
+    background: none;
+    margin-top: -20px;
+    position: relative;
+    bottom: 425px;
+    right: 75px;
+  }
 
-.detail-nextButton {
-    display: none;
-}
+  .detail-nextButton button {
+    width: 100px;
+    height: 30px;
+    color: white;
+    border: white 2px solid;
+    background: linear-gradient(
+      109.6deg,
+      rgb(36, 45, 57) 11.2%,
+      rgb(16, 37, 60) 51.2%,
+      rgb(0, 0, 0) 98.6%
+    );
+    border-radius: 5px;
+    font-size: 10px;
+  }
 
-@media screen and (max-width: 787px) {
-    .background {
-        flex-wrap: wrap;
-        flex-direction: row;
-        height: 350px;
-    }
+  .car-detail-gallery {
+    background: linear-gradient(
+      180.2deg,
+      rgb(30, 33, 48) 6.8%,
+      rgb(74, 98, 110) 131%
+    );
+    height: 100%;
+    color: white;
+  }
 
-    .detail-info-flex-container {
-        display: none;
-    }
+  .car-detail-gallery-flex {
+    margin-bottom: 5px;
+  }
 
-    .detail-title {
-        font-size: 30px;
-    }
+  .car-detail-gallery-flexbox {
+    width: 80%;
+    margin-bottom: 30px;
+  }
 
-    .detail-subtitle {
-        font-size: 14px;
-        text-align: center;
-    }
-
-    .detail-mid-container-mobile {
-        display: flex;
-    }
-
-    .detail-mobile-h4 {
-        font-size: 15px;
-    }
-
-    .detail-mobile-h5 {
-        font-size: 13px;
-    }
-
-    .detail-bottom-container {
-        display: none;
-        /* height: 100%; */
-    }
-
-    .detail-bottom-container-mobile {
-        height: 650px;
-        width: 100%;
-        background: linear-gradient(180.2deg, rgb(30, 33, 48) 6.8%, rgb(74, 98, 110) 131%);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-bottom: -30px;
-    }
-
-    .detail-bottom-flex-container-mobile {
-        flex-wrap: wrap;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .detail-bottom-flexbox-mobile {
-        height: 650px;
-        width: 100%;
-        padding: 50px;
-        background: linear-gradient(109.6deg, rgb(36, 45, 57) 11.2%, rgb(16, 37, 60) 51.2%, rgb(0, 0, 0) 98.6%);
-        color: white;
-    }
-
-    .detail-bottom-flexbox-mobile h1 {
-        font-size: 20px;
-    }
-
-    .detail-bottom-flexbox-mobile h2 {
-        font-size: 18px;
-        margin-bottom: -5px;
-    }
-
-    .detail-bottom-flexbox-mobile h3 {
-        font-size: 16px;
-        border-top: 1px dotted white;
-        margin-top: 50px;
-        margin-bottom: 30px;
-        padding-top: 30px;
-    }
-
-    .detail-bottom-flexbox-mobile h4 {
-        font-size: 14px;
-        margin-top: -10px;
-        margin-bottom: 50px;
-    }
-
-    .detail-bottom-flexbox-mobile p {
-        font-size: 16px;
-    }
-
-
-    .detail-nextButton {
-        display: flex;
-        justify-content: center;
-        background: none;
-        margin-top: -20px;
-        position: relative;
-        bottom: 425px;
-        right: 75px;
-    }
-
-    .detail-nextButton button {
-        width: 100px;
-        height: 30px;
-        color: white;
-        border: white 2px solid;
-        background: linear-gradient(109.6deg, rgb(36, 45, 57) 11.2%, rgb(16, 37, 60) 51.2%, rgb(0, 0, 0) 98.6%);
-        border-radius: 5px;
-        font-size: 10px;
-    }
+  .car-detail-gallery h1 {
+    border: none;
+    margin-top: 30px;
+    margin-bottom: 25px;
+    margin-left: 0px;
+    padding: 5px;
+    font-size: 20px;
+    text-align: center;
+    width: 97%;
+  }
 }
