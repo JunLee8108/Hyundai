@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
 import Page404 from "../helpers/Page404";
 import { carAllData } from "../helpers/CarData";
-import EachTrim from "../helpers/EachTrim";
+import EachTrimDescription from "../helpers/EachTrimDescription";
 import "../CarDetail.css";
 import { useEffect, useState } from "react";
 import styled from "styled-components";
@@ -47,11 +47,10 @@ function CarDetail() {
   const handleModal = () => {
     if (modal) {
       setModal(false);
-    }
-    else {
+    } else {
       setModal(true);
     }
-  }
+  };
 
   // 404 Error Page
   if (id == "" || id > 3) {
@@ -197,7 +196,7 @@ function CarDetail() {
         </div>
 
         {/* Mobile View */}
-        <EachTrim id={id} trimNum={trimNum} />
+        <EachTrimDescription id={id} trimNum={trimNum} />
         <div className="detail-nextButton">
           <div style={{ width: "80%" }}></div>
           <div style={{ width: "20%" }}>
@@ -212,9 +211,13 @@ function CarDetail() {
             {carAllData[id].imgGallery.map(function (a, index) {
               return (
                 <div className="car-detail-gallery-flexbox" key={index}>
-                  <img src={carAllData[id].imgGallery[index]} onClick={()=>{
-                    setModal(true); 
-                    setImageNum(index);}} />
+                  <img
+                    src={carAllData[id].imgGallery[index]}
+                    onClick={() => {
+                      setModal(true);
+                      setImageNum(index);
+                    }}
+                  />
                 </div>
               );
             })}
@@ -227,7 +230,6 @@ function CarDetail() {
             <GalleryModal id={id} handleModal={handleModal} imageNum={imageNum}/>
           ) : null
         } */}
-
       </>
     );
   }

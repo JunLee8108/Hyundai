@@ -1,11 +1,7 @@
 import OwnerSection from "../OwnerSection";
 
 function Owners(props) {
-  return (
-    <div>
-      <OwnerSection />
-    </div>
-  );
+  return <OwnerSection />;
 }
 
 export default Owners;

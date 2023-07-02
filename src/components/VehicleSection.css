@@ -102,12 +102,14 @@ div {
     .vehicle-top h1 {
         font-size: 24px;
         margin-left: 0px;
+        width: 100%;
     }
 
     .vehicle-top-box {
         height: 350px;
-        margin: 20px;
-        margin-bottom: 50px;
+        margin: 5px;
+        margin-bottom: 20px;
+        margin-top: 30px;
     }
 
     .vehicle-top-box img {
@@ -122,8 +124,12 @@ div {
         border-left: 3px solid;
     }
 
+    .vehicle-text-box p {
+        font-size: 14px;
+    }
+
     .color-navy {
-        font-size: 32px;
+        font-size: 29px;
         font-weight: bold;
     }
 

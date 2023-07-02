@@ -99,14 +99,16 @@ function CarBuild() {
 
   let [fade, setFade] = useState("");
 
-  useEffect(()=> {
-    let timer = setTimeout(()=> {setFade("end")}, 100)
+  useEffect(() => {
+    let timer = setTimeout(() => {
+      setFade("end");
+    }, 100);
 
-    return (()=> {
+    return () => {
       clearTimeout(timer);
       setFade("");
-    })
-  },[keyNum])
+    };
+  }, [keyNum]);
 
   // 404 Page
   if (id === "" || id > 3) {
@@ -163,10 +165,10 @@ function CarBuild() {
             </div>
 
             <div className={"car-build-price " + fade}>
-            <h4 style={{ marginBottom: "-15px" }}>Starting MSRP</h4>
-            <h2 style={{ marginBottom: "-15px" }}>
-              ${carAllData[id].price[keyNum]}
-            </h2>
+              <h4 style={{ marginBottom: "-15px" }}>Starting MSRP</h4>
+              <h2 style={{ marginBottom: "-15px" }}>
+                ${carAllData[id].price[keyNum]}
+              </h2>
             </div>
 
             {/* Laptop View */}

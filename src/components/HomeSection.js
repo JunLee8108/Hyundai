@@ -1,14 +1,24 @@
 import "./HomeSection.css";
 import { Link, useNavigate } from "react-router-dom";
 import { useState, useRef, useEffect } from "react";
-import {carImage, carName, carType, carPrice, carMiles, carPower, carWheel, milesOrMPG, available} from "./helpers/CarData"
+import {
+  carImage,
+  carName,
+  carType,
+  carPrice,
+  carMiles,
+  carPower,
+  carWheel,
+  milesOrMPG,
+  available,
+} from "./helpers/CarData";
 
 function HomeSection() {
   let [count, setCount] = useState(0);
   let [numForMiles, setNumForMile] = useState(0);
   let [numForAvailable, setNumAvailable] = useState(0);
   let navigate = useNavigate();
-  
+
   const carInfoForward = () => {
     if (count < carImage.length - 1) {
       setCount((count += 1));
@@ -56,18 +66,22 @@ function HomeSection() {
 
   let [carFade, setCarFade] = useState("");
   let [infoFade, setInfoFade] = useState("");
-  
-  useEffect(()=> {
-    let timer = setTimeout(()=>{setCarFade("carFade")}, 100);
-    let timer2 = setTimeout(()=>{setInfoFade("infoFade")}, 100);
 
-    return(()=> {
+  useEffect(() => {
+    let timer = setTimeout(() => {
+      setCarFade("carFade");
+    }, 100);
+    let timer2 = setTimeout(() => {
+      setInfoFade("infoFade");
+    }, 100);
+
+    return () => {
       clearTimeout(timer);
       clearTimeout(timer2);
       setCarFade("");
       setInfoFade("");
-    })
-  },[count])
+    };
+  }, [count]);
 
   return (
     <div>
@@ -86,7 +100,10 @@ function HomeSection() {
         <div className="home-bottom-content home-top-content ">
           <h3>All-purpose hybrid SUV</h3>
           <h1>2023 TUCSON HYBRID</h1>
-          <button className="button-learn-more" onClick={()=>navigate("/CarDetail/2")}>
+          <button
+            className="button-learn-more"
+            onClick={() => navigate("/CarDetail/2")}
+          >
             EXPLORE
           </button>
         </div>
@@ -104,7 +121,10 @@ function HomeSection() {
         <div className="home-bottom-content home-top-content ">
           <h3>The first-ever, all electric</h3>
           <h1>2023 IONIQ 6</h1>
-          <button className="button-learn-more" onClick={()=>navigate("/CarDetail/0")}>
+          <button
+            className="button-learn-more"
+            onClick={() => navigate("/CarDetail/0")}
+          >
             EXPLORE
           </button>
         </div>

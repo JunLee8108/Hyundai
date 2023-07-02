@@ -1,11 +1,7 @@
 import HomeSection from "../HomeSection";
 
 function Home(props) {
-  return (
-    <div>
-      <HomeSection/>
-    </div>
-  );
+  return <HomeSection />;
 }
 
 export default Home;

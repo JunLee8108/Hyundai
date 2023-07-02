@@ -53,11 +53,15 @@ function OwnerSection() {
           <div className="login-modal">
             <p>Invalid ID or Password.</p>
             <p>Please check you ID or Password.</p>
-            <button onClick={() => {
-              setModal(false);
-              document.body.style.overflow = "unset";
-            }}>Close</button>
-            </div>
+            <button
+              onClick={() => {
+                setModal(false);
+                document.body.style.overflow = "unset";
+              }}
+            >
+              Close
+            </button>
+          </div>
         ) : null}
       </div>
     </div>

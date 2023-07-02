@@ -3,6 +3,7 @@ import kona from "../../assets/kona-ev.webp";
 import sonata from "../../assets/sonata.webp";
 import tucson from "../../assets/tucson-hb.webp";
 
+import buildYourOwnKona from "../../assets/kona-build-your-own.webp";
 import buildKona from "../../assets/build-kona.webp";
 import buildKonaWhite from "../../assets/build-kona-white.webp";
 import buildKonaRed from "../../assets/build-kona-red.webp";
@@ -15,6 +16,7 @@ import konaGallery4 from "../../assets/car-detail-gallery/kona-detail-4.webp";
 import konaGallery5 from "../../assets/car-detail-gallery/kona-detail-5.webp";
 import konaGallery6 from "../../assets/car-detail-gallery/kona-detail-6.webp";
 
+import buildYourOwnIoniq from "../../assets/ioniq6-build-your-own.webp";
 import buildIoniq from "../../assets/build-ioniq6.webp";
 import buildIoniqRed from "../../assets/build-ioniq-red.webp";
 import buildIoniqWhite from "../../assets/build-ioniq-white.webp";
@@ -27,6 +29,7 @@ import ioniqGallery4 from "../../assets/car-detail-gallery/ioniq-detail-4.webp";
 import ioniqGallery5 from "../../assets/car-detail-gallery/ioniq-detail-5.webp";
 import ioniqGallery6 from "../../assets/car-detail-gallery/ioniq-detail-6.webp";
 
+import buildYourOwnSonata from "../../assets/sonata-build-your-own.webp";
 import buildSonata from "../../assets/build-sonata.webp";
 import buildSonataRed from "../../assets/build-sonata-red.webp";
 import buildSonataWhite from "../../assets/build-sonata-white.webp";
@@ -39,6 +42,7 @@ import sonataGallery4 from "../../assets/car-detail-gallery/sonata-detail-4.webp
 import sonataGallery5 from "../../assets/car-detail-gallery/sonata-detail-5.webp";
 import sonataGallery6 from "../../assets/car-detail-gallery/sonata-detail-6.webp";
 
+import buildYourOwnTucson from "../../assets/tucson-build-your-own.webp";
 import buildTucson from "../../assets/build-tucson.webp";
 import buildTucsonWhite from "../../assets/build-tucson-white.webp";
 import buildTucsonBlue from "../../assets/build-tucson-blue.webp";
@@ -50,8 +54,6 @@ import tucsonGallery3 from "../../assets/car-detail-gallery/tucson-detail-3.webp
 import tucsonGallery4 from "../../assets/car-detail-gallery/tucson-detail-4.webp";
 import tucsonGallery5 from "../../assets/car-detail-gallery/tucson-detail-5.webp";
 import tucsonGallery6 from "../../assets/car-detail-gallery/tucson-detail-6.webp";
-
-
 
 const carImage = [ioniq, kona, sonata, tucson];
 const carName = [
@@ -72,12 +74,17 @@ const carPower = ["320", "201", "192", "226"];
 const carWheel = ["20", "17", "17", "HTRAC AWD"];
 const milesOrMPG = ["miles", "MPG Hwy"];
 const available = [" inch wheels", "."];
-const trimDescription = ["The base trim with lots of great standard features.", "The balanced trim with plenty of must-have features.", "The premium trim that treats you with high-end features."];
+const trimDescription = [
+  "The base trim with lots of great standard features.",
+  "The balanced trim with plenty of must-have features.",
+  "The premium trim that treats you with high-end features.",
+];
 
 const carAllData = [
   {
     id: 0,
     img: ioniq,
+    shoppingToolImg: buildYourOwnIoniq,
     buildImg: [buildIoniq, buildIoniqWhite, buildIoniqSilver, buildIoniqRed],
     color: ["black", "white", "silver", "#790001"],
     background: detailIoniq,
@@ -117,14 +124,20 @@ const carAllData = [
       "Bose Premium Audio",
     ],
     imgGallery: [
-      ioniqGallery1, ioniqGallery2, ioniqGallery3, ioniqGallery4, ioniqGallery5, ioniqGallery6
-    ]
+      ioniqGallery1,
+      ioniqGallery2,
+      ioniqGallery3,
+      ioniqGallery4,
+      ioniqGallery5,
+      ioniqGallery6,
+    ],
   },
 
   {
     id: 1,
     img: kona,
-    buildImg: [buildKona,buildKonaWhite, buildKonaBlue, buildKonaRed],
+    shoppingToolImg: buildYourOwnKona,
+    buildImg: [buildKona, buildKonaWhite, buildKonaBlue, buildKonaRed],
     color: ["black", "white", "#006DB5", "#790001"],
     background: detailKona,
     name: "KONA ELECTRIC",
@@ -163,14 +176,25 @@ const carAllData = [
       "Leather-trimmed seats",
     ],
     imgGallery: [
-      konaGallery1, konaGallery2, konaGallery3, konaGallery4, konaGallery5, konaGallery6
-    ]
+      konaGallery1,
+      konaGallery2,
+      konaGallery3,
+      konaGallery4,
+      konaGallery5,
+      konaGallery6,
+    ],
   },
 
   {
     id: 3,
     img: tucson,
-    buildImg: [buildTucson, buildTucsonWhite, buildTucsonSivler ,buildTucsonBlue],
+    shoppingToolImg: buildYourOwnTucson,
+    buildImg: [
+      buildTucson,
+      buildTucsonWhite,
+      buildTucsonSivler,
+      buildTucsonBlue,
+    ],
     color: ["black", "white", "silver", "#00154D"],
     year: "2023",
     name: "TUCSON HYBRID",
@@ -209,14 +233,25 @@ const carAllData = [
       "HTRAC All Wheel Drive",
     ],
     imgGallery: [
-      tucsonGallery1, tucsonGallery2, tucsonGallery3, tucsonGallery4, tucsonGallery5, tucsonGallery6
-    ]
+      tucsonGallery1,
+      tucsonGallery2,
+      tucsonGallery3,
+      tucsonGallery4,
+      tucsonGallery5,
+      tucsonGallery6,
+    ],
   },
 
   {
     id: 2,
     img: sonata,
-    buildImg: [buildSonata, buildSonataWhite, buildSonataSilver, buildSonataRed],
+    shoppingToolImg: buildYourOwnSonata,
+    buildImg: [
+      buildSonata,
+      buildSonataWhite,
+      buildSonataSilver,
+      buildSonataRed,
+    ],
     color: ["black", "white", "silver", "#790001"],
     year: "2023",
     name: "SONATA HYBRID",
@@ -255,8 +290,13 @@ const carAllData = [
       "Blind-Spot View Monitor (BVM)",
     ],
     imgGallery: [
-      sonataGallery1, sonataGallery2, sonataGallery3, sonataGallery4, sonataGallery5, sonataGallery6,
-    ]
+      sonataGallery1,
+      sonataGallery2,
+      sonataGallery3,
+      sonataGallery4,
+      sonataGallery5,
+      sonataGallery6,
+    ],
   },
 ];
 

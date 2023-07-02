@@ -1,6 +1,6 @@
 import { carAllData, trimDescription } from "./CarData";
 
-function EachTrim(props) {
+function EachTrimDescription(props) {
   if (props.trimNum == 0) {
     return (
       <div className="detail-bottom-container-mobile">
@@ -61,4 +61,4 @@ function EachTrim(props) {
   }
 }
 
-export default EachTrim;
+export default EachTrimDescription;
