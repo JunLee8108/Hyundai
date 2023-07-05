@@ -11,6 +11,7 @@ import {
   carWheel,
   milesOrMPG,
   available,
+  carAllData,
 } from "./helpers/CarData";
 
 function HomeSection() {
@@ -32,7 +33,7 @@ function HomeSection() {
       setNumForMile(1);
     }
 
-    if (count == 3) {
+    if (count == 2) {
       setNumAvailable(1);
     } else {
       setNumAvailable(0);
@@ -52,7 +53,7 @@ function HomeSection() {
       setNumForMile(1);
     }
 
-    if (count == 3) {
+    if (count == 2) {
       setNumAvailable(1);
     } else {
       setNumAvailable(0);
@@ -136,7 +137,7 @@ function HomeSection() {
             <p>«</p>
           </div>
           <div className={"home-middle-left-flexbox2 " + carFade}>
-            <img src={carImage[count]} alt="car-information"></img>
+            <img src={carAllData[count].img} alt="car-information"></img>
           </div>
           <div className="home-middle-left-flexbox3" onClick={carInfoForward}>
             <p>»</p>
@@ -147,7 +148,7 @@ function HomeSection() {
           <table>
             <thead>
               <tr>
-                <th className="car-name">{carName[count]}</th>
+                <th className="car-name">{carAllData[count].year} {carAllData[count].name}</th>
                 <th>Starting at</th>
                 <th>Up to</th>
                 <th>Up to</th>
@@ -156,17 +157,17 @@ function HomeSection() {
             </thead>
             <tbody>
               <tr>
-                <th>{carType[count]}</th>
-                <td className="car-number">${carPrice[count]}</td>
+                <th>{carAllData[count].type}</th>
+                <td className="car-number">${carAllData[count].price[0]}</td>
                 <td>
-                  <span className="car-number">{carMiles[count]}</span>{" "}
+                  <span className="car-number">{carAllData[count].miles}</span>{" "}
                   {milesOrMPG[numForMiles]}
                 </td>
                 <td>
-                  <span className="car-number">{carPower[count]}</span> hp
+                  <span className="car-number">{carAllData[count].power}</span> hp
                 </td>
                 <td>
-                  <span className="car-number">{carWheel[count]}</span>
+                  <span className="car-number">{carAllData[count].wheel}</span>
                   {available[numForAvailable]}
                 </td>
               </tr>
