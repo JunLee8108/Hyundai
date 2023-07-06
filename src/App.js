@@ -7,11 +7,11 @@ import Vehicles from "./components/pages/Vehicles";
 import NavigationBar from "./components/NavigationBar";
 import CarBuild from "./components/pages/CarBuild";
 import CarDetail from "./components/pages/CarDetail";
-import Page404 from "./components/helpers/Page404";
 import Footer from "./components/Footer";
 import { lazy, Suspense } from "react";
 
 const About = lazy(() => import("./components/pages/About"));
+const Page404 = lazy(() => import("./components/helpers/Page404"));
 
 function App() {
   return (
@@ -23,6 +23,9 @@ function App() {
           <Route path="/" exact element={<Home />} />
           <Route path="/Vehicles" element={<Vehicles />} />
           <Route path="/Owners" element={<Owners />} />
+          <Route path="/ShoppingTools" element={<ShoppingTools />} />
+          <Route path="/CarBuild/:id" element={<CarBuild />} />
+          <Route path="/CarDetail/:id" element={<CarDetail />} />
           <Route
             path="/About"
             element={
@@ -31,10 +34,14 @@ function App() {
               </Suspense>
             }
           />
-          <Route path="/ShoppingTools" element={<ShoppingTools />} />
-          <Route path="/CarBuild/:id" element={<CarBuild />} />
-          <Route path="/CarDetail/:id" element={<CarDetail />} />
-          <Route path="*" element={<Page404 />} />
+          <Route
+            path="*"
+            element={
+              <Suspense fallback={<div>Loading..</div>}>
+                <Page404 />
+              </Suspense>
+            }
+          />
         </Routes>
         <Footer />
       </BrowserRouter>
