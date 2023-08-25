@@ -57,6 +57,11 @@ let TrimButton1 = styled.button`
   &:hover {
     background-color: black;
     color: white;
+    transition: all 0.2s linear;
+  }
+
+  &:not(:hover) {
+    transition: all 0.2s linear;
   }
 `;
 ///////////////////////////// Styled div
