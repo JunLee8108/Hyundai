@@ -137,7 +137,14 @@ function HomeSection() {
             <p>«</p>
           </div>
           <div className={"home-middle-left-flexbox2 " + carFade}>
-            <img src={carAllData[count].img} alt="car-information"></img>
+            <img
+              src={carAllData[count].img}
+              alt="car-information"
+              onClick={() => {
+                navigate("/CarDetail/" + count);
+              }}
+              style={{ cursor: "pointer" }}
+            ></img>
           </div>
           <div className="home-middle-left-flexbox3" onClick={carInfoForward}>
             <p>»</p>
@@ -148,7 +155,9 @@ function HomeSection() {
           <table>
             <thead>
               <tr>
-                <th className="car-name">{carAllData[count].year} {carAllData[count].name}</th>
+                <th className="car-name">
+                  {carAllData[count].year} {carAllData[count].name}
+                </th>
                 <th>Starting at</th>
                 <th>Up to</th>
                 <th>Up to</th>
@@ -164,7 +173,8 @@ function HomeSection() {
                   {milesOrMPG[numForMiles]}
                 </td>
                 <td>
-                  <span className="car-number">{carAllData[count].power}</span> hp
+                  <span className="car-number">{carAllData[count].power}</span>{" "}
+                  hp
                 </td>
                 <td>
                   <span className="car-number">{carAllData[count].wheel}</span>

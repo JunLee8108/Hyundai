@@ -22,6 +22,12 @@ let NavLi = styled.li`
 
   &:hover {
     color: red;
+    transition: all 0.2s linear;
+  }
+
+  &:not(:hover) {
+    color: white;
+    transition: all 0.2s linear;
   }
 `;
 

@@ -1,122 +1,122 @@
-
 ul {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 ul {
-    box-sizing: border-box;
-    margin: 0;
+  box-sizing: border-box;
+  margin: 0;
 }
 
 nav {
-    height: 50px;
-    padding: 20px;
-    background-color: black;
+  height: 50px;
+  padding: 20px;
+  background-color: black;
 }
 
 .nav-container {
-    position: sticky;
-    z-index: 999;
-    top: 0;
+  position: sticky;
+  z-index: 999;
+  top: 0;
 }
 
 .nav-container-mobile {
-    position: sticky;
-    z-index: 999;
-    top: 0;
+  position: sticky;
+  z-index: 999;
+  top: 0;
 }
 
 .hyundai-logo {
-    float: left;
-    margin-top: 13px;
-    margin-right: -10px;
-    width: 60px;
+  float: left;
+  margin-top: 13px;
+  margin-right: -10px;
+  width: 60px;
 }
 
 .mobile-menu {
-    float: right;
-    margin-top: -19px; 
+  float: right;
+  margin-top: -19px;
 }
 
 .mobile-menu img {
-    width: 20px;
-    height: 20px;
-    margin-top: 21px;
-    cursor: pointer;
+  width: 20px;
+  height: 20px;
+  margin-top: 21px;
+  cursor: pointer;
 }
 
 .nav-modal {
-    background: radial-gradient(circle at 10% 20%, rgb(0, 0, 0) 0%, rgb(64, 64, 64) 90.2%);
-    width: 100%;
-    height: 300px;
-    padding-top: 30px;
-    opacity: 0;
+  background: radial-gradient(
+    circle at 10% 20%,
+    rgb(0, 0, 0) 0%,
+    rgb(64, 64, 64) 90.2%
+  );
+  width: 100%;
+  height: 300px;
+  padding-top: 35px;
+  position: fixed;
+  opacity: 0;
 }
 
 .nav-modal-fade {
-    opacity: 1;
-    transition: 0.5s;
+  opacity: 1;
+  transition: 0.5s;
 }
 
 .nav-modal li {
-    list-style-type: none;
-    margin-top: 1px;
-    margin-bottom: 50px;
-    font-size: 18px;
-    font-weight: bold;
-    color: white;
+  list-style-type: none;
+  margin-top: 1px;
+  margin-bottom: 50px;
+  font-size: 15px;
+  font-weight: bold;
+  color: white;
 }
 
 .nav-modal li:visited {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .nav-modal li:hover {
-    color: red;
+  color: red;
 }
 
 .modal-style {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .nav-model ul {
-    display: flex;
-    margin: 0;
+  display: flex;
+  margin: 0;
 }
 
 .nav-item-company {
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
 }
 
 .nav-item-company:hover {
-    color: red;
+  color: red;
 }
 
 .nav-menu {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    margin-top: -5px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: -5px;
 }
 
 .clear-both {
-    clear: both;
+  clear: both;
 }
 
 @media screen and (max-width: 767px) {
-    nav {
-        height: 25px;
-    }
+  nav {
+    height: 25px;
+  }
 
-    .hyundai-logo {
-        margin-top: 5px;
-        margin-right: -12px;
-        width: 30px;
-    }
+  .hyundai-logo {
+    margin-top: 5px;
+    margin-right: -12px;
+    width: 30px;
+  }
 }
-
-
-
-

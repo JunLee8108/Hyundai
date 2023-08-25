@@ -2,294 +2,302 @@
 _::-webkit-full-page-media,
 _:future,
 :root .background-img {
-    background-attachment: scroll;
+  background-attachment: scroll;
 }
 
 .home-top-background {
-    width: 100%;
-    filter: brightness(90%) contrast(150%) saturate(150%);
-    background-image: url(../../public/img/pexels-hyundai-motor-group-11159145.webp);
+  width: 100%;
+  filter: brightness(90%) contrast(150%) saturate(150%);
+  background-image: url(../../public/img/pexels-hyundai-motor-group-11159145.webp);
 }
 
 .background-img {
-    height: 100vh;
-    position: relative;
-    background-repeat: repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
-    padding: 1px;
+  height: 100vh;
+  position: relative;
+  background-repeat: repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  padding: 1px;
 }
 
 .home-top-content {
-    text-align: center;
-    font-size: 26px;
-    letter-spacing: 10px;
-    width: 100%;
-    color: white;
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  text-align: center;
+  font-size: 26px;
+  letter-spacing: 10px;
+  width: 100%;
+  color: white;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .logo-style {
-    font-size: 52.5px;
-    letter-spacing: 8px;
+  font-size: 52.5px;
+  letter-spacing: 8px;
 }
 
 .button-learn-more {
-    width: 110px;
-    font-weight: bold;
-    border: none;
-    height: 50px;
-    cursor: pointer;
-    color: white;
-    border: 1px solid white;
-    background-color: black;
-    border-radius: 5px;
+  width: 110px;
+  font-weight: bold;
+  border: none;
+  height: 50px;
+  cursor: pointer;
+  color: white;
+  border: 1px solid white;
+  background-color: black;
+  border-radius: 5px;
 }
 
 .button-learn-more:hover {
-    background-color: white;
-    color: red;
-    transition: all 0.2s linear;
-    transform: scale(1.05);
+  background-color: white;
+  color: red;
+  transition: all 0.2s linear;
+}
+
+.button-learn-more:not(:hover) {
+  transition: all 0.2s linear;
 }
 
 .home-middle-background {
-    width: 100%;
-    height: 600px;
-    display: flex;
-    flex-direction: column;
-    background-color: white;
+  width: 100%;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
 }
 
 .home-middle-left {
-    width: 100%;
-    height: 400px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  width: 100%;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .home-middle-left p {
-    font-size: 50px;
-    cursor: pointer;
+  font-size: 50px;
+  cursor: pointer;
 }
 
 .home-middle-left-flexbox1 {
-    width: 10%;
-    height: 400px;
-    text-align: right;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  width: 10%;
+  height: 400px;
+  text-align: right;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .home-middle-left-flexbox2 {
-    width: 50%;
-    height: 400px;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    opacity: 0;
+  width: 50%;
+  height: 400px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
 }
 
 .carFade {
-    opacity: 1;
-    transition: 1s;
+  opacity: 1;
+  transition: 1s;
 }
 
 .home-middle-left-flexbox3 {
-    width: 10%;
-    height: 400px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  width: 10%;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .home-middle-left p:hover {
-    transform: scale(1.4);
-    transition: all 0.2s linear;
-    color: red;
+  transform: scale(1.4);
+  transition: all 0.15s linear;
+  color: red;
+}
+
+.home-middle-left p:not(:hover) {
+  transform: scale(1);
+  transition: all 0.15s linear;
 }
 
 .home-middle-left img {
-    width: 100%;
-    max-width: 800px;
-    padding: 10px;
+  width: 100%;
+  max-width: 800px;
+  padding: 10px;
 }
 
 .home-middle-right {
-    width: 100%;
-    height: 200px;
-    background-color: ghostwhite;
-    display: flex;
-    opacity: 0;
+  width: 100%;
+  height: 200px;
+  background-color: ghostwhite;
+  display: flex;
+  opacity: 0;
 }
 
 .infoFade {
-    opacity: 1;
-    transition: 2s;
+  opacity: 1;
+  transition: 2s;
 }
 
 table {
-    width: 100%;
-    max-width: 1150px;
-    text-align: center;
-    padding: 80px;
-    box-sizing: border-box;
+  width: 100%;
+  max-width: 1150px;
+  text-align: center;
+  padding: 80px;
+  box-sizing: border-box;
 }
 
 th,
 td {
-    padding: 0px;
-    font-size: 18px;
+  padding: 0px;
+  font-size: 18px;
 }
 
 th {
-    color: grey;
-    font-size: 16px;
+  color: grey;
+  font-size: 16px;
 }
 
 .car-name {
-    color: navy;
-    font-size: 26px;
-    font-weight: bold;
+  color: navy;
+  font-size: 26px;
+  font-weight: bold;
 }
 
 .car-number {
-    color: black;
-    font-size: 21px;
-    font-weight: bold;
+  color: black;
+  font-size: 21px;
+  font-weight: bold;
 }
 
 .home-bottom-background {
-    background-image: url(../../public/img/hyundai-grey.webp);
-    filter: brightness(90%) contrast(120%) saturate(200%);
+  background-image: url(../../public/img/hyundai-grey.webp);
+  filter: brightness(90%) contrast(120%) saturate(200%);
 }
 
 .home-bottom-background2 {
-    background-image: url(../../public/img/hyundai-kona.webp);
-    filter: brightness(100%) contrast(110%) saturate(140%);
+  background-image: url(../../public/img/hyundai-kona.webp);
+  filter: brightness(100%) contrast(110%) saturate(140%);
 }
 
 .home-bottom-background3 {
-    background-image: url(../../public/img/ioniq.webp);
-    filter: brightness(100%) contrast(110%) saturate(160%);
+  background-image: url(../../public/img/ioniq.webp);
+  filter: brightness(100%) contrast(110%) saturate(160%);
 }
 
 .home-bottom-content {
-    letter-spacing: 8px;
-    top: 50%;
+  letter-spacing: 8px;
+  top: 50%;
 }
 
 .align-center {
-    justify-content: center;
-    align-items: center;
+  justify-content: center;
+  align-items: center;
 }
 
 @media screen and (max-width: 767px) {
-    .home-top-background {
-        background-image: url(../../public/img/hyundai-mobile.webp);
-    }
+  .home-top-background {
+    background-image: url(../../public/img/hyundai-mobile.webp);
+  }
 
-    .home-bottom-background {
-        background-image: url(../../public/img/hyundai-grey-mobile.webp);
-        filter: brightness(90%) contrast(120%) saturate(150%);
-    }
+  .home-bottom-background {
+    background-image: url(../../public/img/hyundai-grey-mobile.webp);
+    filter: brightness(90%) contrast(120%) saturate(150%);
+  }
 
-    .home-bottom-background3 {
-        background-image: url(../../public/img/ioniq-mobile.webp);
-        filter: brightness(100%) contrast(110%) saturate(160%);
-    }
+  .home-bottom-background3 {
+    background-image: url(../../public/img/ioniq-mobile.webp);
+    filter: brightness(100%) contrast(110%) saturate(160%);
+  }
 
-    .background-img {
-        background-attachment: scroll;
-    }
+  .background-img {
+    background-attachment: scroll;
+  }
 
-    .home-top-content {
-        font-size: 14px;
-        line-height: 50px;
-        letter-spacing: 6px;
-        top: 38%;
-    }
+  .home-top-content {
+    font-size: 14px;
+    line-height: 50px;
+    letter-spacing: 6px;
+    top: 38%;
+  }
 
-    .logo-style {
-        font-size: 35px;
-        letter-spacing: 5px;
-    }
+  .logo-style {
+    font-size: 35px;
+    letter-spacing: 5px;
+  }
 
-    .button-learn-more {
-        width: 90px;
-        font-size: 12px;
-        height: 44px;
-        color: white;
-    }
+  .button-learn-more {
+    width: 90px;
+    font-size: 12px;
+    height: 44px;
+    color: white;
+  }
 
-    .home-middle-background {
-        height: 350px;
-    }
+  .home-middle-background {
+    height: 350px;
+  }
 
-    .home-middle-left {
-        height: 220px;
-    }
+  .home-middle-left {
+    height: 220px;
+  }
 
-    .home-middle-left p {
-        margin: 0px;
-        font-size: 30px;
-        cursor: pointer;
-    }
+  .home-middle-left p {
+    margin: 0px;
+    font-size: 30px;
+    cursor: pointer;
+  }
 
-    .home-middle-left-flexbox1 {
-        width: 20%;
-        justify-content: center;
-    }
+  .home-middle-left-flexbox1 {
+    width: 20%;
+    justify-content: center;
+  }
 
-    .home-middle-left-flexbox2 {
-        width: 100%;
-        justify-content: center;
-        align-items: center;
-    }
+  .home-middle-left-flexbox2 {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
 
-    .home-middle-left-flexbox3 {
-        width: 20%;
-        justify-content: center;
-    }
+  .home-middle-left-flexbox3 {
+    width: 20%;
+    justify-content: center;
+  }
 
-    .home-middle-right {
-        height: 130px;
-    }
+  .home-middle-right {
+    height: 130px;
+  }
 
-    table {
-        width: 100%;
-        padding: 10px;
-    }
+  table {
+    width: 100%;
+    padding: 10px;
+  }
 
-    th,
-    td {
-        padding: 5px;
-        font-size: 9px;
-    }
+  th,
+  td {
+    padding: 5px;
+    font-size: 9px;
+  }
 
-    td {
-        font-size: 8px;
-    }
+  td {
+    font-size: 8px;
+  }
 
-    .car-name {
-        font-size: 12px;
-    }
+  .car-name {
+    font-size: 12px;
+  }
 
-    .home-bottom-content {
-        font-size: 14px;
-        letter-spacing: 5px;
-        line-height: 40px;
-        top: 50%;
-    }
+  .home-bottom-content {
+    font-size: 14px;
+    letter-spacing: 5px;
+    line-height: 40px;
+    top: 50%;
+  }
 
-    .car-number {
-        font-size: 12px;
-    }
+  .car-number {
+    font-size: 12px;
+  }
 }

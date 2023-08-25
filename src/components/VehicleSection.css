@@ -1,142 +1,145 @@
 div {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .vehicle-section-container {
-    background: linear-gradient(to right, #434343 0%, black 100%);
-    opacity: 0;
-    min-height: calc(100vh - 15rem);
+  background: linear-gradient(to right, #434343 0%, black 100%);
+  opacity: 0;
+  min-height: calc(100vh - 15rem);
 }
 
 .vehicle-top {
-    padding: 20px;
+  padding: 20px;
 }
 
 .vehicle-top h1 {
-    font-size: 33px;
-    font-weight: lighter;
-    margin-left: 0px;
-    color: white;
-    text-align: center;
+  font-size: 33px;
+  font-weight: lighter;
+  margin-left: 0px;
+  color: white;
+  text-align: center;
 }
 
 .vehicle-top-container {
-    width: 100%;
-    display: flex;
-    margin-bottom: 50px;
-    justify-content: center;
-    flex-wrap: wrap;
+  width: 100%;
+  display: flex;
+  margin-bottom: 50px;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .vehicle-top-box {
-    width: 100%;
-    max-width: 650px;
-    height: 500px;
-    margin: 50px;
-    position: relative;
-    border-radius: 5px;
+  width: 100%;
+  max-width: 650px;
+  height: 500px;
+  margin: 50px;
+  position: relative;
+  border-radius: 5px;
 }
 
 .vehicle-top-box img {
-    text-align: center;
-    margin-top: 160px;
-    width: 95%;
+  text-align: center;
+  margin-top: 160px;
+  width: 95%;
 }
 
 .vehicle-top-box img:hover {
-    transition: all 0.2s linear;
-    transform: scale(1.05);
+  transition: all 0.2s linear;
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+.vehicle-top-box img:not(:hover) {
+  transition: all 0.2s linear;
+  transform: scale(1);
 }
 
 .vehicle-text-box {
-    position: absolute;
-    color: white;
-    left: 5%;
-    top: 0%;
+  position: absolute;
+  color: white;
+  left: 5%;
+  top: 0%;
 }
 
 .vehicle-text-box h1 {
-    padding-top: 5px;
-    padding-bottom: 5px;
-    padding: 10px;
-    border-left: 4px solid white;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding: 10px;
+  border-left: 4px solid white;
 }
 
 .color-navy {
-    color: white;
-    font-size: 37px;
-    font-weight: bold;
+  color: white;
+  font-size: 37px;
+  font-weight: bold;
 }
 
 .vehicle-button {
-    width: 100px;
-    height: 50px;
-    margin: 10px;
-    border: 1px solid white;
-    background-color: black;
-    color: white;
-    font-weight: bold;
-    cursor: pointer;
+  width: 100px;
+  height: 50px;
+  margin: 10px;
+  border: 1px solid transparent;
+  background-color: black;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
 }
 
 .vehicle-section-visible {
-    opacity: 1;
-    transition: 1.5s;
+  opacity: 1;
+  transition: 1.5s;
 }
 
 @media (hover: hover) {
-    .vehicle-button:hover {
-        background-color: white;
-        color: red;
-        transition: all 0.2s linear;
-        transform: scale(1.1);
-    }
+  .vehicle-button:hover {
+    background-color: white;
+    color: black;
+  }
 }
 
-
 @media screen and (max-width: 767px) {
-    .vehicle-top {
-        padding: 20px;
-    }
+  .vehicle-top {
+    padding: 20px;
+  }
 
-    .vehicle-top h1 {
-        font-size: 24px;
-        margin-left: 0px;
-        width: 100%;
-    }
+  .vehicle-top h1 {
+    font-size: 24px;
+    margin-left: 0px;
+    width: 100%;
+  }
 
-    .vehicle-top-box {
-        height: 350px;
-        margin: 5px;
-        margin-bottom: 20px;
-        margin-top: 30px;
-        width: 95%;
-    }
+  .vehicle-top-box {
+    height: 350px;
+    margin: 5px;
+    margin-bottom: 20px;
+    margin-top: 30px;
+    width: 95%;
+  }
 
-    .vehicle-top-box img {
-        margin-top: 120px;
-        width: 100%;
-        height: 125px;
-        filter: brightness(90%) contrast(100%) saturate(150%);
-    }
+  .vehicle-top-box img {
+    margin-top: 120px;
+    width: 100%;
+    height: 125px;
+    filter: brightness(90%) contrast(100%) saturate(150%);
+  }
 
-    .vehicle-text-box h1 {
-        padding: 5px;
-        border-left: 3px solid;
-    }
+  .vehicle-text-box h1 {
+    padding: 5px;
+    border-left: 3px solid;
+  }
 
-    .vehicle-text-box p {
-        font-size: 14px;
-    }
+  .vehicle-text-box p {
+    font-size: 14px;
+  }
 
-    .color-navy {
-        font-size: 29px;
-        font-weight: bold;
-    }
+  .color-navy {
+    font-size: 29px;
+    font-weight: bold;
+  }
 
-    .vehicle-button {
-        width: 85px;
-        height: 40px;
-        font-size: 12px;
-    }
+  .vehicle-button {
+    width: 85px;
+    height: 40px;
+    font-size: 12px;
+  }
 }

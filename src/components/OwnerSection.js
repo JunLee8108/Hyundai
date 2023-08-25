@@ -11,10 +11,12 @@ function OwnerSection() {
       e.preventDefault();
       setModal(true);
       document.body.style.overflow = "hidden";
+      document.body.style.paddingRight = "15px";
     } else if (pw == "") {
       e.preventDefault();
       setModal(true);
       document.body.style.overflow = "hidden";
+      document.body.style.paddingRight = "15px";
     }
   };
 
@@ -39,7 +41,9 @@ function OwnerSection() {
             <input type="password" id="loginPW"></input>
             <p className="underline">Forgot your password?</p>
             <center>
-              <button type="submit">Login</button>
+              <button type="submit" style={{ cursor: "pointer" }}>
+                Login
+              </button>
             </center>
             <p className="line">Or</p>
             <p>
@@ -57,6 +61,7 @@ function OwnerSection() {
               onClick={() => {
                 setModal(false);
                 document.body.style.overflow = "unset";
+                document.body.style.paddingRight = "unset";
               }}
             >
               Close

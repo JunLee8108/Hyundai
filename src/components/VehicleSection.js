@@ -1,5 +1,5 @@
 import "./VehicleSection.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { carAllData } from "./helpers/CarData";
 
@@ -17,6 +17,8 @@ function VehicleSection() {
     };
   }, []);
 
+  const navigate = useNavigate();
+
   return (
     <div className={"vehicle-section-container " + fade}>
       <div className="vehicle-top">
@@ -27,7 +29,13 @@ function VehicleSection() {
                 <div className="vehicle-text-box">
                   {index > 1 ? (
                     <p>
-                      <span style={{ color: "#00A7EB", fontSize: "20px", marginRight: "2px" }}>
+                      <span
+                        style={{
+                          color: "#00A7EB",
+                          fontSize: "20px",
+                          marginRight: "2px",
+                        }}
+                      >
                         🇭
                       </span>{" "}
                       HYBRID
@@ -41,7 +49,13 @@ function VehicleSection() {
                   </h1>
                 </div>
                 <center>
-                  <img src={carAllData[index].img} alt="car-IONIQ"></img>
+                  <img
+                    src={carAllData[index].img}
+                    alt="car-IONIQ"
+                    onClick={() => {
+                      navigate("/CarDetail/" + index);
+                    }}
+                  ></img>
                 </center>
                 <center>
                   <div style={{ textAlign: "center" }}>

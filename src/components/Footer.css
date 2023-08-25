@@ -1,69 +1,72 @@
 div {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .footer-container {
-    display: flex;
-    background-color: black;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    height: 10rem;
+  display: flex;
+  background-color: black;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  height: 10rem;
 }
 
 .footer-item {
-    width: 100%;
-    max-width: 500px;
-    text-align: center;
+  width: 100%;
+  max-width: 500px;
+  text-align: center;
 }
 
 .footer-item h1 {
-    font-size: 20px;
-    color: white;
+  font-size: 20px;
+  color: white;
 }
 
 .footer-item p {
-    font-size: 16px;
-    color: #D3D3D3;
+  font-size: 16px;
+  color: #d3d3d3;
 }
 
 .footer-item p:hover {
-    color: red;
-    transform: scale(1.1);
-    transition: all 0.2s linear;
+  color: red;
+  transition: all 0.2s linear;
+}
+
+.footer-item p:not(:hover) {
+  color: white;
+  transition: all 0.2s linear;
 }
 
 .footer-link {
-    text-decoration: none;
+  text-decoration: none;
 }
 
-
 @media screen and (max-width: 767px) {
-    .footer-container {
-        flex-wrap: wrap;
-        width: 100%;
-        height: 100%;
-    }
-    
-    .footer-item {
-        width: 100%;
-        text-align: left;
-    }
+  .footer-container {
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+  }
 
-    .footer-item h1 {
-        font-size: 16px;
-        color: white;
-        display: inline-block;
-    }
+  .footer-item {
+    width: 100%;
+    text-align: left;
+  }
 
-    .arrow-symbol {
-        margin-top: 13px;
-        float: right;
-        font-size: 13px;
-        color: white;
-    }
-    .clean-both {
-        float: none;
-        clear: both;
-    }
+  .footer-item h1 {
+    font-size: 16px;
+    color: white;
+    display: inline-block;
+  }
+
+  .arrow-symbol {
+    margin-top: 13px;
+    float: right;
+    font-size: 13px;
+    color: white;
+  }
+  .clean-both {
+    float: none;
+    clear: both;
+  }
 }

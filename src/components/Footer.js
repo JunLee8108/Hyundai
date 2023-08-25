@@ -13,28 +13,24 @@ function Footer() {
           <div className="footer-item">
             <Link to="/Vehicles" className="footer-link">
               <h1>Vehicles</h1>
-              <div className="arrow-symbol">▼</div>
             </Link>
             <div className="clean-both"></div>
           </div>
           <div className="footer-item">
             <Link to="ShoppingTools" className="footer-link">
               <h1>Shopping Tools</h1>
-              <div className="arrow-symbol">▼</div>
             </Link>
             <div className="clean-both"></div>
           </div>
           <div className="footer-item">
             <Link to="/Owners" className="footer-link">
               <h1>Owners</h1>
-              <div className="arrow-symbol">▼</div>
             </Link>
             <div className="clean-both"></div>
           </div>
           <div className="footer-item">
             <Link to="/About" className="footer-link">
               <h1>About</h1>
-              <div className="arrow-symbol">▼</div>
             </Link>
             <div className="clean-both"></div>
           </div>
