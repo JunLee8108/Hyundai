@@ -216,6 +216,7 @@ function CarDetail() {
                     onClick={() => {
                       setModal(true);
                       setImageNum(index);
+                      document.body.style.overflow = "hidden";
                     }}
                   />
                 </div>
@@ -224,12 +225,10 @@ function CarDetail() {
           </div>
         </div>
 
-        {/* Gallery Modal
-        {
-          modal == true ? (
-            <GalleryModal id={id} handleModal={handleModal} imageNum={imageNum}/>
-          ) : null
-        } */}
+        {/* Gallery Modal */}
+        {modal == true ? (
+          <GalleryModal id={id} handleModal={handleModal} imageNum={imageNum} />
+        ) : null}
       </>
     );
   }

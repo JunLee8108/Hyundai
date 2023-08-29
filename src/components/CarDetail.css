@@ -214,6 +214,15 @@
   cursor: pointer;
 }
 
+.gallery-modal-bg {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 5;
+}
+
 .gallery-modal {
   position: fixed;
   top: 50%;
@@ -222,19 +231,20 @@
   height: 80%;
   transform: translate(-50%, -50%);
   background-color: white;
-  z-index: 999;
+  z-index: 10;
   display: flex;
   flex-direction: column;
 }
 
 .gallery-modal-flexbox1 {
-  height: 90%;
+  height: 100%;
   background-color: blue;
 }
 
 .gallery-modal-flexbox1 img {
   width: 100%;
   height: 100%;
+  cursor: pointer;
 }
 
 .gallery-modal-flexbox2 {

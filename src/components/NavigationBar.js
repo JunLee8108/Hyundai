@@ -120,6 +120,7 @@ function NavigationBar() {
             onClick={() => {
               navigate("/");
               modalControlFalse();
+              document.body.style.overflow = "unset";
             }}
           >
             HYUNDAI
@@ -164,6 +165,7 @@ function NavigationBar() {
                 onClick={() => {
                   navigate("/");
                   buttonControl(3);
+                  document.body.style.overflow = "unset";
                 }}
               >
                 HYUNDAI
@@ -174,6 +176,7 @@ function NavigationBar() {
                 onClick={() => {
                   navigate("/Vehicles");
                   buttonControl(0);
+                  document.body.style.overflow = "unset";
                 }}
               >
                 VEHICLES
@@ -184,6 +187,7 @@ function NavigationBar() {
                 onClick={() => {
                   navigate("/ShoppingTools");
                   buttonControl(1);
+                  document.body.style.overflow = "unset";
                 }}
               >
                 BUILD YOUR OWN
@@ -194,6 +198,7 @@ function NavigationBar() {
                 onClick={() => {
                   navigate("/About");
                   buttonControl(2);
+                  document.body.style.overflow = "unset";
                 }}
               >
                 ABOUT
@@ -212,6 +217,7 @@ function NavigationBar() {
                 onClick={() => {
                   navigate("/Owners");
                   buttonControl(3);
+                  document.body.style.overflow = "unset";
                 }}
               >
                 MY HYUNDAI
