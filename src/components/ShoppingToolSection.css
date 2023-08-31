@@ -26,7 +26,7 @@
 .title-translateX {
   opacity: 1;
   transition: 1s;
-  border-bottom: solid white 2px;
+  border-bottom: solid white 4px;
 }
 
 .container {
@@ -64,11 +64,13 @@
 @media (hover: hover) {
   .flexbox:hover {
     transform: translateY(-30px);
+    border: 2px solid white;
     transition: all 0.3s linear;
   }
 
   .flexbox:not(:hover) {
     transition: all 0.3s linear;
+    border: 2px solid transparent;
     transform: translateY(0px);
   }
 }
