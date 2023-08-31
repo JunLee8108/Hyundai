@@ -203,6 +203,11 @@ div {
     cursor: pointer;
   }
 
+  .categorize-button:nth-child(3) {
+    margin-left: 2px;
+    margin-right: 14px;
+  }
+
   .vehicle-categorize-button h4 {
     font-size: 14px;
   }
