@@ -92,17 +92,6 @@ div {
   width: 95%;
 }
 
-.vehicle-top-box img:hover {
-  transition: all 0.2s linear;
-  transform: scale(1.05);
-  cursor: pointer;
-}
-
-.vehicle-top-box img:not(:hover) {
-  transition: all 0.2s linear;
-  transform: scale(1);
-}
-
 .vehicle-text-box {
   position: absolute;
   color: white;
@@ -143,6 +132,17 @@ div {
   .vehicle-button:hover {
     background-color: white;
     color: black;
+  }
+
+  .vehicle-top-box img:hover {
+    transition: all 0.2s linear;
+    transform: scale(1.05);
+    cursor: pointer;
+  }
+
+  .vehicle-top-box img:not(:hover) {
+    transition: all 0.2s linear;
+    transform: scale(1);
   }
 }
 
