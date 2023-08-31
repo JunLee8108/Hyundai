@@ -8,9 +8,10 @@ import NavigationBar from "./components/NavigationBar";
 import CarBuild from "./components/pages/CarBuild";
 import CarDetail from "./components/pages/CarDetail";
 import Footer from "./components/Footer";
+import About from "./components/pages/About";
 import { lazy, Suspense } from "react";
 
-const About = lazy(() => import("./components/pages/About"));
+// const About = lazy(() => import("./components/pages/About"));
 const Page404 = lazy(() => import("./components/helpers/Page404"));
 
 function App() {
@@ -26,14 +27,16 @@ function App() {
           <Route path="/ShoppingTools" element={<ShoppingTools />} />
           <Route path="/CarBuild/:id" element={<CarBuild />} />
           <Route path="/CarDetail/:id" element={<CarDetail />} />
-          <Route
+          <Route path="/About" element={<About />} />
+
+          {/* <Route
             path="/About"
             element={
               <Suspense fallback={<div>Loading..</div>}>
                 <About />
               </Suspense>
             }
-          />
+          /> */}
           <Route
             path="*"
             element={

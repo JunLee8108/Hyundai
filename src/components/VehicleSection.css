@@ -20,6 +20,50 @@ div {
   text-align: center;
 }
 
+.vehicle-categorize-button {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  /* background-color: red; */
+}
+
+.vehicle-categorize-button button {
+  font-size: 15px;
+  width: 100px;
+  height: 40px;
+  border: none;
+  /* border-bottom: 1px dotted white; */
+  background-color: transparent;
+  color: white;
+  cursor: pointer;
+}
+
+.vehicle-categorize-button button:nth-child(2):hover {
+  color: red !important;
+  transition: 0.2s all linear;
+}
+
+.vehicle-categorize-button button:nth-child(3):hover {
+  color: orange !important;
+  transition: 0.2s all linear;
+}
+
+.vehicle-categorize-button button:nth-child(4):hover {
+  color: skyblue !important;
+  transition: 0.2s all linear;
+}
+
+.vehicle-categorize-button button:not(:hover) {
+  color: white;
+  transition: 0.2s all linear;
+}
+
+.vehicle-categorize-button h4 {
+  color: white;
+}
+
 .vehicle-top-container {
   width: 100%;
   display: flex;
@@ -87,7 +131,7 @@ div {
 
 .vehicle-section-visible {
   opacity: 1;
-  transition: 1.5s;
+  transition: all linear 1s;
 }
 
 @media (hover: hover) {
@@ -141,5 +185,20 @@ div {
     width: 85px;
     height: 40px;
     font-size: 12px;
+  }
+
+  .vehicle-categorize-button button {
+    font-size: 13px;
+    width: 70px;
+    height: 40px;
+    border: none;
+    /* border-bottom: 1px dotted white; */
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+  }
+
+  .vehicle-categorize-button h4 {
+    font-size: 14px;
   }
 }

@@ -25,7 +25,7 @@
 
 .title-translateX {
   opacity: 1;
-  transition: 1s;
+  transition: ease-out 1s;
   border-bottom: solid white 2.5px;
 }
 

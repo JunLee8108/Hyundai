@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { carAllData } from "./helpers/CarData";
 
 function ShoppingToolSection() {
-    let navigate = useNavigate();
+  let navigate = useNavigate();
   let [translateX, setTranslateX] = useState("");
 
   useEffect(() => {

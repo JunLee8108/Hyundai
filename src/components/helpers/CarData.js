@@ -131,6 +131,8 @@ const carAllData = [
       ioniqGallery5,
       ioniqGallery6,
     ],
+    engine: "Electrified",
+    engineIcon: "⚡",
   },
 
   {
@@ -183,6 +185,8 @@ const carAllData = [
       konaGallery5,
       konaGallery6,
     ],
+    engine: "Electrified",
+    engineIcon: "⚡",
   },
 
   {
@@ -240,6 +244,8 @@ const carAllData = [
       tucsonGallery5,
       tucsonGallery6,
     ],
+    engine: "Hybrid",
+    engineIcon: "🇭",
   },
 
   {
@@ -297,6 +303,8 @@ const carAllData = [
       sonataGallery5,
       sonataGallery6,
     ],
+    engine: "Hybrid",
+    engineIcon: "🇭",
   },
 ];
 
