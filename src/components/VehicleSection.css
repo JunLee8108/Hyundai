@@ -20,6 +20,11 @@ div {
   text-align: center;
 }
 
+.categorize-button:nth-child(3) {
+  margin-left: 2px;
+  margin-right: 12px;
+}
+
 .vehicle-categorize-button {
   display: flex;
   gap: 1rem;

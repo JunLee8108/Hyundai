@@ -54,6 +54,7 @@ nav {
   height: 300px;
   padding-top: 35px;
   position: fixed;
+  top: 7%;
   opacity: 0;
 }
 
