@@ -31,7 +31,6 @@ div {
   justify-content: center;
   align-items: center;
   margin-top: 30px;
-  /* background-color: red; */
 }
 
 .vehicle-categorize-button button {
@@ -43,6 +42,7 @@ div {
   background-color: transparent;
   color: white;
   cursor: pointer;
+  /* border-bottom: 1px dotted white; */
 }
 
 .vehicle-categorize-button button:nth-child(2):hover {
@@ -67,6 +67,7 @@ div {
 
 .vehicle-categorize-button h4 {
   color: white;
+  margin-right: 10px;
 }
 
 .vehicle-top-container {
@@ -209,6 +210,7 @@ div {
   }
 
   .vehicle-categorize-button h4 {
+    margin-right: 0;
     font-size: 14px;
   }
 }
