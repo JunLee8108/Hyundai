@@ -137,14 +137,32 @@ function HomeSection() {
             <p>«</p>
           </div>
           <div className={"home-middle-left-flexbox2 " + carFade}>
-            <img
+            {/* <img
               src={carAllData[count].img}
               alt="car-information"
               onClick={() => {
                 navigate("/CarDetail/" + count);
               }}
-              style={{ cursor: "pointer" }}
-            ></img>
+              className="home-middle-left-img1"
+            ></img> */}
+            {carAllData.map((a, index) => {
+              return (
+                <div key={index}>
+                  <img
+                    src={carAllData[index].img}
+                    alt="car-information"
+                    onClick={() => {
+                      navigate("/CarDetail/" + count);
+                    }}
+                    className={
+                      index === count
+                        ? "home-middle-left-img1"
+                        : "home-middle-left-img2"
+                    }
+                  ></img>
+                </div>
+              );
+            })}
           </div>
           <div className="home-middle-left-flexbox3" onClick={carInfoForward}>
             <p>»</p>
