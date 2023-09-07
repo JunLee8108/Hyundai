@@ -110,7 +110,7 @@ _:future,
   cursor: pointer;
   opacity: 1;
   transition: 1s all ease-out;
-  background-color: red;
+  /* background-color: red; */
   z-index: 3;
 }
 
