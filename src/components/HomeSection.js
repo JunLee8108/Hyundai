@@ -136,7 +136,7 @@ function HomeSection() {
           <div className="home-middle-left-flexbox1" onClick={carInfoBackward}>
             <p>«</p>
           </div>
-          <div className={"home-middle-left-flexbox2 " + carFade}>
+          <div className="home-middle-left-flexbox2">
             {/* <img
               src={carAllData[count].img}
               alt="car-information"
