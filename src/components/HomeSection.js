@@ -136,7 +136,7 @@ function HomeSection() {
           <div className="home-middle-left-flexbox1" onClick={carInfoBackward}>
             <p>«</p>
           </div>
-          <div className="home-middle-left-flexbox2">
+          <div className={"home-middle-left-flexbox2 " + carFade}>
             {/* <img
               src={carAllData[count].img}
               alt="car-information"
@@ -151,7 +151,11 @@ function HomeSection() {
                   <img
                     src={carAllData[index].img}
                     alt="car-information"
-                    onClick={() => {
+                    onClick={(e) => {
+                      // if (e.target.className === "home-middle-left-img1") {
+                      //   navigate("/CarDetail/" + count);
+                      // }
+                      // console.log(e.target.className);
                       navigate("/CarDetail/" + count);
                     }}
                     className={
