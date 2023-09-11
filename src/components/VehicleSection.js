@@ -134,7 +134,13 @@ function VehicleSection() {
                           src={sortedData[index].img}
                           alt="car-IONIQ"
                           onClick={() => {
-                            navigate("/CarDetail/" + index);
+                            if (sortedData[index].id === 3) {
+                              navigate("/CarDetail/" + 2);
+                            } else if (sortedData[index].id === 2) {
+                              navigate("/CarDetail/" + 3);
+                            } else {
+                              navigate("/CarDetail/" + sortedData[index].id);
+                            }
                           }}
                         ></img>
                       </center>
