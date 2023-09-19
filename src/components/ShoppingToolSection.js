@@ -12,7 +12,7 @@ function ShoppingToolSection() {
     const onPageLoad = () => {
       timer = setTimeout(() => {
         setTranslateX("title-translateX");
-      }, 1000);
+      }, 1500);
     };
 
     if (document.readyState === "complete") {
