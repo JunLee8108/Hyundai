@@ -8,24 +8,37 @@ function ShoppingToolSection() {
   let [translateX, setTranslateX] = useState("");
 
   useEffect(() => {
-    setTranslateX("title-translateX");
+    let timer;
+    const onPageLoad = () => {
+      timer = setTimeout(() => {
+        setTranslateX("title-translateX");
+      }, 800);
+    };
+
+    if (document.readyState === "complete") {
+      onPageLoad();
+    } else {
+      window.addEventListener("load", onPageLoad);
+    }
 
     return () => {
+      clearTimeout(timer);
       setTranslateX("");
+      window.removeEventListener("load", onPageLoad);
     };
   }, []);
 
   return (
     <div className="shopping-container">
       <div className="container">
-        <div className={"title " + translateX}>
+        <div className="title">
           <h1>Build Your Own Car</h1>
         </div>
         <div className="flex-container">
           {carAllData.map(function (a, index) {
             return (
               <div
-                className="flexbox"
+                className={"flexbox " + translateX}
                 onClick={() => navigate("/CarBuild/" + index)}
                 key={index}
               >

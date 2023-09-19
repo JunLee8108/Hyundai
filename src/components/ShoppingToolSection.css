@@ -13,7 +13,7 @@
   margin-bottom: 20px;
   margin-top: -10px;
   text-align: center;
-  opacity: 0;
+  border-bottom: solid white 2.5px;
 }
 
 .title h1 {
@@ -21,12 +21,6 @@
   text-align: center;
   border-radius: 5px;
   font-size: 32px;
-}
-
-.title-translateX {
-  opacity: 1;
-  transition: ease-out 1s;
-  border-bottom: solid white 2.5px;
 }
 
 .container {
@@ -55,6 +49,12 @@
   color: white;
   cursor: pointer;
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  transition: all 1.5s;
+}
+
+.title-translateX {
+  opacity: 1;
 }
 
 .flexbox img {
