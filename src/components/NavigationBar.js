@@ -13,7 +13,7 @@ let NavLi = styled.li`
   box-sizing: border-box;
   display: inline;
   padding: 20px;
-  font-size: 15px;
+  font-size: 14px;
   font-weight: bold;
   cursor: pointer;
   float: ${(props) => props.float};

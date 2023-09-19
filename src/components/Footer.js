@@ -1,6 +1,7 @@
 import "./Footer.css";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { Link, useNavigate } from "react-router-dom";
+import hyundaiLog from "../assets/hyundai-logo.webp";
 
 function Footer() {
   const isMobile = useMediaQuery("(max-width: 600px)");
@@ -9,31 +10,9 @@ function Footer() {
   if (isMobile) {
     return (
       <div>
-        <div className="footer-container">
-          <div className="footer-item">
-            <Link to="/Vehicles" className="footer-link">
-              <h1>Vehicles</h1>
-            </Link>
-            <div className="clean-both"></div>
-          </div>
-          <div className="footer-item">
-            <Link to="ShoppingTools" className="footer-link">
-              <h1>Shopping Tools</h1>
-            </Link>
-            <div className="clean-both"></div>
-          </div>
-          <div className="footer-item">
-            <Link to="/Owners" className="footer-link">
-              <h1>Owners</h1>
-            </Link>
-            <div className="clean-both"></div>
-          </div>
-          <div className="footer-item">
-            <Link to="/About" className="footer-link">
-              <h1>About</h1>
-            </Link>
-            <div className="clean-both"></div>
-          </div>
+        <div className="footer-container-mobile">
+          <img src={hyundaiLog}></img>
+          <h4>HYUNDAI Motors.</h4>
         </div>
       </div>
     );

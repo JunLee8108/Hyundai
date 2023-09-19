@@ -32,7 +32,9 @@ function ShoppingToolSection() {
     <div className="shopping-container">
       <div className="container">
         <div className="title">
-          <h1>Build Your Own Car</h1>
+          <h1>
+            Personalize your HYUNDAI model with our intuitive online tool.
+          </h1>
         </div>
         <div className="flex-container">
           {carAllData.map(function (a, index) {

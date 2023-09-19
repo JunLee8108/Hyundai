@@ -1,5 +1,5 @@
 import "./App.css";
-import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 import ScrollToTop from "./components/helpers/ScrollToTop";
 import Home from "./components/pages/Home";
 import Owners from "./components/pages/Owners";
