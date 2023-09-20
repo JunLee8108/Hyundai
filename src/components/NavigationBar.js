@@ -63,18 +63,18 @@ function NavigationBar() {
     if (modal) {
       setModal(false);
       setImageNum(0);
-      document.body.style.overflow = "unset";
+      // document.body.style.overflow = "unset";
     } else {
       setModal(true);
       setImageNum(1);
-      document.body.style.overflow = "hidden";
+      // document.body.style.overflow = "hidden";
     }
   };
 
   const modalControlFalse = () => {
     setImageNum(0);
     setModal(false);
-    document.body.style.overflow = "unset";
+    // document.body.style.overflow = "unset";
   };
 
   const buttonControl = (e) => {
@@ -97,16 +97,16 @@ function NavigationBar() {
     }
   };
 
-  let [fade, setFade] = useState("");
-  useEffect(() => {
-    let timer = setTimeout(() => {
-      setFade("nav-modal-fade");
-    }, 100);
-    return () => {
-      clearTimeout(timer);
-      setFade("");
-    };
-  }, [modal]);
+  // let [fade, setFade] = useState("");
+  // useEffect(() => {
+  //   let timer = setTimeout(() => {
+  //     setFade("nav-modal-fade");
+  //   }, 300);
+  //   return () => {
+  //     clearTimeout(timer);
+  //     setFade("");
+  //   };
+  // }, [modal]);
 
   // If it's mobile
   if (isMobile) {
@@ -120,32 +120,36 @@ function NavigationBar() {
             onClick={() => {
               navigate("/");
               modalControlFalse();
-              document.body.style.overflow = "unset";
+              // document.body.style.overflow = "unset";
             }}
           >
             HYUNDAI
           </NavLiCompanyName>
           <li className="mobile-menu">
-            <img src={modalImage[imageNum]} onClick={modalControl}></img>
+            <button onClick={modalControl}>
+              <img src={modalImage[imageNum]}></img>
+            </button>
           </li>
         </nav>
         <div className="clear-both"></div>
         {modal == true ? (
-          <div className={"nav-modal " + fade}>
-            <ul>
-              <Link to="/Vehicles" className="modal-style">
-                <li onClick={modalControl}>‣ Vehicles</li>
-              </Link>
-              <Link to="/ShoppingTools" className="modal-style">
-                <li onClick={modalControl}>‣ Build Your Own</li>
-              </Link>
-              <Link to="/About" className="modal-style">
-                <li onClick={modalControl}>‣ About Hyundai</li>
-              </Link>
-              <Link to="/Owners" className="modal-style">
-                <li onClick={modalControl}>‣ Login to My Hyundai</li>
-              </Link>
-            </ul>
+          <div className="nav-container-mobile-bg">
+            <div className="nav-modal">
+              <ul>
+                <Link to="/Vehicles" className="modal-style">
+                  <li onClick={modalControl}>Vehicles</li>
+                </Link>
+                <Link to="/ShoppingTools" className="modal-style">
+                  <li onClick={modalControl}>Build Your Own</li>
+                </Link>
+                <Link to="/About" className="modal-style">
+                  <li onClick={modalControl}>About Hyundai</li>
+                </Link>
+                <Link to="/Owners" className="modal-style">
+                  <li onClick={modalControl}>Login to My Hyundai</li>
+                </Link>
+              </ul>
+            </div>
           </div>
         ) : null}
       </div>
@@ -165,7 +169,7 @@ function NavigationBar() {
                 onClick={() => {
                   navigate("/");
                   buttonControl(3);
-                  document.body.style.overflow = "unset";
+                  // document.body.style.overflow = "unset";
                 }}
               >
                 HYUNDAI
@@ -176,7 +180,7 @@ function NavigationBar() {
                 onClick={() => {
                   navigate("/Vehicles");
                   buttonControl(0);
-                  document.body.style.overflow = "unset";
+                  // document.body.style.overflow = "unset";
                 }}
               >
                 VEHICLES
@@ -187,7 +191,7 @@ function NavigationBar() {
                 onClick={() => {
                   navigate("/ShoppingTools");
                   buttonControl(1);
-                  document.body.style.overflow = "unset";
+                  // document.body.style.overflow = "unset";
                 }}
               >
                 BUILD YOUR OWN
@@ -198,7 +202,7 @@ function NavigationBar() {
                 onClick={() => {
                   navigate("/About");
                   buttonControl(2);
-                  document.body.style.overflow = "unset";
+                  // document.body.style.overflow = "unset";
                 }}
               >
                 ABOUT
@@ -217,7 +221,7 @@ function NavigationBar() {
                 onClick={() => {
                   navigate("/Owners");
                   buttonControl(3);
-                  document.body.style.overflow = "unset";
+                  // document.body.style.overflow = "unset";
                 }}
               >
                 MY HYUNDAI

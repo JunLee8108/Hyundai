@@ -8,11 +8,19 @@ function ShoppingToolSection() {
   let [translateX, setTranslateX] = useState("");
 
   useEffect(() => {
+    const BrowserWidth = document.body.scrollWidth;
     let timer;
+
     const onPageLoad = () => {
-      timer = setTimeout(() => {
-        setTranslateX("title-translateX");
-      }, 1200);
+      if (BrowserWidth > 768) {
+        timer = setTimeout(() => {
+          setTranslateX("title-translateX");
+        }, 1100);
+      } else {
+        timer = setTimeout(() => {
+          setTranslateX("title-translateX");
+        }, 200);
+      }
     };
 
     if (document.readyState === "complete") {

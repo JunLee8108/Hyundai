@@ -33,8 +33,17 @@ nav {
 }
 
 .mobile-menu {
-  float: right;
-  margin-top: -19px;
+  position: relative;
+  margin-top: -20px;
+  list-style-type: none;
+}
+
+.mobile-menu button {
+  width: 50px;
+  position: absolute;
+  left: 89.5%;
+  background-color: transparent;
+  border: none;
 }
 
 .mobile-menu img {
@@ -44,28 +53,38 @@ nav {
   cursor: pointer;
 }
 
+.nav-container-mobile-bg {
+  position: fixed;
+  left: 0;
+  top: 59px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 10;
+}
+
 .nav-modal {
   background: black;
   width: 100%;
-  height: 300px;
   padding-top: 25px;
   position: fixed;
-  top: 7%;
-  opacity: 0;
+  top: 59px;
+  /* opacity: 0; */
 }
 
 .nav-modal-fade {
   opacity: 1;
-  transition: 0.5s;
+  transition: 0.5s all;
 }
 
 .nav-modal li {
-  list-style-type: none;
+  list-style-type: disc;
   margin-top: 1px;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
+  margin-left: 2px;
+  padding-left: 10px;
   font-size: 15px;
   font-weight: bold;
-  color: white;
 }
 
 .nav-modal li:visited {
@@ -78,6 +97,7 @@ nav {
 
 .modal-style {
   text-decoration: none;
+  color: white;
 }
 
 .nav-model ul {
@@ -108,8 +128,9 @@ nav {
 
 @media screen and (max-width: 767px) {
   nav {
-    height: 25px;
-    padding: 20px;
+    height: 35px;
+    padding-left: 20px;
+    padding-top: 20px;
   }
 
   .hyundai-logo {
