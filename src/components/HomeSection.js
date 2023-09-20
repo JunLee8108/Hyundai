@@ -68,17 +68,17 @@ function HomeSection() {
 
   const handleMouseDown = (e) => {
     setIsDragging(true);
-    setStartX(e.clientX);
+    setStartX(e.clientX || e.touches[0].clientX);
   };
 
   const handleMouseMove = (e) => {
     if (!isDragging) return;
 
-    const currentX = e.clientX;
+    const currentX = e.clientX || e.touches[0].clientX;
     const diffX = startX - currentX;
     setDragOffset(diffX);
 
-    if (Math.abs(diffX) > 500) {
+    if (Math.abs(diffX) > 100) {
       if (diffX > 0) {
         carInfoForward();
       } else {
@@ -176,6 +176,9 @@ function HomeSection() {
             onMouseDown={handleMouseDown}
             onMouseMove={handleMouseMove}
             onMouseUp={handleMouseUp}
+            onTouchStart={handleMouseDown}
+            onTouchMove={handleMouseMove}
+            onTouchEnd={handleMouseUp}
           >
             {/* <img
               src={carAllData[count].img}

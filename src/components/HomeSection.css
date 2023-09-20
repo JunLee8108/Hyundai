@@ -103,6 +103,7 @@ img {
   align-items: center;
   opacity: 0;
   position: relative;
+  transition: transform 0.5s ease-out;
 }
 
 .carFade {
