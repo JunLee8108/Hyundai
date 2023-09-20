@@ -14,17 +14,17 @@ function VehicleSection() {
     const allButtons = document.querySelectorAll(".categorize-button");
     if (target.innerHTML === "All") {
       for (let i = 0; i < allButtons.length; i++) {
-        allButtons[i].style.color = "white";
+        allButtons[i].style.color = "grey";
       }
       target.style.color = "red";
     } else if (target.innerHTML === "Electrified") {
       for (let i = 0; i < allButtons.length; i++) {
-        allButtons[i].style.color = "white";
+        allButtons[i].style.color = "grey";
       }
       target.style.color = "orange";
     } else if (target.innerHTML === "Hybrid") {
       for (let i = 0; i < allButtons.length; i++) {
-        allButtons[i].style.color = "white";
+        allButtons[i].style.color = "grey";
       }
       target.style.color = "skyblue";
     }
@@ -60,6 +60,13 @@ function VehicleSection() {
 
   return (
     <>
+      <div className="vehicle-introduction">
+        <p>
+          Introducing Hyundai's Spectacular Lineup of All Vehicles – Where
+          Quality Meets Innovation!
+        </p>
+      </div>
+
       {sortedData.length > 0 ? (
         <>
           <div className="vehicle-categorize-button">

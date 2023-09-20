@@ -71,11 +71,11 @@ function CarBuild() {
   let [keyNum, setKey] = useState(0);
   let [imgNum, setImg] = useState(0);
   let [buttonBgColor1, setButtonBgColor1] = useState("black");
-  let [buttonBgColor2, setButtonBgColor2] = useState("");
-  let [buttonBgColor3, setButtonBgColor3] = useState("");
+  let [buttonBgColor2, setButtonBgColor2] = useState("white");
+  let [buttonBgColor3, setButtonBgColor3] = useState("white");
   let [buttonColor1, setButtonColor1] = useState("white");
-  let [buttonColor2, setButtonColor2] = useState("");
-  let [buttonColor3, setButtonColor3] = useState("");
+  let [buttonColor2, setButtonColor2] = useState("black");
+  let [buttonColor3, setButtonColor3] = useState("black");
 
   const handleButton = (e) => {
     if (e == 0) {

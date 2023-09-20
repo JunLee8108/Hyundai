@@ -2,6 +2,21 @@ div {
   box-sizing: border-box;
 }
 
+.vehicle-introduction {
+  text-align: center;
+  color: white;
+  margin-top: 60px;
+  margin-bottom: 50px;
+}
+
+.vehicle-introduction p {
+  font-weight: 500;
+  font-size: 18px;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .vehicle-section-container {
   background: linear-gradient(to right, #434343 0%, black 100%);
   opacity: 0;
@@ -31,17 +46,19 @@ div {
   justify-content: center;
   align-items: center;
   margin-top: 30px;
+  margin-bottom: -10px;
 }
 
 .vehicle-categorize-button button {
-  font-size: 15px;
+  font-size: 13px;
   width: 100px;
   height: 40px;
   border: none;
   /* border-bottom: 1px dotted white; */
   background-color: transparent;
-  color: white;
+  color: grey;
   cursor: pointer;
+  letter-spacing: 1px;
   /* border-bottom: 1px dotted white; */
 }
 
@@ -61,12 +78,13 @@ div {
 }
 
 .vehicle-categorize-button button:not(:hover) {
-  color: white;
+  color: grey;
   transition: 0.2s all linear;
 }
 
 .vehicle-categorize-button h4 {
   color: white;
+  font-size: 14px;
   margin-right: 10px;
 }
 
@@ -148,6 +166,22 @@ div {
 }
 
 @media screen and (max-width: 767px) {
+  .vehicle-introduction {
+    margin-top: 50px;
+    margin-bottom: 30px;
+  }
+
+  .vehicle-introduction p {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 30px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 45px;
+    border-bottom: 2px solid white;
+  }
+
   .vehicle-top {
     padding: 20px;
   }
@@ -194,7 +228,7 @@ div {
   }
 
   .vehicle-categorize-button button {
-    font-size: 13px;
+    font-size: 12px;
     width: 70px;
     height: 40px;
     border: none;
