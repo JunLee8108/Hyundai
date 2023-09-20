@@ -158,12 +158,12 @@ function VehicleSection() {
                           </p>
                           <Link to={"/CarDetail/" + index}>
                             <button className="vehicle-button">
-                              <p>Explore</p>
+                              <p>EXPLORE</p>
                             </button>
                           </Link>
                           <Link to={"/CarBuild/" + index}>
                             <button className="vehicle-button">
-                              <p>Build</p>
+                              <p>BUILD</p>
                             </button>
                           </Link>
                         </div>

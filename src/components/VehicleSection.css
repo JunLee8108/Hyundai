@@ -132,9 +132,11 @@ div {
 }
 
 .vehicle-button {
-  width: 100px;
-  height: 50px;
+  width: 105px;
+  height: 60px;
   margin: 10px;
+  border-radius: 5px;
+  font-size: 12px;
   border: 1px solid transparent;
   background-color: black;
   color: white;
@@ -151,6 +153,13 @@ div {
   .vehicle-button:hover {
     background-color: white;
     color: black;
+    transition: 0.3s all;
+  }
+
+  .vehicle-button:not(:hover) {
+    background-color: black;
+    color: white;
+    transition: 0.3s all;
   }
 
   .vehicle-top-box img:hover {
@@ -168,7 +177,7 @@ div {
 @media screen and (max-width: 767px) {
   .vehicle-introduction {
     margin-top: 50px;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
   }
 
   .vehicle-introduction p {
@@ -178,8 +187,6 @@ div {
     width: 90%;
     margin-left: auto;
     margin-right: auto;
-    padding-bottom: 45px;
-    border-bottom: 2px solid white;
   }
 
   .vehicle-top {
@@ -222,9 +229,14 @@ div {
   }
 
   .vehicle-button {
-    width: 85px;
-    height: 40px;
-    font-size: 12px;
+    width: 90px;
+    height: 53px;
+    font-size: 11px;
+  }
+
+  .vehicle-button:focus {
+    background-color: white;
+    color: black;
   }
 
   .vehicle-categorize-button button {

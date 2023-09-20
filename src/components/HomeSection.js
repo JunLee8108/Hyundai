@@ -20,6 +20,10 @@ function HomeSection() {
   let [numForAvailable, setNumAvailable] = useState(0);
   let navigate = useNavigate();
 
+  const [isDragging, setIsDragging] = useState(false);
+  const [startX, setStartX] = useState(0);
+  const [dragOffset, setDragOffset] = useState(0);
+
   const carInfoForward = () => {
     if (count < carImage.length - 1) {
       setCount((count += 1));
@@ -61,8 +65,33 @@ function HomeSection() {
   };
 
   const carInfoRef = useRef(null);
-  const clickToInfo = () => {
-    carInfoRef.current?.scrollIntoView({ behavior: "smooth" });
+
+  const handleMouseDown = (e) => {
+    setIsDragging(true);
+    setStartX(e.clientX);
+  };
+
+  const handleMouseMove = (e) => {
+    if (!isDragging) return;
+
+    const currentX = e.clientX;
+    const diffX = startX - currentX;
+    setDragOffset(diffX);
+
+    if (Math.abs(diffX) > 500) {
+      if (diffX > 0) {
+        carInfoForward();
+      } else {
+        carInfoBackward();
+      }
+      setIsDragging(false);
+      setDragOffset(0);
+    }
+  };
+
+  const handleMouseUp = () => {
+    setIsDragging(false);
+    setDragOffset(0);
   };
 
   let [carFade, setCarFade] = useState("");
@@ -97,16 +126,18 @@ function HomeSection() {
         </div>
       </div>
 
-      <div className="home-bottom-background background-img">
-        <div className="home-bottom-content home-top-content ">
-          <h3>All-purpose hybrid SUV</h3>
-          <h1>2023 TUCSON HYBRID</h1>
-          <button
-            className="button-learn-more"
-            onClick={() => navigate("/CarDetail/2")}
-          >
-            EXPLORE
-          </button>
+      <div className="home-bottom-container">
+        <div className="home-bottom-background background-img">
+          <div className="home-bottom-content home-top-content ">
+            <h3>All-purpose hybrid SUV</h3>
+            <h1>2023 TUCSON HYBRID</h1>
+            <button
+              className="button-learn-more"
+              onClick={() => navigate("/CarDetail/2")}
+            >
+              EXPLORE
+            </button>
+          </div>
         </div>
       </div>
 
@@ -133,10 +164,19 @@ function HomeSection() {
 
       <div className="home-middle-background" ref={carInfoRef}>
         <div className="home-middle-left align-center">
-          <div className="home-middle-left-flexbox1" onClick={carInfoBackward}>
-            <p>«</p>
+          <div
+            className="home-middle-left-flexbox1"
+            // onClick={carInfoBackward}
+          >
+            {/* <p>«</p> */}
           </div>
-          <div className={"home-middle-left-flexbox2 " + carFade}>
+          <div
+            className={"home-middle-left-flexbox2 " + carFade}
+            style={{ transform: `translateX(${dragOffset}px)` }}
+            onMouseDown={handleMouseDown}
+            onMouseMove={handleMouseMove}
+            onMouseUp={handleMouseUp}
+          >
             {/* <img
               src={carAllData[count].img}
               alt="car-information"
@@ -156,7 +196,7 @@ function HomeSection() {
                       //   navigate("/CarDetail/" + count);
                       // }
                       // console.log(e.target.className);
-                      navigate("/CarDetail/" + count);
+                      // navigate("/CarDetail/" + count);
                     }}
                     className={
                       index === count
@@ -168,8 +208,11 @@ function HomeSection() {
               );
             })}
           </div>
-          <div className="home-middle-left-flexbox3" onClick={carInfoForward}>
-            <p>»</p>
+          <div
+            className="home-middle-left-flexbox3"
+            // onClick={carInfoForward}
+          >
+            {/* <p>»</p> */}
           </div>
         </div>
 
