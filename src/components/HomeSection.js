@@ -60,11 +60,6 @@ function HomeSection() {
     }
   };
 
-  const carInfoRef = useRef(null);
-  const clickToInfo = () => {
-    carInfoRef.current?.scrollIntoView({ behavior: "smooth" });
-  };
-
   let [carFade, setCarFade] = useState("");
   let [infoFade, setInfoFade] = useState("");
 
@@ -133,7 +128,7 @@ function HomeSection() {
         </div>
       </div>
 
-      <div className="home-middle-background" ref={carInfoRef}>
+      <div className="home-middle-background">
         <div className="home-middle-left align-center">
           <div className="home-middle-left-flexbox1" onClick={carInfoBackward}>
             <p>«</p>
