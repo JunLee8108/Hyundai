@@ -20,10 +20,6 @@ function HomeSection() {
   let [numForAvailable, setNumAvailable] = useState(0);
   let navigate = useNavigate();
 
-  const [isDragging, setIsDragging] = useState(false);
-  const [startX, setStartX] = useState(0);
-  const [dragOffset, setDragOffset] = useState(0);
-
   const carInfoForward = () => {
     if (count < carImage.length - 1) {
       setCount((count += 1));
@@ -65,33 +61,8 @@ function HomeSection() {
   };
 
   const carInfoRef = useRef(null);
-
-  const handleMouseDown = (e) => {
-    setIsDragging(true);
-    setStartX(e.clientX || e.touches[0].clientX);
-  };
-
-  const handleMouseMove = (e) => {
-    if (!isDragging) return;
-
-    const currentX = e.clientX || e.touches[0].clientX;
-    const diffX = startX - currentX;
-    setDragOffset(diffX);
-
-    if (Math.abs(diffX) > 100) {
-      if (diffX > 0) {
-        carInfoForward();
-      } else {
-        carInfoBackward();
-      }
-      setIsDragging(false);
-      setDragOffset(0);
-    }
-  };
-
-  const handleMouseUp = () => {
-    setIsDragging(false);
-    setDragOffset(0);
+  const clickToInfo = () => {
+    carInfoRef.current?.scrollIntoView({ behavior: "smooth" });
   };
 
   let [carFade, setCarFade] = useState("");
@@ -100,10 +71,10 @@ function HomeSection() {
   useEffect(() => {
     let timer = setTimeout(() => {
       setCarFade("carFade");
-    }, 100);
+    }, 300);
     let timer2 = setTimeout(() => {
       setInfoFade("infoFade");
-    }, 100);
+    }, 300);
 
     return () => {
       clearTimeout(timer);
@@ -164,22 +135,10 @@ function HomeSection() {
 
       <div className="home-middle-background" ref={carInfoRef}>
         <div className="home-middle-left align-center">
-          <div
-            className="home-middle-left-flexbox1"
-            // onClick={carInfoBackward}
-          >
-            {/* <p>«</p> */}
+          <div className="home-middle-left-flexbox1" onClick={carInfoBackward}>
+            <p>«</p>
           </div>
-          <div
-            className={"home-middle-left-flexbox2 " + carFade}
-            style={{ transform: `translateX(${dragOffset}px)` }}
-            onMouseDown={handleMouseDown}
-            onMouseMove={handleMouseMove}
-            onMouseUp={handleMouseUp}
-            onTouchStart={handleMouseDown}
-            onTouchMove={handleMouseMove}
-            onTouchEnd={handleMouseUp}
-          >
+          <div className={"home-middle-left-flexbox2 " + carFade}>
             {/* <img
               src={carAllData[count].img}
               alt="car-information"
@@ -199,7 +158,7 @@ function HomeSection() {
                       //   navigate("/CarDetail/" + count);
                       // }
                       // console.log(e.target.className);
-                      // navigate("/CarDetail/" + count);
+                      navigate("/CarDetail/" + count);
                     }}
                     className={
                       index === count
@@ -211,11 +170,8 @@ function HomeSection() {
               );
             })}
           </div>
-          <div
-            className="home-middle-left-flexbox3"
-            // onClick={carInfoForward}
-          >
-            {/* <p>»</p> */}
+          <div className="home-middle-left-flexbox3" onClick={carInfoForward}>
+            <p>»</p>
           </div>
         </div>
 
