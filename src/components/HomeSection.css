@@ -52,16 +52,12 @@ img {
   border: 1px solid white;
   background-color: black;
   border-radius: 5px;
+  transition: color 0.5s, background-color 0.5s;
 }
 
 .button-learn-more:hover {
   background-color: white;
   color: red;
-  transition: all 0.2s linear;
-}
-
-.button-learn-more:not(:hover) {
-  transition: all 0.2s linear;
 }
 
 .home-middle-background {
@@ -271,7 +267,6 @@ th {
     width: 90px;
     font-size: 12px;
     height: 44px;
-    color: white;
   }
 
   .home-middle-background {

@@ -19,15 +19,10 @@ let NavLi = styled.li`
   float: ${(props) => props.float};
   color: ${(props) => props.color};
   margin-top: 3px;
+  transition: color 0.2s linear;
 
   &:hover {
     color: red;
-    transition: all 0.2s linear;
-  }
-
-  &:not(:hover) {
-    color: white;
-    transition: all 0.2s linear;
   }
 `;
 
