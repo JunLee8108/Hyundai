@@ -59,7 +59,7 @@ function CarDetail() {
   // Car Detail Page
   else {
     return (
-      <>
+      <div className="car-detail-container">
         <DetailContainer bg={carAllData[id].background}>
           <div className="detail-flexbox1">
             <h1 className="detail-title">
@@ -229,7 +229,7 @@ function CarDetail() {
         {modal == true ? (
           <GalleryModal id={id} handleModal={handleModal} imageNum={imageNum} />
         ) : null}
-      </>
+      </div>
     );
   }
 }

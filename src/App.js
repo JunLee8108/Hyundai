@@ -1,59 +1,90 @@
 import "./App.css";
-import { Routes, Route, useLocation } from "react-router-dom";
 import ScrollToTop from "./components/helpers/ScrollToTop";
-import Home from "./components/pages/Home";
-import Owners from "./components/pages/Owners";
-import ShoppingTools from "./components/pages/ShoppingTools";
-import Vehicles from "./components/pages/Vehicles";
 import NavigationBar from "./components/NavigationBar";
-import CarBuild from "./components/pages/CarBuild";
-import CarDetail from "./components/pages/CarDetail";
 import Footer from "./components/Footer";
-import About from "./components/pages/About";
-import { lazy, Suspense } from "react";
-import { TransitionGroup } from "react-transition-group";
-import Fade from "./components/helpers/Fade";
+import Home from "./components/pages/Home";
+import LoadingHeight100 from "./components/helpers/LoadingHeight100";
 
-// const About = lazy(() => import("./components/pages/About"));
+import { lazy, Suspense } from "react";
+
+import { Routes, Route } from "react-router-dom";
+
 const Page404 = lazy(() => import("./components/helpers/Page404"));
+const Owners = lazy(() => import("./components/pages/Owners"));
+const ShoppingTools = lazy(() => import("./components/pages/ShoppingTools"));
+const Vehicles = lazy(() => import("./components/pages/Vehicles"));
+const CarBuild = lazy(() => import("./components/pages/CarBuild"));
+const CarDetail = lazy(() => import("./components/pages/CarDetail"));
+const About = lazy(() => import("./components/pages/About"));
 
 function App() {
-  const location = useLocation();
-
   return (
     <div className="App">
       <ScrollToTop />
       <NavigationBar />
-      <TransitionGroup>
-        <Fade key={location.key}>
-          <Routes location={location}>
-            <Route path="/" exact element={<Home />} />
-            <Route path="/Vehicles" element={<Vehicles />} />
-            <Route path="/Owners" element={<Owners />} />
-            <Route path="/ShoppingTools" element={<ShoppingTools />} />
-            <Route path="/CarBuild/:id" element={<CarBuild />} />
-            <Route path="/CarDetail/:id" element={<CarDetail />} />
-            <Route path="/About" element={<About />} />
 
-            {/* <Route
-            path="/About"
-            element={
-              <Suspense fallback={<div>Loading..</div>}>
-                <About />
-              </Suspense>
-            }
-          /> */}
-            <Route
-              path="*"
-              element={
-                <Suspense fallback={<div>Loading..</div>}>
-                  <Page404 />
-                </Suspense>
-              }
-            />
-          </Routes>
-        </Fade>
-      </TransitionGroup>
+      <Routes>
+        <Route path="/" exact element={<Home />} />
+
+        <Route
+          path="/Vehicles"
+          element={
+            <Suspense fallback={<LoadingHeight100 />}>
+              <Vehicles />
+            </Suspense>
+          }
+        />
+        <Route
+          path="/Owners"
+          element={
+            <Suspense fallback={<LoadingHeight100 />}>
+              <Owners />
+            </Suspense>
+          }
+        />
+        <Route
+          path="/ShoppingTools"
+          element={
+            <Suspense fallback={<LoadingHeight100 />}>
+              <ShoppingTools />
+            </Suspense>
+          }
+        />
+        <Route
+          path="/CarBuild/:id"
+          element={
+            <Suspense fallback={<LoadingHeight100 />}>
+              <CarBuild />
+            </Suspense>
+          }
+        />
+        <Route
+          path="/CarDetail/:id"
+          element={
+            <Suspense fallback={<LoadingHeight100 />}>
+              <CarDetail />
+            </Suspense>
+          }
+        />
+        <Route
+          path="/About"
+          element={
+            <Suspense fallback={<LoadingHeight100 />}>
+              <About />
+            </Suspense>
+          }
+        />
+
+        <Route
+          path="*"
+          element={
+            <Suspense fallback={<LoadingHeight100 />}>
+              <Page404 />
+            </Suspense>
+          }
+        />
+      </Routes>
+
       <Footer />
     </div>
   );

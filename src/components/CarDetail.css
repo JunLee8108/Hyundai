@@ -12,6 +12,11 @@
   align-items: center;
 }
 
+.car-detail-container {
+  opacity: 0;
+  animation: flash 1s 0.1s forwards ease;
+}
+
 .ioniq-detail-container {
   background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
     url("../assets//detail-ioniq-bg.webp");

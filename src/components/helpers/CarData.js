@@ -245,7 +245,7 @@ const carAllData = [
       tucsonGallery6,
     ],
     engine: "Hybrid",
-    engineIcon: "🇭",
+    engineIcon: <span style={{ color: "#87CEEB" }}>🇭</span>,
   },
 
   {
@@ -304,7 +304,7 @@ const carAllData = [
       sonataGallery6,
     ],
     engine: "Hybrid",
-    engineIcon: "🇭",
+    engineIcon: <span style={{ color: "#87CEEB" }}>🇭</span>,
   },
 ];
 

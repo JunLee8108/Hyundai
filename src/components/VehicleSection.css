@@ -2,6 +2,11 @@ div {
   box-sizing: border-box;
 }
 
+.vehicle-entire-container {
+  opacity: 0;
+  animation: flash 1s 0.1s forwards ease;
+}
+
 .vehicle-introduction {
   text-align: center;
   color: white;

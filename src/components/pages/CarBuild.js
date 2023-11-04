@@ -10,6 +10,8 @@ let CarDataContainer = styled.div`
   height: 90vh;
   display: flex;
   justify-content: center;
+  opacity: 0;
+  animation: flash 1s 0.1s forwards ease;
   @media screen and (max-width: 787px) {
     height: 100%;
     flex-wrap: wrap;

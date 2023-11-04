@@ -59,7 +59,7 @@ function VehicleSection() {
   }, [sort]);
 
   return (
-    <>
+    <div className="vehicle-entire-container">
       <div className="vehicle-introduction">
         <p>
           Introducing Hyundai's Spectacular Lineup of All Vehicles – Where
@@ -278,7 +278,7 @@ function VehicleSection() {
           </div>
         </>
       )}
-    </>
+    </div>
   );
 }
 

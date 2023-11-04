@@ -24,3 +24,9 @@ span {
 code {
   font-family: "Karla", sans-serif;
 }
+
+@keyframes flash {
+  to {
+    opacity: 1;
+  }
+}

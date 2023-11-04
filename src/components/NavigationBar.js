@@ -7,6 +7,7 @@ import menu from "../assets/main-menu.webp";
 import deleteButton from "../assets/delete-button.webp";
 import { useEffect, useState } from "react";
 import styled from "styled-components";
+import { useLocation } from "react-router-dom";
 
 /////////////////// STYLED COMPONENTS
 let NavLi = styled.li`
@@ -43,65 +44,40 @@ let NavLiCompanyName = styled(NavLi)`
 
 function NavigationBar() {
   const navigate = useNavigate();
+  const location = useLocation();
   const isMobile = useMediaQuery("(max-width: 600px)");
+  const modalImage = [menu, deleteButton];
 
   let [modal, setModal] = useState(false);
-
-  const modalImage = [menu, deleteButton];
   let [imageNum, setImageNum] = useState(0);
-
-  let [btnColor1, setBtnColor1] = useState("white");
-  let [btnColor2, setBtnColor2] = useState("white");
-  let [btnColor3, setBtnColor3] = useState("white");
+  const [navbarColor, setNavbarColor] = useState(-1);
 
   const modalControl = () => {
     if (modal) {
       setModal(false);
       setImageNum(0);
-      // document.body.style.overflow = "unset";
     } else {
       setModal(true);
       setImageNum(1);
-      // document.body.style.overflow = "hidden";
     }
   };
 
   const modalControlFalse = () => {
     setImageNum(0);
     setModal(false);
-    // document.body.style.overflow = "unset";
   };
 
-  const buttonControl = (e) => {
-    if (e == 0) {
-      setBtnColor1("red");
-      setBtnColor2("white");
-      setBtnColor3("white");
-    } else if (e == 1) {
-      setBtnColor1("white");
-      setBtnColor2("red");
-      setBtnColor3("white");
-    } else if (e == 2) {
-      setBtnColor1("white");
-      setBtnColor2("white");
-      setBtnColor3("red");
+  useEffect(() => {
+    if (location.pathname.includes("Vehicles")) {
+      setNavbarColor(1);
+    } else if (location.pathname.includes("ShoppingTools")) {
+      setNavbarColor(2);
+    } else if (location.pathname.includes("About")) {
+      setNavbarColor(3);
     } else {
-      setBtnColor1("white");
-      setBtnColor2("white");
-      setBtnColor3("white");
+      setNavbarColor(-1);
     }
-  };
-
-  // let [fade, setFade] = useState("");
-  // useEffect(() => {
-  //   let timer = setTimeout(() => {
-  //     setFade("nav-modal-fade");
-  //   }, 300);
-  //   return () => {
-  //     clearTimeout(timer);
-  //     setFade("");
-  //   };
-  // }, [modal]);
+  }, [location]);
 
   // If it's mobile
   if (isMobile) {
@@ -115,7 +91,6 @@ function NavigationBar() {
             onClick={() => {
               navigate("/");
               modalControlFalse();
-              // document.body.style.overflow = "unset";
             }}
           >
             HYUNDAI
@@ -163,41 +138,33 @@ function NavigationBar() {
                 color="white"
                 onClick={() => {
                   navigate("/");
-                  buttonControl(3);
-                  // document.body.style.overflow = "unset";
                 }}
               >
                 HYUNDAI
               </NavLiCompanyName>
               <NavLi
                 float="left"
-                color={btnColor1}
+                color={navbarColor === 1 ? "red" : "white"}
                 onClick={() => {
                   navigate("/Vehicles");
-                  buttonControl(0);
-                  // document.body.style.overflow = "unset";
                 }}
               >
                 VEHICLES
               </NavLi>
               <NavLi
                 float="left"
-                color={btnColor2}
+                color={navbarColor === 2 ? "red" : "white"}
                 onClick={() => {
                   navigate("/ShoppingTools");
-                  buttonControl(1);
-                  // document.body.style.overflow = "unset";
                 }}
               >
                 BUILD YOUR OWN
               </NavLi>
               <NavLi
                 float="left"
-                color={btnColor3}
+                color={navbarColor === 3 ? "red" : "white"}
                 onClick={() => {
                   navigate("/About");
-                  buttonControl(2);
-                  // document.body.style.overflow = "unset";
                 }}
               >
                 ABOUT
@@ -215,8 +182,6 @@ function NavigationBar() {
                 color="white"
                 onClick={() => {
                   navigate("/Owners");
-                  buttonControl(3);
-                  // document.body.style.overflow = "unset";
                 }}
               >
                 MY HYUNDAI

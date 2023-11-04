@@ -80,7 +80,7 @@ function HomeSection() {
   }, [count]);
 
   return (
-    <div>
+    <div className="home-entire-container">
       <div className="home-top-background background-img">
         <div className="home-top-content">
           <h1>

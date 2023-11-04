@@ -5,6 +5,8 @@
   background-repeat: no-repeat;
   background-size: cover;
   min-height: calc(100vh - 7rem);
+  opacity: 0;
+  animation: flash 1s 0.1s forwards ease;
 }
 
 /* .shopping-container::before {

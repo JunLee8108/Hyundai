@@ -9,6 +9,11 @@ img {
   -webkit-user-drag: none;
 }
 
+.home-entire-container {
+  opacity: 0;
+  animation: flash 1s 0.1s forwards ease;
+}
+
 .home-top-background {
   width: 100%;
   filter: brightness(90%) contrast(150%) saturate(150%);

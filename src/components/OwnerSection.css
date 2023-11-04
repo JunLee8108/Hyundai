@@ -12,6 +12,8 @@ div {
   align-items: center;
   position: relative;
   flex-direction: column;
+  opacity: 0;
+  animation: flash 1s 0.1s forwards ease;
 }
 
 .owner-introduction {
