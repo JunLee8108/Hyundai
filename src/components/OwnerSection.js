@@ -1,5 +1,5 @@
 import "./OwnerSection.css";
-import { useState, useRef } from "react";
+import { useState } from "react";
 
 function OwnerSection() {
   let [modal, setModal] = useState(false);
@@ -7,12 +7,12 @@ function OwnerSection() {
   const handleSubmit = (e) => {
     let id = document.querySelector("#loginID").value;
     let pw = document.querySelector("#loginPW").value;
-    if (id == "") {
+    if (id === "") {
       e.preventDefault();
       setModal(true);
       // document.body.style.paddingRight = "15px";
       document.body.style.overflow = "hidden";
-    } else if (pw == "") {
+    } else if (pw === "") {
       e.preventDefault();
       setModal(true);
       document.body.style.overflow = "hidden";
@@ -27,7 +27,7 @@ function OwnerSection() {
       </div>
       <div className="login">
         <form onSubmit={handleSubmit}>
-          <h2>MY HYUNDAI</h2>
+          <h1>HYUNDAI</h1>
           <label htmlFor="loginID">
             <p>Hyundai ID</p>
           </label>
@@ -49,7 +49,7 @@ function OwnerSection() {
         </form>
       </div>
 
-      {modal == true ? (
+      {modal ? (
         <div className="login-modal-bg">
           <div className="login-modal">
             <p>Invalid ID or Password.</p>

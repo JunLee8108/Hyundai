@@ -17,12 +17,15 @@ function VehicleSection() {
         allButtons[i].style.color = "grey";
       }
       target.style.color = "red";
-    } else if (target.innerHTML === "Electrified") {
+    } else if (target.innerHTML === "⚡ Electrified") {
       for (let i = 0; i < allButtons.length; i++) {
         allButtons[i].style.color = "grey";
       }
       target.style.color = "orange";
-    } else if (target.innerHTML === "Hybrid") {
+    } else if (
+      target.innerHTML ===
+      '<span style="color: rgb(135, 206, 235);">🇭</span> Hybrid'
+    ) {
       for (let i = 0; i < allButtons.length; i++) {
         allButtons[i].style.color = "grey";
       }
@@ -83,20 +86,20 @@ function VehicleSection() {
             <button
               className="categorize-button"
               onClick={(e) => {
-                sortFunction(e.target.innerHTML);
+                sortFunction("Electrified");
                 clickIdentified(e.target);
               }}
             >
-              Electrified
+              ⚡ Electrified
             </button>
             <button
               className="categorize-button"
               onClick={(e) => {
-                sortFunction(e.target.innerHTML);
+                sortFunction("Hybrid");
                 clickIdentified(e.target);
               }}
             >
-              Hybrid
+              <span style={{ color: "#87CEEB" }}>🇭</span> Hybrid
             </button>
           </div>
 
@@ -107,28 +110,13 @@ function VehicleSection() {
                   return (
                     <div className="vehicle-top-box" key={index}>
                       <div className="vehicle-text-box">
-                        {/* {index > 1 ? (
-                        <p>
-                          <span
-                            style={{
-                              color: "#00A7EB",
-                              fontSize: "20px",
-                              marginRight: "2px",
-                            }}
-                          >
-                            🇭
-                          </span>{" "}
-                          HYBRID
-                        </p>
-                      ) : ( */}
-                        {/* ⚡ */}
-                        <p style={{ display: "inline", marginRight: "2px" }}>
+                        <p style={{ display: "inline", marginRight: "5px" }}>
                           {sortedData[index].engineIcon}
                         </p>
                         <p style={{ display: "inline" }}>
-                          {sortedData[index].engine.toUpperCase()}
+                          {sortedData[index].engine}
                         </p>
-                        {/* )} */}
+
                         <h1>
                           {sortedData[index].year}{" "}
                           <span className="color-navy">
@@ -191,20 +179,20 @@ function VehicleSection() {
             <button
               className="categorize-button"
               onClick={(e) => {
-                sortFunction(e.target.innerHTML);
+                sortFunction("Electrified");
                 clickIdentified(e.target);
               }}
             >
-              Electrified
+              ⚡ Electrified
             </button>
             <button
               className="categorize-button"
               onClick={(e) => {
-                sortFunction(e.target.innerHTML);
+                sortFunction("Hybrid");
                 clickIdentified(e.target);
               }}
             >
-              Hybrid
+              <span style={{ color: "#87CEEB" }}>🇭</span> Hybrid
             </button>
           </div>
 
@@ -215,28 +203,10 @@ function VehicleSection() {
                   return (
                     <div className="vehicle-top-box" key={index}>
                       <div className="vehicle-text-box">
-                        {/* {index > 1 ? (
-                    <p>
-                      <span
-                        style={{
-                          color: "#00A7EB",
-                          fontSize: "20px",
-                          marginRight: "2px",
-                        }}
-                      >
-                        🇭
-                      </span>{" "}
-                      HYBRID
-                    </p>
-                  ) : ( */}
-                        {/* ⚡ */}
-                        <p style={{ display: "inline", marginRight: "2px" }}>
-                          {carAllData[index].engineIcon}
-                        </p>
                         <p style={{ display: "inline" }}>
-                          {carAllData[index].engine.toUpperCase()}
+                          {carAllData[index].engine}
                         </p>
-                        {/* )} */}
+
                         <h1>
                           {carAllData[index].year}{" "}
                           <span className="color-navy">
