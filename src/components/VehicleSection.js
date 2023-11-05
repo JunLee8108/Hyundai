@@ -1,7 +1,10 @@
 import "./VehicleSection.css";
-import { Link, useNavigate } from "react-router-dom";
-import { useEffect, useState } from "react";
 import { carAllData } from "./helpers/CarData";
+
+import { useEffect, useState } from "react";
+
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Link, useNavigate } from "react-router-dom";
 
 function VehicleSection() {
   const navigate = useNavigate();
@@ -24,7 +27,7 @@ function VehicleSection() {
       target.style.color = "orange";
     } else if (
       target.innerHTML ===
-      '<span style="color: rgb(135, 206, 235);">🇭</span> Hybrid'
+      '<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="h" class="svg-inline--fa fa-h " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" style="color: rgb(135, 206, 235);"><path fill="currentColor" d="M320 256l0 192c0 17.7 14.3 32 32 32s32-14.3 32-32l0-224V64c0-17.7-14.3-32-32-32s-32 14.3-32 32V192L64 192 64 64c0-17.7-14.3-32-32-32S0 46.3 0 64V448c0 17.7 14.3 32 32 32s32-14.3 32-32l0-192 256 0z"></path></svg> Hybrid'
     ) {
       for (let i = 0; i < allButtons.length; i++) {
         allButtons[i].style.color = "grey";
@@ -99,7 +102,11 @@ function VehicleSection() {
                 clickIdentified(e.target);
               }}
             >
-              <span style={{ color: "#87CEEB" }}>🇭</span> Hybrid
+              <FontAwesomeIcon
+                icon="fa-solid fa-h"
+                style={{ color: "#87CEEB" }}
+              />{" "}
+              Hybrid
             </button>
           </div>
 
@@ -192,7 +199,11 @@ function VehicleSection() {
                 clickIdentified(e.target);
               }}
             >
-              <span style={{ color: "#87CEEB" }}>🇭</span> Hybrid
+              <FontAwesomeIcon
+                icon="fa-solid fa-h"
+                style={{ color: "#87CEEB" }}
+              />{" "}
+              Hybrid
             </button>
           </div>
 

@@ -1,18 +1,7 @@
 import "./HomeSection.css";
 import { Link, useNavigate } from "react-router-dom";
-import { useState, useRef, useEffect } from "react";
-import {
-  carImage,
-  carName,
-  carType,
-  carPrice,
-  carMiles,
-  carPower,
-  carWheel,
-  milesOrMPG,
-  available,
-  carAllData,
-} from "./helpers/CarData";
+import { useState, useEffect } from "react";
+import { carImage, milesOrMPG, available, carAllData } from "./helpers/CarData";
 
 function HomeSection() {
   let [count, setCount] = useState(0);
@@ -23,17 +12,17 @@ function HomeSection() {
   const carInfoForward = () => {
     if (count < carImage.length - 1) {
       setCount((count += 1));
-    } else if (count == carImage.length - 1) {
+    } else if (count === carImage.length - 1) {
       setCount((count = 0));
     }
 
-    if (count == 0 || count == 1) {
+    if (count === 0 || count === 1) {
       setNumForMile(0);
     } else {
       setNumForMile(1);
     }
 
-    if (count == 2) {
+    if (count === 2) {
       setNumAvailable(1);
     } else {
       setNumAvailable(0);
@@ -43,17 +32,17 @@ function HomeSection() {
   const carInfoBackward = () => {
     if (count > 0 && count <= carImage.length - 1) {
       setCount((count -= 1));
-    } else if (count == 0) {
+    } else if (count === 0) {
       setCount((count = 3));
     }
 
-    if (count == 0 || count == 1) {
+    if (count === 0 || count === 1) {
       setNumForMile(0);
     } else {
       setNumForMile(1);
     }
 
-    if (count == 2) {
+    if (count === 2) {
       setNumAvailable(1);
     } else {
       setNumAvailable(0);
@@ -106,14 +95,6 @@ function HomeSection() {
           </div>
         </div>
       </div>
-
-      {/* <div className="home-bottom-background2 background-img">
-        <div className="home-bottom-content home-top-content ">
-          <h3>all-electric small SUV</h3>
-          <h1>2023 KONA ELECTRIC</h1>
-          <button className="button-learn-more">LEARN MORE</button>
-        </div>
-      </div> */}
 
       <div className="home-bottom-background3 background-img">
         <div className="home-bottom-content home-top-content ">

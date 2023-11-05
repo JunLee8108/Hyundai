@@ -9,6 +9,14 @@ import { lazy, Suspense } from "react";
 
 import { Routes, Route } from "react-router-dom";
 
+// import the library
+import { library } from "@fortawesome/fontawesome-svg-core";
+
+// import your icons
+import { fab } from "@fortawesome/free-brands-svg-icons";
+import { fas } from "@fortawesome/free-solid-svg-icons";
+import { far } from "@fortawesome/free-regular-svg-icons";
+
 const Page404 = lazy(() => import("./components/helpers/Page404"));
 const Owners = lazy(() => import("./components/pages/Owners"));
 const ShoppingTools = lazy(() => import("./components/pages/ShoppingTools"));
@@ -91,3 +99,4 @@ function App() {
 }
 
 export default App;
+library.add(fab, fas, far);

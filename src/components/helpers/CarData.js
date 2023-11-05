@@ -55,6 +55,8 @@ import tucsonGallery4 from "../../assets/car-detail-gallery/tucson-detail-4.webp
 import tucsonGallery5 from "../../assets/car-detail-gallery/tucson-detail-5.webp";
 import tucsonGallery6 from "../../assets/car-detail-gallery/tucson-detail-6.webp";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 const carImage = [ioniq, kona, sonata, tucson];
 const carName = [
   "2023 IONIQ 6",
@@ -245,7 +247,10 @@ const carAllData = [
       tucsonGallery6,
     ],
     engine: "Hybrid",
-    engineIcon: <span style={{ color: "#87CEEB" }}>🇭</span>,
+
+    engineIcon: (
+      <FontAwesomeIcon icon="fa-solid fa-h" style={{ color: "#87CEEB" }} />
+    ),
   },
 
   {
@@ -304,7 +309,9 @@ const carAllData = [
       sonataGallery6,
     ],
     engine: "Hybrid",
-    engineIcon: <span style={{ color: "#87CEEB" }}>🇭</span>,
+    engineIcon: (
+      <FontAwesomeIcon icon="fa-solid fa-h" style={{ color: "#87CEEB" }} />
+    ),
   },
 ];
 
