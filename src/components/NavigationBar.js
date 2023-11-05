@@ -97,12 +97,12 @@ function NavigationBar() {
           </NavLiCompanyName>
           <li className="mobile-menu">
             <button onClick={modalControl}>
-              <img src={modalImage[imageNum]}></img>
+              <img src={modalImage[imageNum]} alt=""></img>
             </button>
           </li>
         </nav>
         <div className="clear-both"></div>
-        {modal == true ? (
+        {modal ? (
           <div className="nav-container-mobile-bg">
             <div className="nav-modal">
               <ul>
@@ -147,6 +147,9 @@ function NavigationBar() {
                 color={navbarColor === 1 ? "red" : "white"}
                 onClick={() => {
                   navigate("/Vehicles");
+                  if (location.pathname.includes("Vehicles")) {
+                    navigate(0);
+                  }
                 }}
               >
                 VEHICLES
@@ -156,6 +159,9 @@ function NavigationBar() {
                 color={navbarColor === 2 ? "red" : "white"}
                 onClick={() => {
                   navigate("/ShoppingTools");
+                  if (location.pathname.includes("ShoppingTools")) {
+                    navigate(0);
+                  }
                 }}
               >
                 BUILD YOUR OWN
@@ -165,6 +171,9 @@ function NavigationBar() {
                 color={navbarColor === 3 ? "red" : "white"}
                 onClick={() => {
                   navigate("/About");
+                  if (location.pathname.includes("About")) {
+                    navigate(0);
+                  }
                 }}
               >
                 ABOUT

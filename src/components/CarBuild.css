@@ -71,7 +71,7 @@
   transition: 1s;
 }
 
-@media screen and (max-width: 787px) {
+@media screen and (max-width: 767px) {
   .trim button {
     border: none;
     width: 80px;
@@ -115,5 +115,9 @@
 
   .h1-subtitle {
     font-size: 30px;
+  }
+
+  .keyFeature-container {
+    width: 85%;
   }
 }
