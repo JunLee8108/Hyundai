@@ -15,7 +15,7 @@ function ShoppingToolSection() {
       if (BrowserWidth > 768) {
         timer = setTimeout(() => {
           setTranslateX("title-translateX");
-        }, 700);
+        }, 900);
       } else {
         timer = setTimeout(() => {
           setTranslateX("title-translateX");

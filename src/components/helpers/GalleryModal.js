@@ -1,4 +1,5 @@
 import { carAllData } from "./CarData";
+import "../CarDetail.css";
 
 function GalleryModal(props) {
   return (
@@ -17,6 +18,7 @@ function GalleryModal(props) {
               props.handleModal();
               document.body.style.overflow = "unset";
             }}
+            alt="car"
           />
         </div>
       </div>
