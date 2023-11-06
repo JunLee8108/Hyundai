@@ -3,6 +3,7 @@ import ScrollToTop from "./components/helpers/ScrollToTop";
 import NavigationBar from "./components/NavigationBar";
 import Footer from "./components/Footer";
 import Home from "./components/pages/Home";
+import Empty from "./components/helpers/Empty";
 import LoadingHeight100 from "./components/helpers/LoadingHeight100";
 
 import { lazy, Suspense } from "react";
@@ -33,6 +34,7 @@ function App() {
 
       <Routes>
         <Route path="/" exact element={<Home />} />
+        <Route path="refresh" element={<Empty />} />
 
         <Route
           path="/Vehicles"

@@ -80,14 +80,14 @@ function CarBuild() {
   let [buttonColor3, setButtonColor3] = useState("black");
 
   const handleButton = (e) => {
-    if (e == 0) {
+    if (e === 0) {
       setButtonBgColor1("black");
       setButtonBgColor2("white");
       setButtonBgColor3("white");
       setButtonColor1("white");
       setButtonColor2("black");
       setButtonColor3("black");
-    } else if (e == 1) {
+    } else if (e === 1) {
       setButtonBgColor1("white");
       setButtonBgColor2("black");
       setButtonBgColor3("white");

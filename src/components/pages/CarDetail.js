@@ -3,7 +3,7 @@ import Page404 from "../helpers/Page404";
 import { carAllData } from "../helpers/CarData";
 import EachTrimDescription from "../helpers/EachTrimDescription";
 import "../CarDetail.css";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import styled from "styled-components";
 import GalleryModal from "../helpers/GalleryModal";
 
@@ -39,7 +39,7 @@ function CarDetail() {
   const handleTrim = () => {
     if (trimNum < 2) {
       setTrimNum((trimNum += 1));
-    } else if (trimNum == 2) {
+    } else if (trimNum === 2) {
       setTrimNum((trimNum = 0));
     }
   };
@@ -53,7 +53,7 @@ function CarDetail() {
   };
 
   // 404 Error Page
-  if (id == "" || id > 3) {
+  if (id === "" || id > 3) {
     return <Page404 />;
   }
   // Car Detail Page
@@ -218,6 +218,7 @@ function CarDetail() {
                       setImageNum(index);
                       document.body.style.overflow = "hidden";
                     }}
+                    alt=""
                   />
                 </div>
               );
@@ -226,7 +227,7 @@ function CarDetail() {
         </div>
 
         {/* Gallery Modal */}
-        {modal == true ? (
+        {modal ? (
           <GalleryModal id={id} handleModal={handleModal} imageNum={imageNum} />
         ) : null}
       </div>

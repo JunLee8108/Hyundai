@@ -1,6 +1,6 @@
 .about-container {
   background: linear-gradient(to right, #434343 0%, black 100%);
-  min-height: calc(100vh - 15rem);
+  min-height: calc(100vh - 7rem);
   position: relative;
   opacity: 0;
   animation: flash 1s 0.1s forwards ease;

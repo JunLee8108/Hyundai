@@ -79,6 +79,16 @@ function NavigationBar() {
     }
   }, [location]);
 
+  const handleNavigation = (path) => {
+    navigate(`/${path}`);
+    if (location.pathname.includes(path)) {
+      navigate("refresh");
+      setTimeout(() => {
+        navigate(`/${path}`);
+      }, 100);
+    }
+  };
+
   // If it's mobile
   if (isMobile) {
     return (
@@ -106,16 +116,44 @@ function NavigationBar() {
           <div className="nav-container-mobile-bg">
             <div className="nav-modal">
               <ul>
-                <Link to="/Vehicles" className="modal-style">
+                <Link
+                  to="/Vehicles"
+                  className="modal-style"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    handleNavigation("Vehicles");
+                  }}
+                >
                   <li onClick={modalControl}>Vehicles</li>
                 </Link>
-                <Link to="/ShoppingTools" className="modal-style">
+                <Link
+                  to="/ShoppingTools"
+                  className="modal-style"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    handleNavigation("ShoppingTools");
+                  }}
+                >
                   <li onClick={modalControl}>Build Your Own</li>
                 </Link>
-                <Link to="/About" className="modal-style">
+                <Link
+                  to="/About"
+                  className="modal-style"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    handleNavigation("About");
+                  }}
+                >
                   <li onClick={modalControl}>About Hyundai</li>
                 </Link>
-                <Link to="/Owners" className="modal-style">
+                <Link
+                  to="/Owners"
+                  className="modal-style"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    handleNavigation("Owners");
+                  }}
+                >
                   <li onClick={modalControl}>Login to My Hyundai</li>
                 </Link>
               </ul>
@@ -145,36 +183,21 @@ function NavigationBar() {
               <NavLi
                 float="left"
                 color={navbarColor === 1 ? "red" : "white"}
-                onClick={() => {
-                  navigate("/Vehicles");
-                  if (location.pathname.includes("Vehicles")) {
-                    navigate(0);
-                  }
-                }}
+                onClick={() => handleNavigation("Vehicles")}
               >
                 VEHICLES
               </NavLi>
               <NavLi
                 float="left"
                 color={navbarColor === 2 ? "red" : "white"}
-                onClick={() => {
-                  navigate("/ShoppingTools");
-                  if (location.pathname.includes("ShoppingTools")) {
-                    navigate(0);
-                  }
-                }}
+                onClick={() => handleNavigation("ShoppingTools")}
               >
                 BUILD YOUR OWN
               </NavLi>
               <NavLi
                 float="left"
                 color={navbarColor === 3 ? "red" : "white"}
-                onClick={() => {
-                  navigate("/About");
-                  if (location.pathname.includes("About")) {
-                    navigate(0);
-                  }
-                }}
+                onClick={() => handleNavigation("About")}
               >
                 ABOUT
               </NavLi>
@@ -187,12 +210,7 @@ function NavigationBar() {
                 style={{ marginRight: "-10px", marginTop: "2px" }}
                 alt="account-logo"
               ></img>
-              <NavLi
-                color="white"
-                onClick={() => {
-                  navigate("/Owners");
-                }}
-              >
+              <NavLi color="white" onClick={() => handleNavigation("Owners")}>
                 MY HYUNDAI
               </NavLi>
             </div>

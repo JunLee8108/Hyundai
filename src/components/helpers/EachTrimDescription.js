@@ -1,7 +1,7 @@
 import { carAllData, trimDescription } from "./CarData";
 
 function EachTrimDescription(props) {
-  if (props.trimNum == 0) {
+  if (props.trimNum === 0) {
     return (
       <div className="detail-bottom-container-mobile">
         <div className="detail-bottom-flex-container-mobile">
@@ -20,7 +20,7 @@ function EachTrimDescription(props) {
         </div>
       </div>
     );
-  } else if (props.trimNum == 1) {
+  } else if (props.trimNum === 1) {
     return (
       <div className="detail-bottom-container-mobile">
         <div className="detail-bottom-flex-container-mobile">

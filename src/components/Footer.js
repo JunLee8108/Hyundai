@@ -1,17 +1,16 @@
 import "./Footer.css";
 import useMediaQuery from "@mui/material/useMediaQuery";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import hyundaiLog from "../assets/hyundai-logo.webp";
 
 function Footer() {
   const isMobile = useMediaQuery("(max-width: 600px)");
-  const navigate = useNavigate();
 
   if (isMobile) {
     return (
       <div>
         <div className="footer-container-mobile">
-          <img src={hyundaiLog}></img>
+          <img src={hyundaiLog} alt=""></img>
           <h4>HYUNDAI Motors.</h4>
         </div>
       </div>
